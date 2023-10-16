@@ -8,9 +8,15 @@ public class SoundManager : MonoBehaviour
     [SerializeField] Image soundOnicon;
     [SerializeField] Image soundOfficon;
     private bool muted = false;
+    private AudioSource soundEffectSource; // Reference to the AudioSource component for sound effects
+
+    public AudioClip yourSoundEffect; // Reference to your sound effect AudioClip
 
     void Start()
     {
+        // Initialize the soundEffectSource reference
+        soundEffectSource = gameObject.AddComponent<AudioSource>();
+
         if (!PlayerPrefs.HasKey("muted"))
         {
             PlayerPrefs.SetInt("muted", 0);
@@ -38,6 +44,15 @@ public class SoundManager : MonoBehaviour
         }
         Save();
         UpdateButtonIcon();
+    }
+
+    public void PlayYourSoundEffect()
+    {
+        // Check if the sound is not muted
+        if (!muted && yourSoundEffect != null)
+        {
+            soundEffectSource.PlayOneShot(yourSoundEffect);
+        }
     }
 
     private void UpdateButtonIcon()
