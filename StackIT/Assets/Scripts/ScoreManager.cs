@@ -7,9 +7,9 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
     public Text highestScoreText;
     public Text unlockText;
+    public HighScoreManager highScoreManager; // Reference to the HighScoreManager
 
     private int playerScore = 0;
-    private int highestScore = 1;
     private int stackedItems = 0;
     private bool isUnlockMessageShowing = false;
 
@@ -23,10 +23,9 @@ public class ScoreManager : MonoBehaviour
     {
         playerScore++;
 
-        if (playerScore > highestScore)
+        if (playerScore > highScoreManager.GetHighestScore())
         {
-            highestScore = playerScore;
-            SaveHighestScore();
+            highScoreManager.SetHighestScore(playerScore);
             UpdateHighestScoreUI();
         }
 
@@ -49,18 +48,12 @@ public class ScoreManager : MonoBehaviour
 
     private void LoadHighestScore()
     {
-        highestScore = PlayerPrefs.GetInt("HighestScore", 0);
-    }
-
-    private void SaveHighestScore()
-    {
-        PlayerPrefs.SetInt("HighestScore", highestScore);
-        PlayerPrefs.Save();
+        highScoreManager.LoadHighestScore();
     }
 
     private void UpdateHighestScoreUI()
     {
-        highestScoreText.text = "Highest Score: " + highestScore.ToString();
+        highestScoreText.text = "Highest Score: " + highScoreManager.GetHighestScore().ToString();
     }
 
     private IEnumerator ShowUnlockMessage()

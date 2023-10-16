@@ -10,23 +10,22 @@ public class HighScoreManager : MonoBehaviour
         LoadHighestScore();
     }
 
-    void LoadHighestScore()
+    public void LoadHighestScore()
     {
-       
         int highestScore = PlayerPrefs.GetInt("HighestScore", 0);
-         
+        highestScore ++;
         highestScoreText.text = "Highest Score: " + highestScore;
-
-        // Increment highestScore by 1 to match the player's score
-       
-
-        // Save the updated highestScore
-        SaveHighestScore(highestScore);
     }
 
-    void SaveHighestScore(int score)
+    public void SetHighestScore(int score)
     {
         PlayerPrefs.SetInt("HighestScore", score);
         PlayerPrefs.Save();
+        highestScoreText.text = "Highest Score: " + score;
+    }
+
+    public int GetHighestScore()
+    {
+        return PlayerPrefs.GetInt("HighestScore", 0);
     }
 }
