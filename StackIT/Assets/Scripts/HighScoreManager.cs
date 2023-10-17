@@ -13,7 +13,7 @@ public class HighScoreManager : MonoBehaviour
     public void LoadHighestScore()
     {
         int highestScore = PlayerPrefs.GetInt("HighestScore", 0);
-        highestScore ++;
+        //highestScore++;
         highestScoreText.text = "Highest Score: " + highestScore;
     }
 
