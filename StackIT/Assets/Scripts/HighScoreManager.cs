@@ -9,20 +9,30 @@ public class HighScoreManager : MonoBehaviour
     {
         LoadHighestScore();
     }
+public void LoadHighestScore()
+{
+    int currentScore = 0; // This will be the score for the current game.
+    int highestScore = PlayerPrefs.GetInt("HighestScore", 0);
 
-    public void LoadHighestScore()
+    if (highestScore >= 4)
     {
-        int highestScore = PlayerPrefs.GetInt("HighestScore", 0);
-        //highestScore++;
-        highestScoreText.text = "Highest Score: " + highestScore;
+        highestScore++;
+        currentScore = highestScore; // Set currentScore to the current high score.
     }
 
-    public void SetHighestScore(int score)
-    {
-        PlayerPrefs.SetInt("HighestScore", score);
-        PlayerPrefs.Save();
-        highestScoreText.text = "Highest Score: " + score;
-    }
+    highestScoreText.text = "Highest Score: " + highestScore;
+
+    // Use currentScore for your game logic.
+    // When the game is over and you want to reset the high score to 1, call SetHighestScore(1).
+}
+
+public void SetHighestScore(int score)
+{
+    PlayerPrefs.SetInt("HighestScore", score);
+    PlayerPrefs.Save();
+    highestScoreText.text = "Highest Score: " + score;
+}
+
 
     public int GetHighestScore()
     {

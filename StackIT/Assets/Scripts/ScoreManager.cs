@@ -59,7 +59,7 @@ public class ScoreManager : MonoBehaviour
     private IEnumerator ShowUnlockMessage()
     {
         isUnlockMessageShowing = true;
-        unlockText.text = "2X Activated";
+        unlockText.text = "2X Item Activated";
         unlockText.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(1f);
