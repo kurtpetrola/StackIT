@@ -8,43 +8,69 @@ public class ScoreManager : MonoBehaviour
     public Text highestScoreText;
     public Text unlockText;
     public HighScoreManager highScoreManager; // Reference to the HighScoreManager
+    public GameObject lockedItemImage; // Reference to the locked image in the shop
 
     private int playerScore = 0;
     private int stackedItems = 0;
     private bool isUnlockMessageShowing = false;
+    private bool isLockRemoved = false;
 
-    void Start()
+    // PlayerPrefs keys
+    private const string LockStateKey = "LockState";
+
+   void Start()
+{
+    LoadHighestScore();
+    UpdateHighestScoreUI();
+    
+    // Check if the lock has already been removed
+    isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
+
+    if (isLockRemoved)
     {
-        LoadHighestScore();
+        unlockText.text = "2x Item Is Unlock";
+    }
+    else
+    {
+        unlockText.text = "2x item is Activate"; // Initial message when the lock is not removed
+    }
+}
+
+   public void IncreaseScore()
+{
+    playerScore++;
+
+    if (playerScore > highScoreManager.GetHighestScore())
+    {
+        highScoreManager.SetHighestScore(playerScore);
         UpdateHighestScoreUI();
     }
 
-    public void IncreaseScore()
+    if (playerScore == 3 && !isUnlockMessageShowing)
     {
-        playerScore++;
-
-        if (playerScore > highScoreManager.GetHighestScore())
-        {
-            highScoreManager.SetHighestScore(playerScore);
-            UpdateHighestScoreUI();
-        }
-
-        // Check if an item is stacked
-        if (playerScore == 3 && !isUnlockMessageShowing)
+        if (isLockRemoved)
         {
             StartCoroutine(ShowUnlockMessage());
+            unlockText.text = "2X Item Activated";
         }
-
-        // Check if an item is stacked
-        if (playerScore == 4)
+        else
         {
-            stackedItems++;
+            RemoveLockImage();
+            StartCoroutine(ShowUnlockMessage());
+            unlockText.text = "2x Item Is Unlock";
         }
-
-        playerScore += stackedItems;
-
-        scoreText.text = "Score: " + playerScore.ToString();
     }
+
+    if (playerScore == 4)
+    {
+        stackedItems++;
+    }
+
+    playerScore += stackedItems;
+
+    scoreText.text = "Score: " + playerScore.ToString();
+}
+
 
     private void LoadHighestScore()
     {
@@ -59,11 +85,18 @@ public class ScoreManager : MonoBehaviour
     private IEnumerator ShowUnlockMessage()
     {
         isUnlockMessageShowing = true;
-        unlockText.text = "2X Item Activated";
         unlockText.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(1f);
         unlockText.gameObject.SetActive(false);
         isUnlockMessageShowing = false;
+    }
+
+    private void RemoveLockImage()
+    {
+        lockedItemImage.SetActive(false);
+        PlayerPrefs.SetInt(LockStateKey, 1);
+        PlayerPrefs.Save();
+        isLockRemoved = true;
     }
 }

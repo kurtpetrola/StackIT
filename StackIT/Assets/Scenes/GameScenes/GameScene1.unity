@@ -1932,6 +1932,7 @@ MonoBehaviour:
   highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
+  lockedItemImage: {fileID: 5087410446041884336, guid: f6a18cd5609397a4d820bf34238afa6b, type: 3}
 --- !u!114 &1158821304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2270,8 +2271,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -249.89354, y: -532.77295}
-  m_SizeDelta: {x: 583.88, y: 113.64}
+  m_AnchoredPosition: {x: -244.68, y: -556.4695}
+  m_SizeDelta: {x: 805.51, y: 150.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449956599
 MonoBehaviour:
