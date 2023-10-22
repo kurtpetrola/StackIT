@@ -26,14 +26,14 @@ public class ScoreManager : MonoBehaviour
     // Check if the lock has already been removed
     isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
 
-    if (isLockRemoved)
+   /* if (isLockRemoved)
     {
         unlockText.text = "2x Item Is Unlock";
     }
     else
     {
         unlockText.text = "2x item is Activate"; // Initial message when the lock is not removed
-    }
+    }*/
 }
 
    public void IncreaseScore()

@@ -3330,7 +3330,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: SHOP
+  m_Text: ITEMS
 --- !u!222 &564335350
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4752,7 +4752,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SHOP
+  m_Text: ITEMS
 --- !u!222 &854218613
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7292,7 +7292,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SHOP
+  m_Text: ITEMS
 --- !u!222 &1397191588
 CanvasRenderer:
   m_ObjectHideFlags: 0
