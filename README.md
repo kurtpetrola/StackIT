@@ -1,1 +1,2 @@
 # StackIT
+``` Simple stacking game. ```
