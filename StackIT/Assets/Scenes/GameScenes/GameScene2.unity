@@ -1932,7 +1932,9 @@ MonoBehaviour:
   highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  lockedItemImage: {fileID: 5087410446041884336, guid: f6a18cd5609397a4d820bf34238afa6b, type: 3}
+  lockedItemImage1: {fileID: 3642780535467281697, guid: fab3186960ddff94bab03d0330150bad, type: 3}
+  lockedItemImage2: {fileID: 5087410446041884336, guid: f6a18cd5609397a4d820bf34238afa6b, type: 3}
+  yourButton: {fileID: 2606973285044634754, guid: af487588fda7bda42bf75afc783d05f2, type: 3}
 --- !u!114 &1158821304
 MonoBehaviour:
   m_ObjectHideFlags: 0

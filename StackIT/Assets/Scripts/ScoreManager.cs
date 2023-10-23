@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -8,69 +7,95 @@ public class ScoreManager : MonoBehaviour
     public Text highestScoreText;
     public Text unlockText;
     public HighScoreManager highScoreManager; // Reference to the HighScoreManager
-    public GameObject lockedItemImage; // Reference to the locked image in the shop
+    public GameObject lockedItemImage1; // Reference to the first locked image
+    public GameObject lockedItemImage2; // Reference to the second locked image
+    public Button yourButton; // Reference to your button
 
     private int playerScore = 0;
     private int stackedItems = 0;
     private bool isUnlockMessageShowing = false;
     private bool isLockRemoved = false;
+    private bool isButtonEnabled = false; // Track whether the button is enabled
 
     // PlayerPrefs keys
     private const string LockStateKey = "LockState";
+    private const string ButtonStateKey = "ButtonState";
+    private const string LockedImage1StateKey = "LockedImage1State";
+    private const string LockedImage2StateKey = "LockedImage2State";
 
-   void Start()
-{
-    LoadHighestScore();
-    UpdateHighestScoreUI();
-    
-    // Check if the lock has already been removed
-    isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
+    // Custom event to notify score changes
+    public event System.Action<int> ScoreChanged;
 
-   /* if (isLockRemoved)
+    private void Start()
     {
-        unlockText.text = "2x Item Is Unlock";
-    }
-    else
-    {
-        unlockText.text = "2x item is Activate"; // Initial message when the lock is not removed
-    }*/
-}
-
-   public void IncreaseScore()
-{
-    playerScore++;
-
-    if (playerScore > highScoreManager.GetHighestScore())
-    {
-        highScoreManager.SetHighestScore(playerScore);
+        LoadHighestScore();
         UpdateHighestScoreUI();
+
+        // Load the saved states
+        isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
+        isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey, 0) == 1;
+        bool isLockedImage1Active = PlayerPrefs.GetInt(LockedImage1StateKey, 1) == 1;
+        bool isLockedImage2Active = PlayerPrefs.GetInt(LockedImage2StateKey, 1) == 1;
+
+        // Set the button and locked images according to the saved states
+        yourButton.interactable = isButtonEnabled;
+        lockedItemImage1.SetActive(isLockedImage1Active);
+        lockedItemImage2.SetActive(isLockedImage2Active);
     }
 
-    if (playerScore == 3 && !isUnlockMessageShowing)
+    public int GetPlayerScore()
     {
-        if (isLockRemoved)
-        {
-            StartCoroutine(ShowUnlockMessage());
-            unlockText.text = "2X Item Activated";
-        }
-        else
-        {
-            RemoveLockImage();
-            StartCoroutine(ShowUnlockMessage());
-            unlockText.text = "2x Item Is Unlock";
-        }
+        return playerScore;
     }
 
-    if (playerScore == 4)
+    public void IncreaseScore()
     {
-        stackedItems++;
+        playerScore++;
+
+        if (playerScore > highScoreManager.GetHighestScore())
+        {
+            highScoreManager.SetHighestScore(playerScore);
+            UpdateHighestScoreUI();
+        }
+
+        if (playerScore == 3)
+        {
+            RemoveLockImages();
+            if (!isUnlockMessageShowing)
+            {
+                StartCoroutine(ShowUnlockMessage());
+                unlockText.text = "2x Item Is Unlock";
+            }
+        }
+
+        if (playerScore == 3 && highScoreManager.GetHighestScore() == 3)
+        {
+            isButtonEnabled = true;
+            PlayerPrefs.SetInt(ButtonStateKey, 1); // Save the button state
+        }
+
+        if (isButtonEnabled)
+        {
+            yourButton.interactable = true;
+        }
+
+        if (playerScore == 4)
+        {
+            stackedItems++;
+        }
+
+        playerScore += stackedItems;
+
+        scoreText.text = "Score: " + playerScore.ToString();
+
+        // Notify subscribers of the score change
+        ScoreChanged?.Invoke(playerScore);
+
+        // Update the saved state of locked images
+        PlayerPrefs.SetInt(LockedImage1StateKey, lockedItemImage1.activeSelf ? 1 : 0);
+        PlayerPrefs.SetInt(LockedImage2StateKey, lockedItemImage2.activeSelf ? 1 : 0);
+        PlayerPrefs.Save();
     }
-
-    playerScore += stackedItems;
-
-    scoreText.text = "Score: " + playerScore.ToString();
-}
-
 
     private void LoadHighestScore()
     {
@@ -82,7 +107,7 @@ public class ScoreManager : MonoBehaviour
         highestScoreText.text = "Highest Score: " + highScoreManager.GetHighestScore().ToString();
     }
 
-    private IEnumerator ShowUnlockMessage()
+    private System.Collections.IEnumerator ShowUnlockMessage()
     {
         isUnlockMessageShowing = true;
         unlockText.gameObject.SetActive(true);
@@ -92,9 +117,10 @@ public class ScoreManager : MonoBehaviour
         isUnlockMessageShowing = false;
     }
 
-    private void RemoveLockImage()
+    private void RemoveLockImages()
     {
-        lockedItemImage.SetActive(false);
+        lockedItemImage1.SetActive(false);
+        lockedItemImage2.SetActive(false);
         PlayerPrefs.SetInt(LockStateKey, 1);
         PlayerPrefs.Save();
         isLockRemoved = true;
