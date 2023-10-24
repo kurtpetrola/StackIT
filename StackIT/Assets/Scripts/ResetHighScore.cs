@@ -23,6 +23,11 @@ public class ResetHighScore : MonoBehaviour
         PlayerPrefs.SetInt("ButtonState", 0); // Reset the button state
         PlayerPrefs.SetInt("LockedImage1State", 1); // Set the first locked image to active
         PlayerPrefs.SetInt("LockedImage2State", 1); // Set the second locked image to active
+
+        // Reset the unlock message states
+        PlayerPrefs.SetInt("UnlockMessageShown", 0);
+        PlayerPrefs.SetInt("UnlockMessage1Shown", 0);
+
         PlayerPrefs.Save();
 
         // Update the UI text to reflect the reset
