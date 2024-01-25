@@ -3813,8 +3813,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1723352581}
+  m_Children: []
   m_Father: {fileID: 1506778245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3860,50 +3859,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647454591}
   m_CullTransparentMesh: 1
---- !u!1 &678063764
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 678063766}
-  - component: {fileID: 678063765}
-  m_Layer: 0
-  m_Name: SceneLoader1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &678063765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678063764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ca500b92f96ac4cb4090357553def0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &678063766
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678063764}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 315.46957, y: 203.43692, z: -2.4338593}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705569632
 GameObject:
   m_ObjectHideFlags: 0
@@ -8567,6 +8522,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 647454592}
+  - {fileID: 1723352581}
   - {fileID: 1020903501}
   - {fileID: 1985237311}
   - {fileID: 760844056}
@@ -9482,11 +9438,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 531634024}
-  m_Father: {fileID: 647454592}
+  m_Father: {fileID: 1506778245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -140, y: 655}
+  m_AnchoredPosition: {x: -140, y: 659.33}
   m_SizeDelta: {x: 695.06, y: 436.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723352582
@@ -12113,13 +12069,12 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 958789601}
   - {fileID: 848339796}
   - {fileID: 1188014278}
+  - {fileID: 958789601}
   - {fileID: 903381135}
   - {fileID: 1418567698}
   - {fileID: 1506778245}
   - {fileID: 962172334}
   - {fileID: 1569628473}
   - {fileID: 543864295}
-  - {fileID: 678063766}
