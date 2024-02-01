@@ -84,9 +84,8 @@ public class BoxScript : MonoBehaviour
             GameObject objectToDrop = objectsToDrop[randomIndex];
             GameObject spawnedObject = Instantiate(objectToDrop, transform.position, Quaternion.identity);
 
-            if (spawnedObject.GetComponent<Rigidbody2D>() != null)
+            if (spawnedObject.TryGetComponent(out Rigidbody2D objRigidbody))
             {
-                Rigidbody2D objRigidbody = spawnedObject.GetComponent<Rigidbody2D>();
                 objRigidbody.velocity = new Vector2(currentBoxMoveSpeed, objRigidbody.velocity.y);
 
                 if (lastDroppedItem != null)
@@ -165,17 +164,35 @@ public class BoxScript : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D target)
+{
+    if (ignoreTrigger)
+        return;
+    
+    if (target.tag == "GameOver")
     {
-        if (ignoreTrigger)
-            return;
+        gameOver = true;
+        canMove = false;
+        ignoreTrigger = true;
 
-        if (target.tag == "GameOver")
+        if (LifeManager.Instance != null)
         {
-            gameOver = true;
-            canMove = false;
-            ignoreTrigger = true;
+            LifeManager.Instance.DecreaseLife(); // Decrease life when the box hits the game over trigger
 
-            GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+            if (LifeManager.Instance.lives > 0)
+            {
+                // If lives are remaining, continue spawning new boxes
+                GameplayController.instance.SpawnNewBox();
+            }
+            else
+            {
+                // If lives are zero, handle game over logic
+                GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+            }
+        }
+        else
+        {
+            Debug.LogError("LifeManager instance is null. Ensure that LifeManager is properly initialized.");
         }
     }
+}
 }
