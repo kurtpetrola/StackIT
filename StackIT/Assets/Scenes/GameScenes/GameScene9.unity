@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 232572293}
   - component: {fileID: 232572292}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: HSText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2052,7 +2052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb08bb899f16d84cbc1dfa490efaa03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PausePanel: {fileID: 367212060}
+  pauseMenu: {fileID: 0}
 --- !u!1 &1090236700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,7 +2426,7 @@ GameObject:
   - component: {fileID: 1386572862}
   - component: {fileID: 1386572861}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: GameOverPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
