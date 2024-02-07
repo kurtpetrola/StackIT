@@ -3708,7 +3708,7 @@ PrefabInstance:
     - target: {fileID: 7326954767867510156, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
       propertyPath: lockedItemImage1
       value: 
-      objectReference: {fileID: 573556620584176351, guid: 2fd3c549ab64e3241a944edf3341ae68, type: 3}
+      objectReference: {fileID: 1706820728679069145, guid: 2fd3c549ab64e3241a944edf3341ae68, type: 3}
     - target: {fileID: 7326954767867510156, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
       propertyPath: lockedItemImage2
       value: 
