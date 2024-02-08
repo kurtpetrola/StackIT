@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 269118974}
   - component: {fileID: 269118973}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: MapUnlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2221,8 +2221,8 @@ MonoBehaviour:
   unlockText1: {fileID: 269118973}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 1500348057738304497, guid: d53b357199eabd840ba1a8825ec4581c, type: 3}
-  lockedItemImage1: {fileID: 573556620584176351, guid: 2fd3c549ab64e3241a944edf3341ae68, type: 3}
-  yourButton: {fileID: 6359067211278394755, guid: af487588fda7bda42bf75afc783d05f2, type: 3}
+  lockedItemImage1: {fileID: 4755568855503929712, guid: 2fd3c549ab64e3241a944edf3341ae68, type: 3}
+  yourButton: {fileID: 1487744096308514770, guid: af487588fda7bda42bf75afc783d05f2, type: 3}
 --- !u!114 &1158821304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2538,7 +2538,7 @@ GameObject:
   - component: {fileID: 1449956600}
   - component: {fileID: 1449956599}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ItemUnlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

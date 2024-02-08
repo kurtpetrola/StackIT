@@ -2445,7 +2445,7 @@ GameObject:
   - component: {fileID: 1449956600}
   - component: {fileID: 1449956599}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ItemUnlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2503,7 +2503,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Unlock The 2X Item
+  m_Text: 2X Item Unlocked
 --- !u!222 &1449956600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2888,7 +2888,7 @@ GameObject:
   - component: {fileID: 1850066181}
   - component: {fileID: 1850066180}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: MapUnlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2946,7 +2946,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2nd Map Unlock
+  m_Text: 2nd Map Unlocked
 --- !u!222 &1850066181
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3627,11 +3627,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367407299773565425, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 220.58
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 367407299773565425, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 122.76
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 367407299773565425, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3698,6 +3698,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1850066180}
     - target: {fileID: 7326954767867510156, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
+      propertyPath: unlockText2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326954767867510156, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
+      propertyPath: yourButton1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326954767867510156, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
       propertyPath: mapUnlockText
       value: 
       objectReference: {fileID: 1850066180}
@@ -3712,7 +3720,7 @@ PrefabInstance:
     - target: {fileID: 7326954767867510156, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
       propertyPath: lockedItemImage2
       value: 
-      objectReference: {fileID: 5087410446041884336, guid: f6a18cd5609397a4d820bf34238afa6b, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

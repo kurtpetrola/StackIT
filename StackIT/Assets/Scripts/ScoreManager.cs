@@ -173,4 +173,4 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.Save();
         isLockRemoved = true;
     }
-}
+} 
