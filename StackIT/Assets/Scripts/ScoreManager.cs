@@ -1,4 +1,4 @@
- using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
@@ -79,18 +79,19 @@ public class ScoreManager : MonoBehaviour
             StartCoroutine(ShowUnlockMessage());
             unlockText.text = "2x Item Is Unlocked";
 
-           
+
 
             // Mark the unlock message as shown
             PlayerPrefs.SetInt(UnlockMessageShownKey, 1);
             PlayerPrefs.Save();
-          
+
         }
-  else  if
-            (playerScore == 3 ){
-                StartCoroutine(ShowUnlockMessage());
+        else if
+                  (playerScore == 3)
+        {
+            StartCoroutine(ShowUnlockMessage());
             unlockText.text = "2x Item Is Activated";
-            }
+        }
         if (playerScore == 4)
         {
             // Remove lockedItemImage1 when the player score reaches 4
@@ -111,7 +112,7 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
-         if (playerScore == 4 && highScoreManager.GetHighestScore() == 4)
+        if (playerScore == 4 && highScoreManager.GetHighestScore() == 4)
         {
             isButtonEnabled = true;
             PlayerPrefs.SetInt(ButtonStateKey, 1); // Save the button state
@@ -156,7 +157,7 @@ public class ScoreManager : MonoBehaviour
         isUnlockMessageShowing = false;
     }
 
-   private System.Collections.IEnumerator ShowUnlockMessage1()
+    private System.Collections.IEnumerator ShowUnlockMessage1()
     {
         isUnlockMessageShowing1 = true;
         unlockText1.gameObject.SetActive(true);
@@ -172,4 +173,4 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.Save();
         isLockRemoved = true;
     }
-}
+} 

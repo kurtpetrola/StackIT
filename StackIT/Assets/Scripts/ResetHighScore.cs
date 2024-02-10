@@ -41,4 +41,3 @@ public class ResetHighScore : MonoBehaviour
         yourButton.interactable = false;
     }
 }
-
