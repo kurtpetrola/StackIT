@@ -1,7 +1,7 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManagerMap1 : MonoBehaviour
 {
     public Text scoreText;
     public Text highestScoreText;
@@ -66,7 +66,7 @@ public class ScoreManager : MonoBehaviour
             UpdateHighestScoreUI();
         }
 
-        if (playerScore == 3 && !isUnlockMessageShowing)
+        if (playerScore == 5 && !isUnlockMessageShowing)
         {
             // Remove lock images when the player score reaches 3
             RemoveLockImages();
@@ -77,7 +77,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.Save();
 
             StartCoroutine(ShowUnlockMessage());
-            unlockText.text = "2x Item Is Unlocked";
+            unlockText.text = "";
 
 
 
@@ -90,9 +90,9 @@ public class ScoreManager : MonoBehaviour
                   (playerScore == 3)
         {
             StartCoroutine(ShowUnlockMessage());
-            unlockText.text = "2x Item Is Activated";
+            unlockText.text = "";
         }
-        if (playerScore == 4)
+        if (playerScore == 5)
         {
             // Remove lockedItemImage1 when the player score reaches 4
             lockedItemImage1.SetActive(false);
@@ -124,10 +124,7 @@ public class ScoreManager : MonoBehaviour
         }
 
 
-        if (playerScore == 4)
-        {
-            stackedItems++;
-        }
+        
 
         playerScore += stackedItems;
 
@@ -173,4 +170,4 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.Save();
         isLockRemoved = true;
     }
-} 
+}

@@ -9,6 +9,11 @@ public class GameplayController : MonoBehaviour
     public BoxSpawner box_Spawner;
     [HideInInspector]
     public BoxScript currentBox;
+    public BoxScript2 currentBox2;
+    public BoxScript3 currentBox3;
+    public BoxScript4 currentBox4;
+    public FakeBox fakeBox;
+
     public CameraFollow cameraScript;
     private int moveCount;
     public GameObject[] objectsToDrop;
@@ -36,7 +41,16 @@ public class GameplayController : MonoBehaviour
             int randomIndex = UnityEngine.Random.Range(0, objectsToDrop.Length);
             GameObject objectToDrop = objectsToDrop[randomIndex];
 
-            currentBox.DropRandomObject();
+            if (currentBox != null)
+                currentBox.DropRandomObject();
+            else if (currentBox2 != null)
+                currentBox2.DropRandomObject();
+            else if (currentBox3 != null)
+                currentBox3.DropRandomObject();
+            else if (currentBox4 != null)
+                currentBox4.DropRandomObject();
+            else if (fakeBox != null)
+                fakeBox.DropRandomObject();
         }
     }
 
@@ -48,6 +62,8 @@ public class GameplayController : MonoBehaviour
     void NewBox()
     {
         box_Spawner.SpawnBox();
+        // Set the spawned box as the current box
+        
     }
 
     public void MoveCamera()

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ButtonLock : MonoBehaviour
 {
     public Button buttonToLock;
-    public ScoreManager scoreManager;
+    public ScoreManagerMap1 scoreManager;
 
     private void Awake()
     {

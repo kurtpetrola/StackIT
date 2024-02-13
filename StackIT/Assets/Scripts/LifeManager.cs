@@ -5,7 +5,7 @@ using UnityEngine;
 public class LifeManager : MonoBehaviour
 {
     public static LifeManager Instance;
-    public int lives = 3;
+    public int lives = 1;
     public LifeUIManager lifeUIManager; // Reference to the LifeUIManager script
 
     private void Awake()

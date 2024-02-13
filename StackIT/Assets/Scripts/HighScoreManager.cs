@@ -14,12 +14,7 @@ public void LoadHighestScore()
     int currentScore = 0; // This will be the score for the current game.
     int highestScore = PlayerPrefs.GetInt("HighestScore", 0);
 
-    if (highestScore >= 4)
-    {
-        highestScore++;
-        currentScore = highestScore; // Set currentScore to the current high score.
-    }
-
+    
     highestScoreText.text = "Highest Score: " + highestScore;
 
     // Use currentScore for your game logic.

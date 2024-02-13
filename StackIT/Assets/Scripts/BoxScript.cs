@@ -15,8 +15,9 @@ public class BoxScript : MonoBehaviour
     private bool gameOver;
     private bool ignoreCollision;
     private bool ignoreTrigger;
-    private ScoreManager scoreManager;
-    private float currentBoxMoveSpeed = 5f;
+    private ScoreManagerMap1 scoreManager;
+    
+    private float currentBoxMoveSpeed = 2.5f;
     private GameObject lastDroppedItem;
     private bool droppedTwoItemsInSuccession;
     private int successfulLandings = 0;
@@ -28,11 +29,13 @@ public class BoxScript : MonoBehaviour
         myBody.gravityScale = 0f;
 
         // Find the ScoreManager script in the scene.
-        scoreManager = FindObjectOfType<ScoreManager>();
+        scoreManager = FindObjectOfType<ScoreManagerMap1>();
+
         if (scoreManager == null)
         {
             Debug.LogError("ScoreManager script not found in the scene.");
         }
+      
     }
 
     void Start()
@@ -41,7 +44,7 @@ public class BoxScript : MonoBehaviour
 
         if (Random.Range(0, 2) > 0)
         {
-            move_Speed = 4f;
+            move_Speed = 2.5f;
         }
 
         currentBoxMoveSpeed = move_Speed;
@@ -122,6 +125,7 @@ public class BoxScript : MonoBehaviour
 
         // Update the score using the ScoreManager.
         scoreManager.IncreaseScore();
+        
         GameOverUIManager.Instance.IncreaseScore();
 
         landedBoxCount++;
@@ -164,35 +168,35 @@ public class BoxScript : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D target)
-{
-    if (ignoreTrigger)
-        return;
-    
-    if (target.tag == "GameOver")
     {
-        gameOver = true;
-        canMove = false;
-        ignoreTrigger = true;
+        if (ignoreTrigger)
+            return;
 
-        if (LifeManager.Instance != null)
+        if (target.tag == "GameOver")
         {
-            LifeManager.Instance.DecreaseLife(); // Decrease life when the box hits the game over trigger
+            gameOver = true;
+            canMove = false;
+            ignoreTrigger = true;
 
-            if (LifeManager.Instance.lives > 0)
+            if (LifeManager.Instance != null)
             {
-                // If lives are remaining, continue spawning new boxes
-                GameplayController.instance.SpawnNewBox();
+                LifeManager.Instance.DecreaseLife(); // Decrease life when the box hits the game over trigger
+
+                if (LifeManager.Instance.lives > 0)
+                {
+                    // If lives are remaining, continue spawning new boxes
+                    GameplayController.instance.SpawnNewBox();
+                }
+                else
+                {
+                    // If lives are zero, handle game over logic
+                    GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+                }
             }
             else
             {
-                // If lives are zero, handle game over logic
-                GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+                Debug.LogError("LifeManager instance is null. Ensure that LifeManager is properly initialized.");
             }
         }
-        else
-        {
-            Debug.LogError("LifeManager instance is null. Ensure that LifeManager is properly initialized.");
-        }
     }
-}
 }
