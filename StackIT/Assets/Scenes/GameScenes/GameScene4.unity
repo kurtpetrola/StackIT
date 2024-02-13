@@ -2191,7 +2191,7 @@ MonoBehaviour:
   unlockText1: {fileID: 269118973}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 1097652283764135602, guid: a41ef78de17fb5a4a895a8e294b4bc85, type: 3}
-  lockedItemImage1: {fileID: 7172159873629112428, guid: 467b28a48899d8143be760f7b5738be1, type: 3}
+  lockedItemImage1: {fileID: 3063607509978513592, guid: ff0808a3b79216e48b541c767f775b34, type: 3}
   yourButton: {fileID: 1179472997798887111, guid: a18bf31a2047fb748be4242e8ef36086, type: 3}
 --- !u!1 &1236499342
 GameObject:
