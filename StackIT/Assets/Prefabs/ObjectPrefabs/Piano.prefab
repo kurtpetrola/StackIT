@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6055691881037241795}
   - component: {fileID: 172006778218742615}
   - component: {fileID: 7467632270054776270}
-  - component: {fileID: -6520764360476565745}
+  - component: {fileID: -8041459822524839845}
   m_Layer: 0
   m_Name: Piano
   m_TagString: Box
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-6520764360476565745
+--- !u!114 &-8041459822524839845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8516474104200412569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be71f4a5528bc79499ae9cd06cf3addb, type: 3}
+  m_Script: {fileID: 11500000, guid: b9c13601f2476ef429bb4dad1321940c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToDrop: []

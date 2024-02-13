@@ -1299,6 +1299,8 @@ MonoBehaviour:
   currentBox2: {fileID: 0}
   currentBox3: {fileID: 0}
   currentBox4: {fileID: 0}
+  currentBox5: {fileID: 0}
+  currentBox6: {fileID: 0}
   fakeBox: {fileID: 0}
   cameraScript: {fileID: 1862462933}
   objectsToDrop:
@@ -2239,7 +2241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxPrefabs:
   - {fileID: 8516474104200412569, guid: 5f65a80478df2624289ce4d733b89c55, type: 3}
-  - {fileID: 8516474104200412569, guid: 26177d12a4f3476419e2731eec62abe1, type: 3}
+  - {fileID: 8516474104200412569, guid: f2dfa98859055244db71e487d22625c2, type: 3}
   - {fileID: 8516474104200412569, guid: 1a2b6cc5d49eea24a8467f794e5dfc6b, type: 3}
   - {fileID: 8516474104200412569, guid: 169e60d5d3aa37d4fa467129d27ce61d, type: 3}
   - {fileID: 8516474104200412569, guid: da3bf6ef5445a784091743dc01d19022, type: 3}

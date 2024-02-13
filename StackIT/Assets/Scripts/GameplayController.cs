@@ -13,6 +13,10 @@ public class GameplayController : MonoBehaviour
     public BoxScript3 currentBox3;
     public BoxScript4 currentBox4;
     public BoxScript5 currentBox5;
+     public BoxScript6 currentBox6;
+     public BoxScript7 currentBox7;
+      public BoxScript8 currentBox8;
+      public BoxScript9 currentBox9;
     public FakeBox fakeBox;
 
     public CameraFollow cameraScript;
@@ -52,6 +56,14 @@ public class GameplayController : MonoBehaviour
                 currentBox4.DropRandomObject();
                  else if (currentBox5 != null)
                 currentBox5.DropRandomObject();
+                else if (currentBox6 != null)
+                currentBox6.DropRandomObject();
+                 else if (currentBox7 != null)
+                currentBox7.DropRandomObject();
+                else if (currentBox8 != null)
+                currentBox8.DropRandomObject();
+                 else if (currentBox9 != null)
+                currentBox9.DropRandomObject();
             else if (fakeBox != null)
                 fakeBox.DropRandomObject();
         }
