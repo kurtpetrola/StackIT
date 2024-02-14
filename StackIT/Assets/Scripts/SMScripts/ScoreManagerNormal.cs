@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManagerMap2 : MonoBehaviour
+public class ScoreManagerNormal : MonoBehaviour
 {
     public Text scoreText;
     public Text highestScoreText;
@@ -66,7 +66,7 @@ public class ScoreManagerMap2 : MonoBehaviour
             UpdateHighestScoreUI();
         }
 
-        if (playerScore == 5 && !isUnlockMessageShowing)
+        if (playerScore == 3 && !isUnlockMessageShowing)
         {
             // Remove lock images when the player score reaches 3
             RemoveLockImages();
@@ -77,7 +77,7 @@ public class ScoreManagerMap2 : MonoBehaviour
             PlayerPrefs.Save();
 
             StartCoroutine(ShowUnlockMessage());
-            unlockText.text = "";
+            unlockText.text = "2x Item Is Unlocked";
 
 
 
@@ -90,9 +90,9 @@ public class ScoreManagerMap2 : MonoBehaviour
                   (playerScore == 3)
         {
             StartCoroutine(ShowUnlockMessage());
-            unlockText.text = "";
+            unlockText.text = "2x Item Is Activated";
         }
-        if (playerScore == 5)
+        if (playerScore == 4)
         {
             // Remove lockedItemImage1 when the player score reaches 4
             lockedItemImage1.SetActive(false);
@@ -104,7 +104,7 @@ public class ScoreManagerMap2 : MonoBehaviour
             if (!isUnlockMessageShowing1)
             {
                 StartCoroutine(ShowUnlockMessage1());
-                unlockText1.text = "3rd Map Unlocked";
+                unlockText1.text = "2ND Map Is Unlocked";
 
                 // Mark the second unlock message as shown
                 PlayerPrefs.SetInt(UnlockMessage1ShownKey, 1);
@@ -124,7 +124,10 @@ public class ScoreManagerMap2 : MonoBehaviour
         }
 
 
-
+        if (playerScore == 4)
+        {
+            stackedItems++;
+        }
 
         playerScore += stackedItems;
 

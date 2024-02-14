@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/MultiplayerGS.unity
     guid: 07d5573e654d1b3448486938a6c5a805
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/NormalGS.unity
+    guid: c1c0ee929d3ef684aa8cb5c4c88efd50
   m_configObjects: {}
