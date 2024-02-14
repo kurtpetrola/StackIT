@@ -1172,6 +1172,10 @@ MonoBehaviour:
   currentBox3: {fileID: 0}
   currentBox4: {fileID: 0}
   currentBox5: {fileID: 0}
+  currentBox6: {fileID: 0}
+  currentBox7: {fileID: 0}
+  currentBox8: {fileID: 0}
+  currentBox9: {fileID: 0}
   fakeBox: {fileID: 0}
   cameraScript: {fileID: 1862462933}
   objectsToDrop:
@@ -2219,8 +2223,8 @@ MonoBehaviour:
   unlockText1: {fileID: 378591632}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 6540992616109092478, guid: 150f2ec6c8eb176448d0a82615526b2e, type: 3}
-  lockedItemImage1: {fileID: 3548739321374079223, guid: 1ecc3ecbd8f0dcd449ad77adbf95667b, type: 3}
-  yourButton: {fileID: 6592842751978103142, guid: 719013b3a088cbf4fa37e49e278c8b9e, type: 3}
+  lockedItemImage1: {fileID: 4651943974607573187, guid: 1ecc3ecbd8f0dcd449ad77adbf95667b, type: 3}
+  yourButton: {fileID: 893606504875532399, guid: 719013b3a088cbf4fa37e49e278c8b9e, type: 3}
 --- !u!1 &1236499342
 GameObject:
   m_ObjectHideFlags: 0

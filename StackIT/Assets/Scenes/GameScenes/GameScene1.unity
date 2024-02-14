@@ -1273,6 +1273,11 @@ MonoBehaviour:
   currentBox2: {fileID: 0}
   currentBox3: {fileID: 0}
   currentBox4: {fileID: 0}
+  currentBox5: {fileID: 0}
+  currentBox6: {fileID: 0}
+  currentBox7: {fileID: 0}
+  currentBox8: {fileID: 0}
+  currentBox9: {fileID: 0}
   fakeBox: {fileID: 0}
   cameraScript: {fileID: 1862462933}
   objectsToDrop:
@@ -3606,9 +3611,9 @@ MonoBehaviour:
   unlockText: {fileID: 1449956599}
   unlockText1: {fileID: 1850066180}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  lockedItemImage: {fileID: 5912473408376748330, guid: 2db619edde9762244bd8498dbe35b3f3, type: 3}
-  lockedItemImage1: {fileID: 5912473408376748330, guid: 2db619edde9762244bd8498dbe35b3f3, type: 3}
-  yourButton: {fileID: 1487744096308514770, guid: af487588fda7bda42bf75afc783d05f2, type: 3}
+  lockedItemImage: {fileID: 6909120649870592188, guid: d53b357199eabd840ba1a8825ec4581c, type: 3}
+  lockedItemImage1: {fileID: 1123314372617588168, guid: 2db619edde9762244bd8498dbe35b3f3, type: 3}
+  yourButton: {fileID: 3832719599575969239, guid: af487588fda7bda42bf75afc783d05f2, type: 3}
 --- !u!114 &8444892633116510745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4195087939720534263, guid: af6c1368104ff0d4bb54f3735fbba97a, type: 3}
