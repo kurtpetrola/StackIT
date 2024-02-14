@@ -650,7 +650,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5th Map Unlocked
+  m_Text: 6th Map Unlocked
 --- !u!222 &378591633
 CanvasRenderer:
   m_ObjectHideFlags: 0
