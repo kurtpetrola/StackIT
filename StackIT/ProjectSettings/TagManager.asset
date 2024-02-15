@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - GameOver
   - GameOverBox
+  - TNT
   layers:
   - Default
   - TransparentFX

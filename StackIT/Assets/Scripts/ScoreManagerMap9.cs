@@ -138,7 +138,16 @@ public class ScoreManagerMap9 : MonoBehaviour
         // Notify subscribers of the score change
         ScoreChanged?.Invoke(playerScore);
     }
+public void DecreaseScore()
+    {
+        playerScore-=1;
+         playerScore += stackedItems;
 
+        scoreText.text = "Score: " + playerScore.ToString();
+
+        // Notify subscribers of the score change
+        ScoreChanged?.Invoke(playerScore);
+    }
     private void LoadHighestScore()
     {
         highScoreManager.LoadHighestScore();

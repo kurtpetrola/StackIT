@@ -154,6 +154,26 @@ public class BoxScript9 : MonoBehaviour
     if (ignoreCollision)
         return;
 
+         if (gameObject.tag == "TNT")
+        {
+            if (target.gameObject.tag == "Box")
+            {
+                Destroy(target.gameObject); // Destroy the TNT
+                Destroy(gameObject); // Destroy the box
+                playerScore-=1;
+                scoreManager.DecreaseScore();
+                GameplayController.instance.SpawnNewBox();
+                return;
+            }
+            if (target.gameObject.tag == "Platform")
+            {
+                Destroy(gameObject);
+                GameplayController.instance.SpawnNewBox();
+                return;
+            }
+
+        }
+
     // Check if this box is the new special "game over" box by comparing tags
     if (gameObject.tag == "GameOverBox")
     {
@@ -189,6 +209,11 @@ public class BoxScript9 : MonoBehaviour
 
     if (target.tag == "GameOver")
     {
+        if (gameObject.tag == "TNT")
+            {
+                GameplayController.instance.SpawnNewBox();
+                return;
+            }
         // Check if this box is a "GameOverBox"
         if (gameObject.tag == "GameOverBox")
         {

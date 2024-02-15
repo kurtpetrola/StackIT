@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6055691881037241795}
   - component: {fileID: 172006778218742615}
   - component: {fileID: 7467632270054776270}
-  - component: {fileID: -6520764360476565745}
+  - component: {fileID: 5257209529813386589}
   m_Layer: 0
   m_Name: Dirt
-  m_TagString: Box
+  m_TagString: GameOverBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-6520764360476565745
+--- !u!114 &5257209529813386589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8516474104200412569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be71f4a5528bc79499ae9cd06cf3addb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b548aa07bfa5024597057e57ba0d631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToDrop: []

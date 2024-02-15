@@ -128,10 +128,20 @@ public class ScoreManagerMap8 : MonoBehaviour
 
         if (fourXButtonScriptMap8.IsButtonActive())
         {
-            playerScore +=3;
+            playerScore += 3;
         }
 
         playerScore += stackedItems;
+
+        scoreText.text = "Score: " + playerScore.ToString();
+
+        // Notify subscribers of the score change
+        ScoreChanged?.Invoke(playerScore);
+    }
+    public void DecreaseScore()
+    {
+        playerScore-=1;
+         playerScore += stackedItems;
 
         scoreText.text = "Score: " + playerScore.ToString();
 
