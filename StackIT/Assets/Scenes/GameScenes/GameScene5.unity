@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5686275, g: 0.039215688, b: 0.40392157, a: 0.94509804}
+  m_Color: {r: 0.003921569, g: 0.99607843, b: 0.8235294, a: 0.94509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1177,6 +1177,8 @@ MonoBehaviour:
   currentBox8: {fileID: 0}
   currentBox9: {fileID: 0}
   fakeBox: {fileID: 0}
+  movingGameoverScript: {fileID: 0}
+  movingGameoverScript1: {fileID: 0}
   cameraScript: {fileID: 1862462933}
   objectsToDrop:
   - {fileID: 0}
@@ -2173,6 +2175,8 @@ MonoBehaviour:
   - {fileID: 8516474104200412569, guid: 26177d12a4f3476419e2731eec62abe1, type: 3}
   - {fileID: 8516474104200412569, guid: baca592a25ec81f4b8caa04e75a625c8, type: 3}
   - {fileID: 8516474104200412569, guid: dff118a8d45748049b3da976c06609b6, type: 3}
+  - {fileID: 8516474104200412569, guid: 5ada490260fb4a043a594cedfddeb63a, type: 3}
+  - {fileID: 8516474104200412569, guid: 0977e171dec9f3b4cbddc81ddabc1b42, type: 3}
 --- !u!1 &1293545207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,7 +2540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5686275, g: 0.039215688, b: 0.40392157, a: 0.94509804}
+  m_Color: {r: 0.003921569, g: 0.99607843, b: 0.8235294, a: 0.94509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6055691881037241795}
   - component: {fileID: 172006778218742615}
   - component: {fileID: 7467632270054776270}
+  - component: {fileID: -6520764360476565745}
   m_Layer: 0
-  m_Name: TNT
+  m_Name: Dirt
   m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 026b0f21123283f44af6463cfdfdab03, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2df8c23c21f72bc4799d7ff0848ceeab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6520764360476565745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8516474104200412569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be71f4a5528bc79499ae9cd06cf3addb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDrop: []

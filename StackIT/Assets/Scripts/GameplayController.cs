@@ -13,11 +13,13 @@ public class GameplayController : MonoBehaviour
     public BoxScript3 currentBox3;
     public BoxScript4 currentBox4;
     public BoxScript5 currentBox5;
-     public BoxScript6 currentBox6;
-     public BoxScript7 currentBox7;
-      public BoxScript8 currentBox8;
-      public BoxScript9 currentBox9;
+    public BoxScript6 currentBox6;
+    public BoxScript7 currentBox7;
+    public BoxScript8 currentBox8;
+    public BoxScript9 currentBox9;
     public FakeBox fakeBox;
+    public MovingGameover movingGameoverScript;
+    public MovingGameover movingGameoverScript1;
 
     public CameraFollow cameraScript;
     private int moveCount;
@@ -82,15 +84,25 @@ public class GameplayController : MonoBehaviour
     }
 
     public void MoveCamera()
+{
+    moveCount++;
+    if (moveCount == 2)
     {
-        moveCount++;
-        if (moveCount == 2)
+        moveCount = 0;
+        cameraScript.targetPos.y += 2f;
+        
+        // If there is a movingGameoverScript attached, move it up as well.
+        if (movingGameoverScript != null)
         {
-            moveCount = 0;
-            cameraScript.targetPos.y += 2f;
+            movingGameoverScript.MoveUp();
+        }
+
+        if (movingGameoverScript1 != null)
+        {
+            movingGameoverScript1.MoveUp();
         }
     }
-
+}
     public void RestartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(
