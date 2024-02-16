@@ -1376,6 +1376,8 @@ MonoBehaviour:
   currentBox8: {fileID: 0}
   currentBox9: {fileID: 0}
   fakeBox: {fileID: 0}
+  movingGameoverScript: {fileID: 0}
+  movingGameoverScript1: {fileID: 0}
   cameraScript: {fileID: 1862462933}
   objectsToDrop:
   - {fileID: 0}
@@ -2422,9 +2424,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxPrefabs:
   - {fileID: 8516474104200412569, guid: 5ad7323e90164cf4eba1c2c510106102, type: 3}
-  - {fileID: 8516474104200412569, guid: ca3eb704f28ccbb4fadb8c62fb97f15d, type: 3}
+  - {fileID: 8516474104200412569, guid: 6e6c75a0be0edb742979b878ff45e52e, type: 3}
   - {fileID: 8516474104200412569, guid: e96f63877e46cb54bab99be568e58c18, type: 3}
   - {fileID: 8516474104200412569, guid: f4f97d154a1078a4582d254e01a81703, type: 3}
+  - {fileID: 8516474104200412569, guid: f2dfa98859055244db71e487d22625c2, type: 3}
+  - {fileID: 8516474104200412569, guid: f4402473bc1e0c74f80dc845e1aeeb54, type: 3}
 --- !u!1 &1386163780
 GameObject:
   m_ObjectHideFlags: 0
