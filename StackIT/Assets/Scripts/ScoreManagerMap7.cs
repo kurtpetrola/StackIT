@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +11,7 @@ public class ScoreManagerMap7 : MonoBehaviour
     public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage1; // Reference to the second locked image
-    public Button yourButton; // Reference to your button
+    public Button yourButton7; // Reference to your button
 
     private int playerScore = 0;
     private int stackedItems = 0;
@@ -22,8 +21,8 @@ public class ScoreManagerMap7 : MonoBehaviour
     private bool isButtonEnabled = false; // Track whether the button is enabled
 
     // PlayerPrefs keys
-    private const string LockStateKey = "LockState";
-    private const string ButtonStateKey = "ButtonState";
+    private const string LockStateKey7 = "LockState7";
+    private const string ButtonStateKey7 = "ButtonState7";
     private const string LockedImageStateKey = "LockedImageState";
     private const string LockedImage1StateKey = "LockedImage1State";
     private const string UnlockMessageShownKey = "UnlockMessageShown";
@@ -38,13 +37,13 @@ public class ScoreManagerMap7 : MonoBehaviour
         UpdateHighestScoreUI();
 
         // Load the saved states
-        isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
-        isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey, 0) == 1;
+        isLockRemoved = PlayerPrefs.GetInt(LockStateKey7, 0) == 1;
+        isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey7, 0) == 1;
         bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
         bool isLockedImage1Active = PlayerPrefs.GetInt(LockedImage1StateKey, 1) == 1;
 
         // Set the button and locked images according to the saved states
-        yourButton.interactable = isButtonEnabled;
+        yourButton7.interactable = isButtonEnabled;
         lockedItemImage.SetActive(isLockedImageActive);
         lockedItemImage1.SetActive(isLockedImage1Active);
 
@@ -74,7 +73,7 @@ public class ScoreManagerMap7 : MonoBehaviour
             RemoveLockImages();
             // Also remove lockedItemImage
             lockedItemImage.SetActive(false);
-            PlayerPrefs.SetInt(LockStateKey, 1);
+            PlayerPrefs.SetInt(LockStateKey7, 1);
             PlayerPrefs.SetInt(LockedImageStateKey, 0);
             PlayerPrefs.Save();
 
@@ -117,18 +116,18 @@ public class ScoreManagerMap7 : MonoBehaviour
         if (playerScore == 4 && highScoreManager.GetHighestScore() == 4)
         {
             isButtonEnabled = true;
-            PlayerPrefs.SetInt(ButtonStateKey, 1); // Save the button state
+            PlayerPrefs.SetInt(ButtonStateKey7, 1); // Save the button state
         }
 
         if (isButtonEnabled)
         {
-            yourButton.interactable = true;
+            yourButton7.interactable = true;
         }
 
 
         if (threeXButtonScriptMap7.IsButtonActive())
         {
-            playerScore +=2;
+            playerScore += 2;
         }
 
         playerScore += stackedItems;
@@ -171,7 +170,7 @@ public class ScoreManagerMap7 : MonoBehaviour
 
     private void RemoveLockImages()
     {
-        PlayerPrefs.SetInt(LockStateKey, 1);
+        PlayerPrefs.SetInt(LockStateKey7, 1);
         PlayerPrefs.Save();
         isLockRemoved = true;
     }

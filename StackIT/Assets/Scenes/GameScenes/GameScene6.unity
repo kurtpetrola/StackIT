@@ -380,9 +380,9 @@ MonoBehaviour:
   unlockText: {fileID: 1449956599}
   unlockText1: {fileID: 1384548048}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  lockedItemImage: {fileID: 5441628427057569261, guid: 996a7f0ad2a0c9243bc062959600ae1f, type: 3}
+  lockedItemImage: {fileID: 2087361424117850407, guid: 29ca1b39111153b42a13d2c9856a3e1a, type: 3}
   lockedItemImage1: {fileID: 5586056488436831877, guid: c8cbf1d257792e24d933e0f32739a401, type: 3}
-  yourButton: {fileID: 2377603090503361574, guid: 377ba760f73dd534aa04e9e88278d1c3, type: 3}
+  yourButton6: {fileID: 2377603090503361574, guid: 377ba760f73dd534aa04e9e88278d1c3, type: 3}
 --- !u!114 &287205300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2752,8 +2752,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 411.7572, y: -45.7804}
-  m_SizeDelta: {x: 236.3006, y: 236.0115}
+  m_AnchoredPosition: {x: 410, y: -45}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590829860
 MonoBehaviour:
@@ -2845,7 +2845,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0673998380a0d784ca0d286228c35406, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 531060957bb29dd469535b9606912053, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3310,8 +3310,8 @@ Transform:
   m_GameObject: {fileID: 1893834977}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6611, z: 0}
-  m_LocalScale: {x: 0.7622969, y: 0.6226822, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.6601491, y: 0.561348, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManagerMap2 : MonoBehaviour
+public class ScoreManagerMap1 : MonoBehaviour
 {
     public Text scoreText;
     public Text highestScoreText;
@@ -9,7 +9,7 @@ public class ScoreManagerMap2 : MonoBehaviour
     public Text unlockText1; // Reference to the second unlock text
     public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
-    public GameObject lockedItemImage1; // Reference to the second locked image
+    public GameObject lockedItemImage2; // Reference to the second locked image
     public Button yourButton; // Reference to your button
 
     private int playerScore = 0;
@@ -23,7 +23,7 @@ public class ScoreManagerMap2 : MonoBehaviour
     private const string LockStateKey = "LockState";
     private const string ButtonStateKey = "ButtonState";
     private const string LockedImageStateKey = "LockedImageState";
-    private const string LockedImage1StateKey = "LockedImage1State";
+    private const string LockedImage2StateKey = "LockedImage2State";
     private const string UnlockMessageShownKey = "UnlockMessageShown";
     private const string UnlockMessage1ShownKey = "UnlockMessage1Shown";
 
@@ -39,12 +39,12 @@ public class ScoreManagerMap2 : MonoBehaviour
         isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
         isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey, 0) == 1;
         bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-        bool isLockedImage1Active = PlayerPrefs.GetInt(LockedImage1StateKey, 1) == 1;
+        bool isLockedImage2Active = PlayerPrefs.GetInt(LockedImage2StateKey, 1) == 1;
 
         // Set the button and locked images according to the saved states
         yourButton.interactable = isButtonEnabled;
         lockedItemImage.SetActive(isLockedImageActive);
-        lockedItemImage1.SetActive(isLockedImage1Active);
+        lockedItemImage2.SetActive(isLockedImage2Active);
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
@@ -95,8 +95,8 @@ public class ScoreManagerMap2 : MonoBehaviour
         if (playerScore == 5)
         {
             // Remove lockedItemImage1 when the player score reaches 4
-            lockedItemImage1.SetActive(false);
-            PlayerPrefs.SetInt(LockedImage1StateKey, 0);
+            lockedItemImage2.SetActive(false);
+            PlayerPrefs.SetInt(LockedImage2StateKey, 0);
             PlayerPrefs.Save();
 
             RemoveLockImages(); // Remove any remaining lock images if needed
@@ -104,7 +104,7 @@ public class ScoreManagerMap2 : MonoBehaviour
             if (!isUnlockMessageShowing1)
             {
                 StartCoroutine(ShowUnlockMessage1());
-                unlockText1.text = "3rd Map Unlocked";
+                unlockText1.text = "2ND Map Is Unlocked";
 
                 // Mark the second unlock message as shown
                 PlayerPrefs.SetInt(UnlockMessage1ShownKey, 1);

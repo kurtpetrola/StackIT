@@ -179,9 +179,9 @@ MonoBehaviour:
   unlockText: {fileID: 1449956599}
   unlockText1: {fileID: 516778375}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  lockedItemImage: {fileID: 5441628427057569261, guid: 996a7f0ad2a0c9243bc062959600ae1f, type: 3}
+  lockedItemImage: {fileID: 2087361424117850407, guid: 29ca1b39111153b42a13d2c9856a3e1a, type: 3}
   lockedItemImage1: {fileID: 1131383868261681218, guid: 74420801e638b174b8bab59c2b994480, type: 3}
-  yourButton: {fileID: 3985470187120145028, guid: d83a8e8d3300b324da1363a232166df0, type: 3}
+  yourButton7: {fileID: 3985470187120145028, guid: d83a8e8d3300b324da1363a232166df0, type: 3}
 --- !u!114 &54490454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,8 +2012,8 @@ Transform:
   m_GameObject: {fileID: 1056445698}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.87, y: -0.47, z: 0}
-  m_LocalScale: {x: 0.7034, y: 0.5813, z: 1}
+  m_LocalPosition: {x: -1.7, y: -0.5, z: 0}
+  m_LocalScale: {x: 0.601196, y: 0.5608383, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2195,8 +2195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 411.7572, y: -45.7804}
-  m_SizeDelta: {x: 236.3006, y: 236.0115}
+  m_AnchoredPosition: {x: 410, y: -45}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072129465
 MonoBehaviour:
@@ -2274,7 +2274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0673998380a0d784ca0d286228c35406, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 531060957bb29dd469535b9606912053, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3375,8 +3375,8 @@ Transform:
   m_GameObject: {fileID: 1678667634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
-  m_LocalScale: {x: 0.7034, y: 0.5813, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.601196, y: 0.51997286, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

@@ -1668,9 +1668,9 @@ MonoBehaviour:
   unlockText: {fileID: 1449956599}
   unlockText1: {fileID: 1924038757}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  lockedItemImage: {fileID: 5441628427057569261, guid: 996a7f0ad2a0c9243bc062959600ae1f, type: 3}
+  lockedItemImage: {fileID: 7814827074198074617, guid: 68c52735ffa1ef346896a8abde8d0372, type: 3}
   lockedItemImage1: {fileID: 792779084472635930, guid: afd2ab44d0a93ca41a2902c0c56c651c, type: 3}
-  yourButton: {fileID: 5133445049406813708, guid: 65cd78a5195cc8f41bcfb1744a26d8fc, type: 3}
+  yourButton9: {fileID: 5133445049406813708, guid: 65cd78a5195cc8f41bcfb1744a26d8fc, type: 3}
 --- !u!114 &894304344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3169,8 +3169,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 411.7572, y: -45.7804}
-  m_SizeDelta: {x: 236.3006, y: 236.0115}
+  m_AnchoredPosition: {x: 410, y: -45}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1882992095
 MonoBehaviour:
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4863c75c918d4e742b595f44488419e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3651046647593bb409b41fdfcd0f5201, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
