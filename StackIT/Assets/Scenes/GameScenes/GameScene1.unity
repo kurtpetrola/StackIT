@@ -2244,10 +2244,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxPrefabs:
-  - {fileID: 8516474104200412569, guid: c67e1eacdc355ec4493c21698181a394, type: 3}
-  - {fileID: 8516474104200412569, guid: ba9bb660a28cbb54490b9171de7b60d5, type: 3}
-  - {fileID: 8516474104200412569, guid: a37db7d507f15064a9e5b445ff202108, type: 3}
   - {fileID: 8516474104200412569, guid: 19b24bb58eba1b541adef151afbaf5be, type: 3}
+  - {fileID: 8516474104200412569, guid: ba9bb660a28cbb54490b9171de7b60d5, type: 3}
+  - {fileID: 8516474104200412569, guid: c67e1eacdc355ec4493c21698181a394, type: 3}
+  - {fileID: 8516474104200412569, guid: a37db7d507f15064a9e5b445ff202108, type: 3}
 --- !u!1 &1238254904
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class ResetHighScore : MonoBehaviour
 
     public GameObject lockedItemImage1; // Reference to the first locked image
     public GameObject lockedItemImage2; // Reference to the second locked image
+    public GameObject lockedItemImage3; // Reference to the second locked image
     public GameObject lockedItemImage4; // Reference to the second locked image
     public GameObject lockedItemImage5; // Reference to the second locked image
     public GameObject lockedItemImage6; // Reference to the second locked image
@@ -65,6 +66,7 @@ public class ResetHighScore : MonoBehaviour
 
         PlayerPrefs.SetInt("LockedImage1State", 1); // Set the first locked image to active
         PlayerPrefs.SetInt("LockedImage2State", 1); // Set the second locked image to active
+        // PlayerPrefs.SetInt("LockedImage3State", 1); // Set the second locked image to active
         PlayerPrefs.SetInt("LockedImage4State", 1); // Set the second locked image to active
         PlayerPrefs.SetInt("LockedImage5State", 1); // Set the second locked image to active
         PlayerPrefs.SetInt("LockedImage6State", 1); // Set the second locked image to active
@@ -89,6 +91,7 @@ public class ResetHighScore : MonoBehaviour
         // Show the locked images after resetting
         lockedItemImage1.SetActive(true);
         lockedItemImage2.SetActive(true);
+        // lockedItemImage3.SetActive(true);
         lockedItemImage4.SetActive(true);
         lockedItemImage5.SetActive(true);
         lockedItemImage6.SetActive(true);
