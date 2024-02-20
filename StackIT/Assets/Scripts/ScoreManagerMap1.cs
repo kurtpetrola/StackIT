@@ -10,7 +10,7 @@ public class ScoreManagerMap1 : MonoBehaviour
     public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage2; // Reference to the second locked image
-    public Button yourButton; // Reference to your button
+    public Button yourButton2; // Reference to your button
 
     private int playerScore = 0;
     private int stackedItems = 0;
@@ -42,7 +42,7 @@ public class ScoreManagerMap1 : MonoBehaviour
         bool isLockedImage2Active = PlayerPrefs.GetInt(LockedImage2StateKey, 1) == 1;
 
         // Set the button and locked images according to the saved states
-        yourButton.interactable = isButtonEnabled;
+        yourButton2.interactable = isButtonEnabled;
         lockedItemImage.SetActive(isLockedImageActive);
         lockedItemImage2.SetActive(isLockedImage2Active);
 
@@ -120,7 +120,7 @@ public class ScoreManagerMap1 : MonoBehaviour
 
         if (isButtonEnabled)
         {
-            yourButton.interactable = true;
+            yourButton2.interactable = true;
         }
 
 

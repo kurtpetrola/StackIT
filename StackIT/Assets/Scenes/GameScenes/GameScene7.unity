@@ -180,8 +180,8 @@ MonoBehaviour:
   unlockText1: {fileID: 516778375}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 2087361424117850407, guid: 29ca1b39111153b42a13d2c9856a3e1a, type: 3}
-  lockedItemImage1: {fileID: 1131383868261681218, guid: 74420801e638b174b8bab59c2b994480, type: 3}
-  yourButton7: {fileID: 3985470187120145028, guid: d83a8e8d3300b324da1363a232166df0, type: 3}
+  lockedItemImage8: {fileID: 1131383868261681218, guid: 74420801e638b174b8bab59c2b994480, type: 3}
+  yourButton8: {fileID: 3985470187120145028, guid: d83a8e8d3300b324da1363a232166df0, type: 3}
 --- !u!114 &54490454
 MonoBehaviour:
   m_ObjectHideFlags: 0

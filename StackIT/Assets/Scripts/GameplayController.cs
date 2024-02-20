@@ -17,6 +17,7 @@ public class GameplayController : MonoBehaviour
     public BoxScript7 currentBox7;
     public BoxScript8 currentBox8;
     public BoxScript9 currentBox9;
+    public NormalBoxScript currentBoxNormal;
     public FakeBox fakeBox;
     public MovingGameover movingGameoverScript;
     public MovingGameover movingGameoverScript1;
@@ -56,16 +57,18 @@ public class GameplayController : MonoBehaviour
                 currentBox3.DropRandomObject();
             else if (currentBox4 != null)
                 currentBox4.DropRandomObject();
-                 else if (currentBox5 != null)
+            else if (currentBox5 != null)
                 currentBox5.DropRandomObject();
-                else if (currentBox6 != null)
+            else if (currentBox6 != null)
                 currentBox6.DropRandomObject();
-                 else if (currentBox7 != null)
+            else if (currentBox7 != null)
                 currentBox7.DropRandomObject();
-                else if (currentBox8 != null)
+            else if (currentBox8 != null)
                 currentBox8.DropRandomObject();
-                 else if (currentBox9 != null)
+            else if (currentBox9 != null)
                 currentBox9.DropRandomObject();
+            else if (currentBoxNormal != null)
+                currentBoxNormal.DropRandomObject();
             else if (fakeBox != null)
                 fakeBox.DropRandomObject();
         }
@@ -80,29 +83,29 @@ public class GameplayController : MonoBehaviour
     {
         box_Spawner.SpawnBox();
         // Set the spawned box as the current box
-        
+
     }
 
     public void MoveCamera()
-{
-    moveCount++;
-    if (moveCount == 2)
     {
-        moveCount = 0;
-        cameraScript.targetPos.y += 2f;
-        
-        // If there is a movingGameoverScript attached, move it up as well.
-        if (movingGameoverScript != null)
+        moveCount++;
+        if (moveCount == 2)
         {
-            movingGameoverScript.MoveUp();
-        }
+            moveCount = 0;
+            cameraScript.targetPos.y += 2f;
 
-        if (movingGameoverScript1 != null)
-        {
-            movingGameoverScript1.MoveUp();
+            // If there is a movingGameoverScript attached, move it up as well.
+            if (movingGameoverScript != null)
+            {
+                movingGameoverScript.MoveUp();
+            }
+
+            if (movingGameoverScript1 != null)
+            {
+                movingGameoverScript1.MoveUp();
+            }
         }
     }
-}
     public void RestartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(

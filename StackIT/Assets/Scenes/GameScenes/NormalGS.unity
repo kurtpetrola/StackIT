@@ -1173,6 +1173,8 @@ MonoBehaviour:
   currentBox8: {fileID: 0}
   currentBox9: {fileID: 0}
   fakeBox: {fileID: 0}
+  movingGameoverScript: {fileID: 0}
+  movingGameoverScript1: {fileID: 0}
   cameraScript: {fileID: 1862462933}
   objectsToDrop:
   - {fileID: 0}
@@ -2114,12 +2116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1158821304}
   highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  unlockText: {fileID: 1449956599}
-  unlockText1: {fileID: 1848225077}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  lockedItemImage: {fileID: 0}
-  lockedItemImage1: {fileID: 0}
-  yourButton: {fileID: 0}
 --- !u!1 &1236499342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,10 +2162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxPrefabs:
-  - {fileID: 8516474104200412569, guid: c67e1eacdc355ec4493c21698181a394, type: 3}
-  - {fileID: 8516474104200412569, guid: ba9bb660a28cbb54490b9171de7b60d5, type: 3}
-  - {fileID: 8516474104200412569, guid: 2e0116ee4be816e4eb30e85c40354e0b, type: 3}
-  - {fileID: 8516474104200412569, guid: a37db7d507f15064a9e5b445ff202108, type: 3}
+  - {fileID: 8516474104200412569, guid: a5db6dbdcba687c4aa78a8a793cbaa5d, type: 3}
 --- !u!1 &1291234579
 GameObject:
   m_ObjectHideFlags: 0

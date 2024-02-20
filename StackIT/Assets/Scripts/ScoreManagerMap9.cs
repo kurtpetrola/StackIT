@@ -10,8 +10,8 @@ public class ScoreManagerMap9 : MonoBehaviour
     public Text unlockText1; // Reference to the second unlock text
     public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
-    public GameObject lockedItemImage1; // Reference to the second locked image
-    public Button yourButton9; // Reference to your button
+    public GameObject lockedItemImage10; // Reference to the second locked image
+    public Button yourButton10; // Reference to your button
 
     private int playerScore = 0;
     private int stackedItems = 0;
@@ -43,9 +43,9 @@ public class ScoreManagerMap9 : MonoBehaviour
         bool isLockedImage1Active = PlayerPrefs.GetInt(LockedImage1StateKey, 1) == 1;
 
         // Set the button and locked images according to the saved states
-        yourButton9.interactable = isButtonEnabled;
+        yourButton10.interactable = isButtonEnabled;
         lockedItemImage.SetActive(isLockedImageActive);
-        lockedItemImage1.SetActive(isLockedImage1Active);
+        lockedItemImage10.SetActive(isLockedImage1Active);
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
@@ -96,7 +96,7 @@ public class ScoreManagerMap9 : MonoBehaviour
         if (playerScore == 4)
         {
             // Remove lockedItemImage1 when the player score reaches 4
-            lockedItemImage1.SetActive(false);
+            lockedItemImage10.SetActive(false);
             PlayerPrefs.SetInt(LockedImage1StateKey, 0);
             PlayerPrefs.Save();
 
@@ -121,7 +121,7 @@ public class ScoreManagerMap9 : MonoBehaviour
 
         if (isButtonEnabled)
         {
-            yourButton9.interactable = true;
+            yourButton10.interactable = true;
         }
 
 
