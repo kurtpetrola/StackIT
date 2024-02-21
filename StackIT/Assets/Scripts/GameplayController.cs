@@ -7,6 +7,7 @@ public class GameplayController : MonoBehaviour
 {
     public static GameplayController instance;
     public BoxSpawner box_Spawner;
+    public StartPanel startPanel;
     [HideInInspector]
     public BoxScript currentBox;
     public BoxScript2 currentBox2;
@@ -34,7 +35,10 @@ public class GameplayController : MonoBehaviour
 
     void Start()
     {
-        box_Spawner.SpawnBox();
+        if (startPanel.panelClosed) // Check if the panel is closed
+        {
+            box_Spawner.SpawnBox();
+        }
     }
 
     void Update()
@@ -76,7 +80,9 @@ public class GameplayController : MonoBehaviour
 
     public void SpawnNewBox()
     {
-        Invoke("NewBox", .7f);
+
+        box_Spawner.SpawnBox();
+
     }
 
     void NewBox()
@@ -89,10 +95,10 @@ public class GameplayController : MonoBehaviour
     public void MoveCamera()
     {
         moveCount++;
-        if (moveCount == 2)
+        if (moveCount == 3)
         {
             moveCount = 0;
-            cameraScript.targetPos.y += 2f;
+            cameraScript.targetPos.y += 1.8f;
 
             // If there is a movingGameoverScript attached, move it up as well.
             if (movingGameoverScript != null)

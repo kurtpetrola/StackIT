@@ -17,7 +17,7 @@ public class BoxCollisionSound : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the sound has already been played
-        if (!hasPlayed && collision.gameObject.CompareTag("Box"))
+        if (!hasPlayed && collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Platform"))
         {
             // Play the sound effect
             audioSource.Play();

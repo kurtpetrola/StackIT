@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoxSpawner : MonoBehaviour
 {
     public GameObject[] boxPrefabs; 
+    
 
     public void SpawnBox()
     {
@@ -13,7 +14,7 @@ public class BoxSpawner : MonoBehaviour
 
         GameObject boxObj = Instantiate(boxPrefabVariant);
         Vector3 temp = transform.position;
-        temp.z = 2f;
+        temp.z = 4f;
         boxObj.transform.position = temp;
     }
 }
