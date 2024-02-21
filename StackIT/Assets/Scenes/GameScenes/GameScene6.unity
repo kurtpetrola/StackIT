@@ -1828,7 +1828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Challenge
+  m_Text: Challenges
 --- !u!222 &910187809
 CanvasRenderer:
   m_ObjectHideFlags: 0
