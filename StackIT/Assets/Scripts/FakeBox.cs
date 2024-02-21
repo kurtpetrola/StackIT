@@ -150,37 +150,38 @@ public class FakeBox : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D target)
-{
-    if (ignoreCollision)
-        return;
-
-    // Check if this box is the new special "game over" box by comparing tags
-    if (gameObject.tag == "GameOverBox")
     {
-        // This is the special game over box. Any collision with the platform or another box
-        // should trigger the game over logic.
+        if (ignoreCollision)
+            return;
+
+        // Check if this box is the new special "game over" box by comparing tags
+        if (gameObject.tag == "GameOverBox")
+        {
+            // This is the special game over box. Any collision with the platform or another box
+            // should trigger the game over logic.
+            if (target.gameObject.tag == "Platform" || target.gameObject.tag == "Box")
+            {
+                gameOver = true;
+
+                GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+
+
+            }
+        }
+
+        // For any other box, handle the collision as before.
         if (target.gameObject.tag == "Platform" || target.gameObject.tag == "Box")
         {
+            Invoke("Landed", 1f);
+            ignoreCollision = true;
+        }
+        else
+        {
             gameOver = true;
-             
-            GameOverUIManager.Instance.ShowGameOverUI(playerScore);
 
-           
+            GameOverUIManager.Instance.ShowGameOverUI(playerScore);
         }
     }
-
-    // For any other box, handle the collision as before.
-    if (target.gameObject.tag == "Platform" || target.gameObject.tag == "Box")
-    {
-        Invoke("Landed", 1f);
-        ignoreCollision = true;
-    }
-    else{
-        gameOver = true;
-             
-            GameOverUIManager.Instance.ShowGameOverUI(playerScore);
-    }
-}
 
     void OnTriggerEnter2D(Collider2D target)
     {

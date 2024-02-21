@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BoxSpawner : MonoBehaviour
 {
-    public GameObject[] boxPrefabs; 
-    
+    public GameObject[] boxPrefabs;
+
 
     public void SpawnBox()
     {

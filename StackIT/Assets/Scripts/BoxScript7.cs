@@ -149,73 +149,75 @@ public class BoxScript7 : MonoBehaviour
         GameplayController.instance.RestartGame();
     }
 
-        void OnCollisionEnter2D(Collision2D target)
-{
-    if (ignoreCollision)
-        return;
-
-    // Check if this box is the new special "game over" box by comparing tags
-    if (gameObject.tag == "GameOverBox")
+    void OnCollisionEnter2D(Collision2D target)
     {
-        // This is the special game over box. Any collision with the platform or another box
-        // should trigger the game over logic.
-        if (target.gameObject.tag == "Platform" || target.gameObject.tag == "Box")
-        {
-            gameOver = true;
-             
-            GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+        if (ignoreCollision)
+            return;
 
-           
-        }
-        
-    }
-
-    // For any other box, handle the collision as before.
-    if (target.gameObject.tag == "Platform" || target.gameObject.tag == "Box")
-    {
-        Invoke("Landed", 1f);
-        ignoreCollision = true;
-    }
-    else{
-        gameOver = true;
-             
-            GameOverUIManager.Instance.ShowGameOverUI(playerScore);
-    }
-}
-    void OnTriggerEnter2D(Collider2D target)
-{
-    if (ignoreTrigger)
-        return;
-
-    if (target.tag == "GameOver")
-    {
-        // Check if this box is a "GameOverBox"
+        // Check if this box is the new special "game over" box by comparing tags
         if (gameObject.tag == "GameOverBox")
         {
-            GameplayController.instance.SpawnNewBox();
-            return;
+            // This is the special game over box. Any collision with the platform or another box
+            // should trigger the game over logic.
+            if (target.gameObject.tag == "Platform" || target.gameObject.tag == "Box")
+            {
+                gameOver = true;
+
+                GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+
+
+            }
+
         }
 
-        gameOver = true;
-        canMove = false;
-        ignoreTrigger = true;
-
-        if (LifeManager2.Instance != null)
+        // For any other box, handle the collision as before.
+        if (target.gameObject.tag == "Platform" || target.gameObject.tag == "Box")
         {
-            LifeManager2.Instance.DecreaseLife(); // Decrease life
-
-            if (LifeManager2.Instance.lives > 0)
-            {
-                GameplayController.instance.SpawnNewBox();
-            }
-            else
-            {
-                GameOverUIManager.Instance.ShowGameOverUI(playerScore);
-            }
+            Invoke("Landed", 1f);
+            ignoreCollision = true;
         }
         else
         {
-            Debug.LogError("LifeManager instance is null. Ensure that LifeManager is properly initialized.");
+            gameOver = true;
+
+            GameOverUIManager.Instance.ShowGameOverUI(playerScore);
         }
-    }}
+    }
+    void OnTriggerEnter2D(Collider2D target)
+    {
+        if (ignoreTrigger)
+            return;
+
+        if (target.tag == "GameOver")
+        {
+            // Check if this box is a "GameOverBox"
+            if (gameObject.tag == "GameOverBox")
+            {
+                GameplayController.instance.SpawnNewBox();
+                return;
+            }
+
+            gameOver = true;
+            canMove = false;
+            ignoreTrigger = true;
+
+            if (LifeManager2.Instance != null)
+            {
+                LifeManager2.Instance.DecreaseLife(); // Decrease life
+
+                if (LifeManager2.Instance.lives > 0)
+                {
+                    GameplayController.instance.SpawnNewBox();
+                }
+                else
+                {
+                    GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+                }
+            }
+            else
+            {
+                Debug.LogError("LifeManager instance is null. Ensure that LifeManager is properly initialized.");
+            }
+        }
+    }
 }

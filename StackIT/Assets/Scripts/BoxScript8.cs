@@ -160,7 +160,7 @@ public class BoxScript8 : MonoBehaviour
             {
                 Destroy(target.gameObject); // Destroy the TNT
                 Destroy(gameObject); // Destroy the box
-                playerScore-=1;
+                playerScore -= 1;
                 scoreManager.DecreaseScore();
                 GameplayController.instance.SpawnNewBox();
                 return;

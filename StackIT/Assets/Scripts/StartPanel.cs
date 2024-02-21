@@ -5,7 +5,7 @@ public class StartPanel : MonoBehaviour
 {
     public GameObject panel;
     public Text countdownText;
-    private float countdown = 5f;
+    private float countdown = 6f;
     public bool panelClosed = false;
 
     private GameplayController gameplayController;

@@ -16,7 +16,7 @@ public class BoxScript : MonoBehaviour
     private bool ignoreCollision;
     private bool ignoreTrigger;
     private ScoreManagerMap1 scoreManager;
-    
+
     private float currentBoxMoveSpeed = 2.5f;
     private GameObject lastDroppedItem;
     private bool droppedTwoItemsInSuccession;
@@ -35,7 +35,7 @@ public class BoxScript : MonoBehaviour
         {
             Debug.LogError("ScoreManager script not found in the scene.");
         }
-      
+
     }
 
     void Start()
@@ -125,7 +125,7 @@ public class BoxScript : MonoBehaviour
 
         // Update the score using the ScoreManager.
         scoreManager.IncreaseScore();
-        
+
         GameOverUIManager.Instance.IncreaseScore();
 
         landedBoxCount++;
