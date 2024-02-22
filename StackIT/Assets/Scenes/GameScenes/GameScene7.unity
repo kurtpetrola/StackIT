@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 54490454}
   threeXButton1: {fileID: 1055446318}
-  countdownText: {fileID: 0}
+  countdownText: {fileID: 1895333622}
 --- !u!114 &1055446318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4403,7 +4403,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.100006, y: 0.000045776367}
-  m_SizeDelta: {x: 173.97, y: 101.18}
+  m_SizeDelta: {x: 170, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895333622
 MonoBehaviour:
@@ -4432,13 +4432,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time left:'
+  m_Text: 
 --- !u!222 &1895333623
 CanvasRenderer:
   m_ObjectHideFlags: 0

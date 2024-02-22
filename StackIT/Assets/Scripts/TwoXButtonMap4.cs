@@ -22,7 +22,7 @@ public class TwoXButtonMap4 : MonoBehaviour
             if (countdown > 0)
             {
                 countdown -= Time.deltaTime;
-                countdownText.text = "Time left:  \n" + countdown.ToString("F1"); // Update countdown text with one decimal point
+                countdownText.text = " " + countdown.ToString("F1"); // Update countdown text with one decimal point
             }
             else
             {
