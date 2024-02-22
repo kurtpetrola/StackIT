@@ -98,7 +98,7 @@ public class ResetHighScore : MonoBehaviour
         // Show the locked images after resetting
         lockedItemImage1.SetActive(true);
         lockedItemImage2.SetActive(true);
-        // lockedItemImage3.SetActive(true);
+        lockedItemImage3.SetActive(true);
         lockedItemImage4.SetActive(true);
         lockedItemImage5.SetActive(true);
         lockedItemImage6.SetActive(true);

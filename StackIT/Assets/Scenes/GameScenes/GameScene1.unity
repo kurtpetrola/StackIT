@@ -2707,7 +2707,7 @@ MonoBehaviour:
   unlockText: {fileID: 1850066180}
   unlockText1: {fileID: 1850066180}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  lockedItemImage: {fileID: 1123314372617588168, guid: 2db619edde9762244bd8498dbe35b3f3, type: 3}
+  lockedItemImage: {fileID: 6922854080870658176, guid: f461a0cca3a9dc447b0c416c787fb0b0, type: 3}
   lockedItemImage2: {fileID: 1123314372617588168, guid: 2db619edde9762244bd8498dbe35b3f3, type: 3}
   yourButton2: {fileID: 3832719599575969239, guid: af487588fda7bda42bf75afc783d05f2, type: 3}
 --- !u!1 &1236499342
