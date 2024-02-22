@@ -1,17 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FourXButtonMap9 : MonoBehaviour
+public class ThreeXButtonMap6 : MonoBehaviour
 {
     public Text scoreText;
-    public Button fourXButton1;
+    public Button threeXButton1;
     public Text countdownText; // Text element to show the countdown
     private bool buttonActive = false;
-    private float countdown = 60f;
+    private float countdown = 45f;
 
     void Start()
     {
-        fourXButton1.onClick.AddListener(ActivateFourX);
+        threeXButton1.onClick.AddListener(ActivateThreeX);
         countdownText.gameObject.SetActive(false); // Initially hide the countdown text
     }
 
@@ -27,18 +27,18 @@ public class FourXButtonMap9 : MonoBehaviour
             else
             {
                 buttonActive = false;
-                fourXButton1.interactable = true; // Make the button interactable again
+                threeXButton1.interactable = true; // Make the button interactable again
                 countdownText.gameObject.SetActive(false); // Hide the countdown text
                 Destroy(gameObject);
             }
         }
     }
 
-    void ActivateFourX()
+    void ActivateThreeX()
     {
         buttonActive = true;
-        countdown = 60f; // Reset the countdown to 60 seconds
-        fourXButton1.interactable = false; // Disable the button as it's been activated
+        countdown = 45f; // Reset the countdown to 30 seconds
+        threeXButton1.interactable = false; // Disable the button as it's been activated
         countdownText.gameObject.SetActive(true); // Show the countdown text
     }
 
@@ -51,8 +51,8 @@ public class FourXButtonMap9 : MonoBehaviour
     {
         if (buttonActive)
         {
-            // Increase the score by 4 for each successful action
-            // Example: scoreText.text = "Score: " + (int.Parse(scoreText.text.Split(' ')[1]) + 4);
+            // Increase the score by 3 for each successful action
+            // Example: scoreText.text = "Score: " + (int.Parse(scoreText.text.Split(' ')[1]) + 3);
         }
         else
         {

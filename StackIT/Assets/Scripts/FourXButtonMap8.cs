@@ -5,12 +5,14 @@ public class FourXButtonMap8 : MonoBehaviour
 {
     public Text scoreText;
     public Button fourXButton1;
+    public Text countdownText; // Text element to show the countdown
     private bool buttonActive = false;
     private float countdown = 30f;
 
     void Start()
     {
-        fourXButton1.onClick.AddListener(ActivateTwoX);
+        fourXButton1.onClick.AddListener(ActivateFourX);
+        countdownText.gameObject.SetActive(false); // Initially hide the countdown text
     }
 
     void Update()
@@ -20,20 +22,24 @@ public class FourXButtonMap8 : MonoBehaviour
             if (countdown > 0)
             {
                 countdown -= Time.deltaTime;
+                countdownText.text = "Time left:  \n" + countdown.ToString("F1"); // Update countdown text with one decimal point
             }
             else
             {
-                fourXButton1.interactable = false;
                 buttonActive = false;
+                fourXButton1.interactable = true; // Make the button interactable again
+                countdownText.gameObject.SetActive(false); // Hide the countdown text
                 Destroy(gameObject);
             }
         }
     }
 
-    void ActivateTwoX()
+    void ActivateFourX()
     {
         buttonActive = true;
-        fourXButton1.interactable = false; // Assuming the button will disappear after activation
+        countdown = 30f; // Reset the countdown to 30 seconds
+        fourXButton1.interactable = false; // Disable the button as it's been activated
+        countdownText.gameObject.SetActive(true); // Show the countdown text
     }
 
     public bool IsButtonActive()
@@ -45,12 +51,12 @@ public class FourXButtonMap8 : MonoBehaviour
     {
         if (buttonActive)
         {
-            // Increase the score by 2 for each successful drop
-            // Example: scoreText.text = "Score: " + (int.Parse(scoreText.text.Split(' ')[1]) + 2);
+            // Increase the score by 4 for each successful action
+            // Example: scoreText.text = "Score: " + (int.Parse(scoreText.text.Split(' ')[1]) + 4);
         }
         else
         {
-            // Increase the score by 1 for each successful drop
+            // Increase the score by 1 for each successful action
             // Example: scoreText.text = "Score: " + (int.Parse(scoreText.text.Split(' ')[1]) + 1);
         }
     }
