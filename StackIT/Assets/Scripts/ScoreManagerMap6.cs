@@ -1,10 +1,9 @@
-
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManagerMap6 : MonoBehaviour
 {
-    public ThreeXButtonMap5 threeXButtonScriptMap5;
+    public ThreeXButtonMap6 threeXButtonScriptMap6;
     public Text scoreText;
     public Text highestScoreText;
     public Text unlockText;
@@ -126,7 +125,7 @@ public class ScoreManagerMap6 : MonoBehaviour
         }
 
 
-        if (threeXButtonScriptMap5.IsButtonActive())
+        if (threeXButtonScriptMap6.IsButtonActive())
         {
             playerScore += 2;
         }
