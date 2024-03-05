@@ -19,6 +19,7 @@ public class GameplayController : MonoBehaviour
     public BoxScript8 currentBox8;
     public BoxScript9 currentBox9;
     public NormalBoxScript currentBoxNormal;
+    public BoxScriptOnline currentBoxOnline;
     public FakeBox fakeBox;
     public MovingGameover movingGameoverScript;
     public MovingGameover movingGameoverScript1;
@@ -73,6 +74,8 @@ public class GameplayController : MonoBehaviour
                 currentBox9.DropRandomObject();
             else if (currentBoxNormal != null)
                 currentBoxNormal.DropRandomObject();
+                else if (currentBoxOnline != null)
+                currentBoxOnline.DropRandomObject();
             else if (fakeBox != null)
                 fakeBox.DropRandomObject();
         }
