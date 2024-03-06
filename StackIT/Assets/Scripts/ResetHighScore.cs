@@ -48,8 +48,6 @@ public class ResetHighScore : MonoBehaviour
         PlayerPrefs.SetInt("LockedItem2State", 1);
         PlayerPrefs.SetInt("LockedItem3State", 1);
 
-        PlayerPrefs.Save();
-
         // Reset the Lock state to locked
         PlayerPrefs.SetInt("LockState", 0);
         PlayerPrefs.SetInt("LockState2", 0);
@@ -117,7 +115,5 @@ public class ResetHighScore : MonoBehaviour
         yourButton7.interactable = false;
         yourButton8.interactable = false;
         yourButton9.interactable = false;
-
-        PlayerPrefs.Save();
     }
 }

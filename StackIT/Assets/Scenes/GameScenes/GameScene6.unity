@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7785fddbf0d580e449a9d4b3ba007b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threeXButtonScriptMap6: {fileID: 1880617691}
+  threeXButtonScriptMap5: {fileID: 0}
   scoreText: {fileID: 287205300}
   highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
@@ -586,7 +586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: 710}
+  m_AnchoredPosition: {x: -260, y: 710}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344773022
@@ -1548,7 +1548,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.15}
+  m_Size: {x: 26, y: 0.15}
   m_EdgeRadius: 0
 --- !u!1 &820349217
 GameObject:
