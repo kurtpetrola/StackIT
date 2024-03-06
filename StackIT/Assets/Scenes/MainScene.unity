@@ -1051,66 +1051,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109585385}
   m_CullTransparentMesh: 1
---- !u!1 &123823416
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 123823419}
-  - component: {fileID: 123823417}
-  m_Layer: 0
-  m_Name: LeaderboardManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &123823417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123823416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8729cc1f68790014b9eca452289e0c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  names:
-  - {fileID: 62517743}
-  - {fileID: 46413616}
-  - {fileID: 431719292}
-  - {fileID: 1456538137}
-  - {fileID: 1760375350}
-  - {fileID: 1434043299}
-  - {fileID: 1074919070}
-  scores:
-  - {fileID: 1279165592}
-  - {fileID: 493674419}
-  - {fileID: 515481703}
-  - {fileID: 2011685840}
-  - {fileID: 1000166342}
-  - {fileID: 407073468}
-  - {fileID: 1590891910}
---- !u!4 &123823419
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123823416}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0213017, y: -0.6488419, z: 949.81213}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &136818781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,24 +1873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2a220ac7c42984cb9e3b8c6336c938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputScore: {fileID: 1156125298}
-  inputName: {fileID: 1849296648}
-  submitScoreEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 123823417}
-        m_TargetAssemblyTypeName: Leaderboard, Assembly-CSharp
-        m_MethodName: SetLeaderboardEntry
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  publicLeaderboardKey: a75967db9274bf6d9ec04561b98fe5aad33b75fc981aca18d40e7b0531b64229
 --- !u!114 &267762295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4476,7 +4398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &577980217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9069,7 +8991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1457119278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15356,4 +15278,3 @@ SceneRoots:
   - {fileID: 1418567698}
   - {fileID: 1506778245}
   - {fileID: 543864295}
-  - {fileID: 123823419}
