@@ -15,14 +15,14 @@ public class HighScoreManagerOnline : MonoBehaviour
     public void LoadHighestScore()
     {
         int highestScore = PlayerPrefs.GetInt(onlineHighestScoreKey, 0);
-        highestScoreTextOnline.text = "Highest Score: " + highestScore;
+        highestScoreTextOnline.text = "Highest Score (Online): " + highestScore;
     }
 
     public void SetHighestScore(int score)
     {
         PlayerPrefs.SetInt(onlineHighestScoreKey, score); // Store online high score using the new key
         PlayerPrefs.Save();
-        highestScoreTextOnline.text = "Highest Score: " + score;
+        highestScoreTextOnline.text = "Highest Score (Online): " + score;
     }
 
     public int GetHighestScore()
