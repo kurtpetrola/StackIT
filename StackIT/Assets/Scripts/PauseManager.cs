@@ -47,8 +47,8 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1;
 
         // Load the main menu scene or quit the application
-        SceneManager.LoadScene("MainScene"); // Uncomment and set your main menu scene name
+        //SceneManager.LoadScene("MainScene"); // Uncomment and set your main menu scene name
         // or
-        //Application.Quit();
+        Application.Quit();
     }
 }
