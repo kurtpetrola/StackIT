@@ -18,7 +18,7 @@ public class NormalBoxScript : MonoBehaviour
     private ScoreManagerNormal scoreManagerNormal;
     private float currentBoxMoveSpeed = 5f;
     private GameObject lastDroppedItem;
-    private bool droppedTwoItemsInSuccession;
+    // private bool droppedTwoItemsInSuccession;
     private int successfulLandings = 0;
     private int itemsDropped = 0;
 
@@ -88,10 +88,10 @@ public class NormalBoxScript : MonoBehaviour
             {
                 objRigidbody.velocity = new Vector2(currentBoxMoveSpeed, objRigidbody.velocity.y);
 
-                if (lastDroppedItem != null)
-                {
-                    droppedTwoItemsInSuccession = true;
-                }
+                // if (lastDroppedItem != null)
+                // {
+                //     droppedTwoItemsInSuccession = true;
+                // }
                 lastDroppedItem = spawnedObject;
             }
         }
@@ -133,7 +133,7 @@ public class NormalBoxScript : MonoBehaviour
             consecutiveSuccessCount = 0; // Reset the count
         }
 
-        droppedTwoItemsInSuccession = false;
+        // droppedTwoItemsInSuccession = false;
         itemsDropped = 0;
 
         GameplayController.instance.SpawnNewBox();

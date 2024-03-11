@@ -177,7 +177,7 @@ MonoBehaviour:
   scoreText: {fileID: 54490454}
   highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
-  unlockText1: {fileID: 516778375}
+  unlockText7: {fileID: 516778375}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 8971842637133075500, guid: 68c52735ffa1ef346896a8abde8d0372, type: 3}
   lockedItemImage8: {fileID: 1131383868261681218, guid: 74420801e638b174b8bab59c2b994480, type: 3}

@@ -454,11 +454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7785fddbf0d580e449a9d4b3ba007b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threeXButtonScriptMap5: {fileID: 0}
+  threeXButtonScriptMap6: {fileID: 1880617691}
   scoreText: {fileID: 287205300}
   highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
-  unlockText1: {fileID: 1384548048}
+  unlockText6: {fileID: 1384548048}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 2936310368605813076, guid: 29ca1b39111153b42a13d2c9856a3e1a, type: 3}
   lockedItemImage7: {fileID: 5586056488436831877, guid: c8cbf1d257792e24d933e0f32739a401, type: 3}

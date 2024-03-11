@@ -2589,7 +2589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1158821304}
-  highestScoreTextOnline: {fileID: 2296827512954261000, guid: 5c862f34dc962394da1c531eb5d01d64, type: 3}
+  highestScoreTextOnline: {fileID: 1158821304}
   highScoreManagerOnline: {fileID: 4010552316308840452, guid: 5c862f34dc962394da1c531eb5d01d64, type: 3}
 --- !u!1 &1236499342
 GameObject:

@@ -84,6 +84,14 @@ public class ResetHighScore : MonoBehaviour
         // Reset the unlock message states
         PlayerPrefs.SetInt("UnlockMessageShown", 0);
         PlayerPrefs.SetInt("UnlockMessage1Shown", 0);
+        PlayerPrefs.SetInt("UnlockMessage2Shown", 0);
+        PlayerPrefs.SetInt("UnlockMessage3Shown", 0);
+        PlayerPrefs.SetInt("UnlockMessage4Shown", 0);
+        PlayerPrefs.SetInt("UnlockMessage5Shown", 0);
+        PlayerPrefs.SetInt("UnlockMessage6Shown", 0);
+        PlayerPrefs.SetInt("UnlockMessage7Shown", 0);
+        PlayerPrefs.SetInt("UnlockMessage8Shown", 0);
+        PlayerPrefs.SetInt("UnlockMessage9Shown", 0);
 
         PlayerPrefs.Save();
 
@@ -105,6 +113,7 @@ public class ResetHighScore : MonoBehaviour
         lockedItemImage7.SetActive(true);
         lockedItemImage8.SetActive(true);
         lockedItemImage9.SetActive(true);
+        // lockedItemImage10.SetActive(true);
 
         // Set the button as not clickable
         yourButton2.interactable = false;

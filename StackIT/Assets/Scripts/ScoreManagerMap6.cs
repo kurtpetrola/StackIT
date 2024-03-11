@@ -4,11 +4,11 @@ using UnityEngine.UI;
 
 public class ScoreManagerMap6 : MonoBehaviour
 {
-    public ThreeXButtonMap5 threeXButtonScriptMap5;
+    public ThreeXButtonMap6 threeXButtonScriptMap6;
     public Text scoreText;
     public Text highestScoreText;
     public Text unlockText;
-    public Text unlockText1; // Reference to the second unlock text
+    public Text unlockText6; // Reference to the second unlock text
     public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage7; // Reference to the second locked image
@@ -17,7 +17,7 @@ public class ScoreManagerMap6 : MonoBehaviour
     private int playerScore = 0;
     private int stackedItems = 0;
     private bool isUnlockMessageShowing = false;
-    private bool isUnlockMessageShowing1 = false; // Track the second unlock message
+    private bool isUnlockMessageShowing6 = false; // Track the second unlock message
     private bool isLockRemoved = false;
     private bool isButtonEnabled = false; // Track whether the button is enabled
 
@@ -25,9 +25,9 @@ public class ScoreManagerMap6 : MonoBehaviour
     private const string LockStateKey6 = "LockState6";
     private const string ButtonStateKey6 = "ButtonState6";
     private const string LockedImageStateKey = "LockedImageState";
-    private const string LockedImage1StateKey = "LockedImage1State";
+    private const string LockedImage7StateKey = "LockedImage7State";
     private const string UnlockMessageShownKey = "UnlockMessageShown";
-    private const string UnlockMessage1ShownKey = "UnlockMessage1Shown";
+    private const string UnlockMessage6ShownKey = "UnlockMessage6Shown";
 
     // Custom event to notify score changes
     public event System.Action<int> ScoreChanged;
@@ -41,16 +41,16 @@ public class ScoreManagerMap6 : MonoBehaviour
         isLockRemoved = PlayerPrefs.GetInt(LockStateKey6, 0) == 1;
         isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey6, 0) == 1;
         bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-        bool isLockedImage1Active = PlayerPrefs.GetInt(LockedImage1StateKey, 1) == 1;
+        bool isLockedImage7Active = PlayerPrefs.GetInt(LockedImage7StateKey, 1) == 1;
 
         // Set the button and locked images according to the saved states
         yourButton7.interactable = isButtonEnabled;
         lockedItemImage.SetActive(isLockedImageActive);
-        lockedItemImage7.SetActive(isLockedImage1Active);
+        lockedItemImage7.SetActive(isLockedImage7Active);
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
-        isUnlockMessageShowing1 = PlayerPrefs.GetInt(UnlockMessage1ShownKey, 0) == 1;
+        isUnlockMessageShowing6 = PlayerPrefs.GetInt(UnlockMessage6ShownKey, 0) == 1;
     }
 
     public int GetPlayerScore()
@@ -94,22 +94,22 @@ public class ScoreManagerMap6 : MonoBehaviour
             StartCoroutine(ShowUnlockMessage());
             unlockText.text = "";
         }
-        if (playerScore == 4)
+        if (playerScore == 30)
         {
             // Remove lockedItemImage1 when the player score reaches 4
             lockedItemImage7.SetActive(false);
-            PlayerPrefs.SetInt(LockedImage1StateKey, 0);
+            PlayerPrefs.SetInt(LockedImage7StateKey, 0);
             PlayerPrefs.Save();
 
             RemoveLockImages(); // Remove any remaining lock images if needed
 
-            if (!isUnlockMessageShowing1)
+            if (!isUnlockMessageShowing6)
             {
                 StartCoroutine(ShowUnlockMessage1());
-                unlockText1.text = "2ND Map Is Unlocked";
+                unlockText6.text = "7th Map Is Unlocked";
 
                 // Mark the second unlock message as shown
-                PlayerPrefs.SetInt(UnlockMessage1ShownKey, 1);
+                PlayerPrefs.SetInt(UnlockMessage6ShownKey, 1);
                 PlayerPrefs.Save();
             }
         }
@@ -126,7 +126,7 @@ public class ScoreManagerMap6 : MonoBehaviour
         }
 
 
-        if (threeXButtonScriptMap5.IsButtonActive())
+        if (threeXButtonScriptMap6.IsButtonActive())
         {
             playerScore += 2;
         }
@@ -161,12 +161,12 @@ public class ScoreManagerMap6 : MonoBehaviour
 
     private System.Collections.IEnumerator ShowUnlockMessage1()
     {
-        isUnlockMessageShowing1 = true;
-        unlockText1.gameObject.SetActive(true);
+        isUnlockMessageShowing6 = true;
+        unlockText6.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(1f);
-        unlockText1.gameObject.SetActive(false);
-        isUnlockMessageShowing1 = false;
+        unlockText6.gameObject.SetActive(false);
+        isUnlockMessageShowing6 = false;
     }
 
     private void RemoveLockImages()

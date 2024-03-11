@@ -20,6 +20,6 @@ public class StartGame : MonoBehaviour
     }
     public void changeScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
     }
 }

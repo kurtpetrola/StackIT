@@ -1343,6 +1343,7 @@ MonoBehaviour:
   currentBox8: {fileID: 0}
   currentBox9: {fileID: 0}
   currentBoxNormal: {fileID: 0}
+  currentBoxOnline: {fileID: 0}
   fakeBox: {fileID: 0}
   movingGameoverScript: {fileID: 0}
   movingGameoverScript1: {fileID: 0}
@@ -1480,7 +1481,7 @@ MonoBehaviour:
   scoreText: {fileID: 754053107}
   highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
-  unlockText1: {fileID: 2113046854}
+  unlockText3: {fileID: 2113046854}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 6922854080870658176, guid: f461a0cca3a9dc447b0c416c787fb0b0, type: 3}
   lockedItemImage4: {fileID: 3290519518155625003, guid: 730fc85ed78919042b939e2b0882c203, type: 3}

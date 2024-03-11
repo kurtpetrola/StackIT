@@ -1566,6 +1566,7 @@ MonoBehaviour:
   currentBox8: {fileID: 0}
   currentBox9: {fileID: 0}
   currentBoxNormal: {fileID: 0}
+  currentBoxOnline: {fileID: 0}
   fakeBox: {fileID: 0}
   movingGameoverScript: {fileID: 0}
   movingGameoverScript1: {fileID: 0}
@@ -2297,7 +2298,6 @@ GameObject:
   - component: {fileID: 1074811809}
   - component: {fileID: 1074811808}
   - component: {fileID: 1074811806}
-  - component: {fileID: 1074811811}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -2403,19 +2403,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1074811811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074811805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb08bb899f16d84cbc1dfa490efaa03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
 --- !u!1 &1090236700
 GameObject:
   m_ObjectHideFlags: 0

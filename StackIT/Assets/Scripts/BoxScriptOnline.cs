@@ -18,7 +18,7 @@ public class BoxScriptOnline : MonoBehaviour
 
     private float currentBoxMoveSpeed = 2.5f;
     private GameObject lastDroppedItem;
-    private bool droppedTwoItemsInSuccession;
+    // private bool droppedTwoItemsInSuccession;
     private int successfulLandings = 0;
     private int itemsDropped = 0;
 
@@ -89,10 +89,10 @@ public class BoxScriptOnline : MonoBehaviour
             {
                 objRigidbody.velocity = new Vector2(currentBoxMoveSpeed, objRigidbody.velocity.y);
 
-                if (lastDroppedItem != null)
-                {
-                    droppedTwoItemsInSuccession = true;
-                }
+                // if (lastDroppedItem != null)
+                // {
+                //     droppedTwoItemsInSuccession = true;
+                // }
                 lastDroppedItem = spawnedObject;
             }
         }
@@ -135,7 +135,7 @@ public class BoxScriptOnline : MonoBehaviour
             consecutiveSuccessCount = 0; // Reset the count
         }
 
-        droppedTwoItemsInSuccession = false;
+        // droppedTwoItemsInSuccession = false;
         itemsDropped = 0;
 
         GameplayController.instance.SpawnNewBox();

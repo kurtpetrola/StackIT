@@ -7,7 +7,7 @@ public class ScoreManagerMap9 : MonoBehaviour
     public Text scoreText;
     public Text highestScoreText;
     public Text unlockText;
-    public Text unlockText1; // Reference to the second unlock text
+    public Text unlockText9; // Reference to the second unlock text
     public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage10; // Reference to the second locked image
@@ -16,7 +16,7 @@ public class ScoreManagerMap9 : MonoBehaviour
     private int playerScore = 0;
     private int stackedItems = 0;
     private bool isUnlockMessageShowing = false;
-    private bool isUnlockMessageShowing1 = false; // Track the second unlock message
+    private bool isUnlockMessageShowing9 = false; // Track the second unlock message
     private bool isLockRemoved = false;
     private bool isButtonEnabled = false; // Track whether the button is enabled
 
@@ -24,9 +24,9 @@ public class ScoreManagerMap9 : MonoBehaviour
     private const string LockStateKey9 = "LockState9";
     private const string ButtonStateKey9 = "ButtonState9";
     private const string LockedImageStateKey = "LockedImageState";
-    private const string LockedImage1StateKey = "LockedImage1State";
+    private const string LockedImage10StateKey = "LockedImage10State";
     private const string UnlockMessageShownKey = "UnlockMessageShown";
-    private const string UnlockMessage1ShownKey = "UnlockMessage1Shown";
+    private const string UnlockMessage9ShownKey = "UnlockMessage9Shown";
 
     // Custom event to notify score changes
     public event System.Action<int> ScoreChanged;
@@ -40,16 +40,16 @@ public class ScoreManagerMap9 : MonoBehaviour
         isLockRemoved = PlayerPrefs.GetInt(LockStateKey9, 0) == 1;
         isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey9, 0) == 1;
         bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-        bool isLockedImage1Active = PlayerPrefs.GetInt(LockedImage1StateKey, 1) == 1;
+        bool isLockedImage10Active = PlayerPrefs.GetInt(LockedImage10StateKey, 1) == 1;
 
         // Set the button and locked images according to the saved states
         yourButton10.interactable = isButtonEnabled;
         lockedItemImage.SetActive(isLockedImageActive);
-        lockedItemImage10.SetActive(isLockedImage1Active);
+        lockedItemImage10.SetActive(isLockedImage10Active);
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
-        isUnlockMessageShowing1 = PlayerPrefs.GetInt(UnlockMessage1ShownKey, 0) == 1;
+        isUnlockMessageShowing9 = PlayerPrefs.GetInt(UnlockMessage9ShownKey, 0) == 1;
     }
 
     public int GetPlayerScore()
@@ -93,22 +93,22 @@ public class ScoreManagerMap9 : MonoBehaviour
             StartCoroutine(ShowUnlockMessage());
             unlockText.text = "";
         }
-        if (playerScore == 4)
+        if (playerScore == 45)
         {
             // Remove lockedItemImage1 when the player score reaches 4
             lockedItemImage10.SetActive(false);
-            PlayerPrefs.SetInt(LockedImage1StateKey, 0);
+            PlayerPrefs.SetInt(LockedImage10StateKey, 0);
             PlayerPrefs.Save();
 
             RemoveLockImages(); // Remove any remaining lock images if needed
 
-            if (!isUnlockMessageShowing1)
+            if (!isUnlockMessageShowing9)
             {
                 StartCoroutine(ShowUnlockMessage1());
-                unlockText1.text = "2ND Map Is Unlocked";
+                unlockText9.text = "9th Map Is Unlocked";
 
                 // Mark the second unlock message as shown
-                PlayerPrefs.SetInt(UnlockMessage1ShownKey, 1);
+                PlayerPrefs.SetInt(UnlockMessage9ShownKey, 1);
                 PlayerPrefs.Save();
             }
         }
@@ -169,12 +169,12 @@ public class ScoreManagerMap9 : MonoBehaviour
 
     private System.Collections.IEnumerator ShowUnlockMessage1()
     {
-        isUnlockMessageShowing1 = true;
-        unlockText1.gameObject.SetActive(true);
+        isUnlockMessageShowing9 = true;
+        unlockText9.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(1f);
-        unlockText1.gameObject.SetActive(false);
-        isUnlockMessageShowing1 = false;
+        unlockText9.gameObject.SetActive(false);
+        isUnlockMessageShowing9 = false;
     }
 
     private void RemoveLockImages()

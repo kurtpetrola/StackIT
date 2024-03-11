@@ -19,12 +19,12 @@ public class BoxScript4 : MonoBehaviour
 
     private float currentBoxMoveSpeed = 3.5f;
     private GameObject lastDroppedItem;
-    private bool droppedTwoItemsInSuccession;
+    // private bool droppedTwoItemsInSuccession;
     private int successfulLandings = 0;
     private int itemsDropped = 0;
 
     void Awake()
-    {
+    {   
         myBody = GetComponent<Rigidbody2D>();
         myBody.gravityScale = 0f;
 
@@ -91,10 +91,10 @@ public class BoxScript4 : MonoBehaviour
             {
                 objRigidbody.velocity = new Vector2(currentBoxMoveSpeed, objRigidbody.velocity.y);
 
-                if (lastDroppedItem != null)
-                {
-                    droppedTwoItemsInSuccession = true;
-                }
+                // if (lastDroppedItem != null)
+                // {
+                //     droppedTwoItemsInSuccession = true;
+                // }
                 lastDroppedItem = spawnedObject;
             }
         }
@@ -137,7 +137,7 @@ public class BoxScript4 : MonoBehaviour
             consecutiveSuccessCount = 0; // Reset the count
         }
 
-        droppedTwoItemsInSuccession = false;
+        // droppedTwoItemsInSuccession = false;
         itemsDropped = 0;
 
         GameplayController.instance.SpawnNewBox();

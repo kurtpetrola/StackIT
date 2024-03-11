@@ -124,8 +124,6 @@ public class ScoreManagerMap1 : MonoBehaviour
         }
 
 
-
-
         playerScore += stackedItems;
 
         scoreText.text = "Score: " + playerScore.ToString();
