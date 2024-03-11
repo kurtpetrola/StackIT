@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "114307851903",
+    "firebase_url": "https://stackit-1a993-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "stackit-1a993",
+    "storage_bucket": "stackit-1a993.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114307851903:android:b944180a84a9e1f5ac014a",
+        "android_client_info": {
+          "package_name": "com.StackIT.StackIT"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp3FAhZzujtZlia0_Mk6X9Emm5gbPYLwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
