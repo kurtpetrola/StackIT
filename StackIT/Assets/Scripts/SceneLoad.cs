@@ -10,7 +10,7 @@ public class SceneLoad : MonoBehaviour
     public Text progressText;
     public float progressMultiplier = 0.1f;
 
-    public void LoadScene(int index)
+    public void LoadSceneAsync(int index)
     {
         StartCoroutine(LoadScene_Coroutine(index));
     }

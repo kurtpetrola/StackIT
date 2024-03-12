@@ -47,6 +47,7 @@ public class ResetHighScore : MonoBehaviour
         PlayerPrefs.SetInt("LockedItem1State", 1);
         PlayerPrefs.SetInt("LockedItem2State", 1);
         PlayerPrefs.SetInt("LockedItem3State", 1);
+        PlayerPrefs.Save();
 
         // Reset the Lock state to locked
         PlayerPrefs.SetInt("LockState", 0);
@@ -58,6 +59,7 @@ public class ResetHighScore : MonoBehaviour
         PlayerPrefs.SetInt("LockState7", 0);
         PlayerPrefs.SetInt("LockState8", 0);
         PlayerPrefs.SetInt("LockState9", 0);
+        PlayerPrefs.Save();
 
         // Reset the buttons state
         PlayerPrefs.SetInt("ButtonState", 0);
@@ -69,6 +71,7 @@ public class ResetHighScore : MonoBehaviour
         PlayerPrefs.SetInt("ButtonState7", 0);
         PlayerPrefs.SetInt("ButtonState8", 0);
         PlayerPrefs.SetInt("ButtonState9", 0);
+        PlayerPrefs.Save();
 
         // Set the locked images to active
         PlayerPrefs.SetInt("LockedImage1State", 1);
@@ -80,6 +83,7 @@ public class ResetHighScore : MonoBehaviour
         PlayerPrefs.SetInt("LockedImage7State", 1);
         PlayerPrefs.SetInt("LockedImage8State", 1);
         PlayerPrefs.SetInt("LockedImage9State", 1);
+        PlayerPrefs.Save();
 
         // Reset the unlock message states
         PlayerPrefs.SetInt("UnlockMessageShown", 0);
@@ -92,7 +96,6 @@ public class ResetHighScore : MonoBehaviour
         PlayerPrefs.SetInt("UnlockMessage7Shown", 0);
         PlayerPrefs.SetInt("UnlockMessage8Shown", 0);
         PlayerPrefs.SetInt("UnlockMessage9Shown", 0);
-
         PlayerPrefs.Save();
 
         // Update the UI text to reflect the reset
@@ -102,6 +105,7 @@ public class ResetHighScore : MonoBehaviour
         lockedItem1.SetActive(true);
         lockedItem2.SetActive(true);
         lockedItem3.SetActive(true);
+        PlayerPrefs.Save();
 
         // Show the locked images after resetting
         lockedItemImage1.SetActive(true);
@@ -114,6 +118,7 @@ public class ResetHighScore : MonoBehaviour
         lockedItemImage8.SetActive(true);
         lockedItemImage9.SetActive(true);
         // lockedItemImage10.SetActive(true);
+        PlayerPrefs.Save();
 
         // Set the button as not clickable
         yourButton2.interactable = false;
@@ -124,5 +129,6 @@ public class ResetHighScore : MonoBehaviour
         yourButton7.interactable = false;
         yourButton8.interactable = false;
         yourButton9.interactable = false;
+        PlayerPrefs.Save();
     }
 }

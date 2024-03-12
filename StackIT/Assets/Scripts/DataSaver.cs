@@ -51,7 +51,7 @@ public class DataSaver : MonoBehaviour
             dts = JsonUtility.FromJson<dataToSave>(jsonData);
         }
         else {
-            print("No Data Dound");
+            Debug.LogWarning("No Data Found");
         }
     
     }

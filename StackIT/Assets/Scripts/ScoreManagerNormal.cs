@@ -29,11 +29,6 @@ public class ScoreManagerNormal : MonoBehaviour
         playerScore++;
         UpdateScoreUI();
 
-        // if (playerScore == 4)
-        // {
-        //     // Increment the stacked items when the player score reaches 4
-        //     stackedItems++;
-        // }
 
         // Add stacked items to the player's score
         playerScore += stackedItems;

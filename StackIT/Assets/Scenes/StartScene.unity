@@ -434,7 +434,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 524871057}
         m_TargetAssemblyTypeName: SceneLoad, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadSceneAsync
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

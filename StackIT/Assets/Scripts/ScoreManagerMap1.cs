@@ -35,20 +35,35 @@ public class ScoreManagerMap1 : MonoBehaviour
         LoadHighestScore();
         UpdateHighestScoreUI();
 
-        // Load the saved states
-        isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
-        isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey, 0) == 1;
-        bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-        bool isLockedImage2Active = PlayerPrefs.GetInt(LockedImage2StateKey, 1) == 1;
+        // // Load the saved states
+        // isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
+        // isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey, 0) == 1;
+        // bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
+        // bool isLockedImage2Active = PlayerPrefs.GetInt(LockedImage2StateKey, 1) == 1;
 
-        // Set the button and locked images according to the saved states
-        yourButton2.interactable = isButtonEnabled;
-        lockedItemImage.SetActive(isLockedImageActive);
-        lockedItemImage2.SetActive(isLockedImage2Active);
+        // // Set the button and locked images according to the saved states
+        // yourButton2.interactable = isButtonEnabled;
+        // lockedItemImage.SetActive(isLockedImageActive);
+        // lockedItemImage2.SetActive(isLockedImage2Active);
+        // PlayerPrefs.Save();
+        
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
         isUnlockMessageShowing1 = PlayerPrefs.GetInt(UnlockMessage1ShownKey, 0) == 1;
+    }
+
+    private void LoadAndApplyButtonAndLockedImageStates()
+    {
+    isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
+    isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey, 0) == 1;
+    bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
+    bool isLockedImage2Active = PlayerPrefs.GetInt(LockedImage2StateKey, 1) == 1;
+
+    // Set the button and locked images according to the saved states
+    yourButton2.interactable = isButtonEnabled;
+    lockedItemImage.SetActive(isLockedImageActive);
+    lockedItemImage2.SetActive(isLockedImage2Active);
     }
 
     public int GetPlayerScore()
@@ -100,6 +115,7 @@ public class ScoreManagerMap1 : MonoBehaviour
             PlayerPrefs.Save();
 
             RemoveLockImages(); // Remove any remaining lock images if needed
+            PlayerPrefs.Save();
 
             if (!isUnlockMessageShowing1)
             {
@@ -110,6 +126,10 @@ public class ScoreManagerMap1 : MonoBehaviour
                 PlayerPrefs.SetInt(UnlockMessage1ShownKey, 1);
                 PlayerPrefs.Save();
             }
+
+            // Load and apply the button and locked image states
+        LoadAndApplyButtonAndLockedImageStates();
+
         }
 
         if (playerScore == 4 && highScoreManager.GetHighestScore() == 4)
@@ -121,6 +141,7 @@ public class ScoreManagerMap1 : MonoBehaviour
         if (isButtonEnabled)
         {
             yourButton2.interactable = true;
+            PlayerPrefs.Save();
         }
 
 
@@ -165,7 +186,7 @@ public class ScoreManagerMap1 : MonoBehaviour
     private void RemoveLockImages()
     {
         PlayerPrefs.SetInt(LockStateKey, 1);
-        PlayerPrefs.Save();
         isLockRemoved = true;
+        PlayerPrefs.Save();
     }
 }

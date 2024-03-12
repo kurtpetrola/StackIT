@@ -17,8 +17,8 @@ public class ScoreManagerMap4 : MonoBehaviour
     private int stackedItems = 0;
     private bool isUnlockMessageShowing = false;
     private bool isUnlockMessageShowing4 = false; // Track the second unlock message
-    private bool isLockRemoved = false;
-    private bool isButtonEnabled = false; // Track whether the button is enabled
+    private bool isLockRemoved4 = false;
+    private bool isButtonEnabled4 = false; // Track whether the button is enabled
 
     // PlayerPrefs keys
     private const string LockStateKey4 = "LockState4";
@@ -37,15 +37,16 @@ public class ScoreManagerMap4 : MonoBehaviour
         UpdateHighestScoreUI();
 
         // Load the saved states
-        isLockRemoved = PlayerPrefs.GetInt(LockStateKey4, 0) == 1;
-        isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey4, 0) == 1;
+        isLockRemoved4 = PlayerPrefs.GetInt(LockStateKey4, 0) == 1;
+        isButtonEnabled4 = PlayerPrefs.GetInt(ButtonStateKey4, 0) == 1;
         bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
         bool isLockedImage5Active = PlayerPrefs.GetInt(LockedImage5StateKey, 1) == 1;
 
         // Set the button and locked images according to the saved states
-        yourButton5.interactable = isButtonEnabled;
+        yourButton5.interactable = isButtonEnabled4;
         lockedItemImage.SetActive(isLockedImageActive);
         lockedItemImage5.SetActive(isLockedImage5Active);
+        PlayerPrefs.Save();
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
@@ -115,11 +116,11 @@ public class ScoreManagerMap4 : MonoBehaviour
 
         if (playerScore == 4 && highScoreManager.GetHighestScore() == 4)
         {
-            isButtonEnabled = true;
+            isButtonEnabled4 = true;
             PlayerPrefs.SetInt(ButtonStateKey4, 1); // Save the button state
         }
 
-        if (isButtonEnabled)
+        if (isButtonEnabled4)
         {
             yourButton5.interactable = true;
         }
@@ -172,6 +173,6 @@ public class ScoreManagerMap4 : MonoBehaviour
     {
         PlayerPrefs.SetInt(LockStateKey4, 1);
         PlayerPrefs.Save();
-        isLockRemoved = true;
+        isLockRemoved4 = true;
     }
 }
