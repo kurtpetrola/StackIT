@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class ScoreManagerMap6 : MonoBehaviour
 {
+    private static ScoreManagerMap6 instance;
     public ThreeXButtonMap6 threeXButtonScriptMap6;
     public Text scoreText;
     public Text highestScoreText;
@@ -32,12 +33,44 @@ public class ScoreManagerMap6 : MonoBehaviour
     // Custom event to notify score changes
     public event System.Action<int> ScoreChanged;
 
+    private void Awake()
+    {
+        // Make this instance persistent across scene changes
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(instance);
+        }
+    }
+
     private void Start()
     {
         LoadHighestScore();
         UpdateHighestScoreUI();
 
         // Load the saved states
+        // isLockRemoved6 = PlayerPrefs.GetInt(LockStateKey6, 0) == 1;
+        // isButtonEnabled6 = PlayerPrefs.GetInt(ButtonStateKey6, 0) == 1;
+        // bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
+        // bool isLockedImage7Active = PlayerPrefs.GetInt(LockedImage7StateKey, 1) == 1;
+
+        // // Set the button and locked images according to the saved states
+        // yourButton7.interactable = isButtonEnabled6;
+        // lockedItemImage.SetActive(isLockedImageActive);
+        // lockedItemImage7.SetActive(isLockedImage7Active);
+        // PlayerPrefs.Save();
+
+        // Check if unlock messages have been shown before
+        isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
+        isUnlockMessageShowing6 = PlayerPrefs.GetInt(UnlockMessage6ShownKey, 0) == 1;
+    }
+
+    private void LoadAndApplyButtonAndLockedImageStates()
+    {
         isLockRemoved6 = PlayerPrefs.GetInt(LockStateKey6, 0) == 1;
         isButtonEnabled6 = PlayerPrefs.GetInt(ButtonStateKey6, 0) == 1;
         bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
@@ -47,11 +80,6 @@ public class ScoreManagerMap6 : MonoBehaviour
         yourButton7.interactable = isButtonEnabled6;
         lockedItemImage.SetActive(isLockedImageActive);
         lockedItemImage7.SetActive(isLockedImage7Active);
-        PlayerPrefs.Save();
-
-        // Check if unlock messages have been shown before
-        isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
-        isUnlockMessageShowing6 = PlayerPrefs.GetInt(UnlockMessage6ShownKey, 0) == 1;
     }
 
     public int GetPlayerScore()
@@ -82,22 +110,19 @@ public class ScoreManagerMap6 : MonoBehaviour
             StartCoroutine(ShowUnlockMessage());
             unlockText.text = "";
 
-
-
             // Mark the unlock message as shown
             PlayerPrefs.SetInt(UnlockMessageShownKey, 1);
             PlayerPrefs.Save();
-
         }
-        else if
-                  (playerScore == 3)
+        else if (playerScore == 3)
         {
             StartCoroutine(ShowUnlockMessage());
             unlockText.text = "";
         }
+
         if (playerScore == 30)
         {
-            // Remove lockedItemImage1 when the player score reaches 4
+            // Remove lockedItemImage7 when the player score reaches 30
             lockedItemImage7.SetActive(false);
             PlayerPrefs.SetInt(LockedImage7StateKey, 0);
             PlayerPrefs.Save();
@@ -113,19 +138,22 @@ public class ScoreManagerMap6 : MonoBehaviour
                 PlayerPrefs.SetInt(UnlockMessage6ShownKey, 1);
                 PlayerPrefs.Save();
             }
+
+            // Load and apply the button and locked image states
+            LoadAndApplyButtonAndLockedImageStates();
+
+            // Enable the button when the player score reaches 30 and the highest score is 30
+            if (playerScore == 30 && highScoreManager.GetHighestScore() == 30)
+            {
+                isButtonEnabled6 = true;
+                PlayerPrefs.SetInt(ButtonStateKey6, 1); // Save the button state
+                LoadAndApplyButtonAndLockedImageStates(); // Load and apply the button and locked image states
+            }
         }
 
-        if (playerScore == 4 && highScoreManager.GetHighestScore() == 4)
-        {
-            isButtonEnabled6 = true;
-            PlayerPrefs.SetInt(ButtonStateKey6, 1); // Save the button state
-        }
-
-        if (isButtonEnabled6)
-        {
-            yourButton7.interactable = true;
-        }
-
+        // Remove the if condition
+        yourButton7.interactable = isButtonEnabled6;
+        PlayerPrefs.Save();
 
         if (threeXButtonScriptMap6.IsButtonActive())
         {

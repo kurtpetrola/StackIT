@@ -74,7 +74,7 @@ public class GameplayController : MonoBehaviour
                 currentBox9.DropRandomObject();
             else if (currentBoxNormal != null)
                 currentBoxNormal.DropRandomObject();
-                else if (currentBoxOnline != null)
+            else if (currentBoxOnline != null)
                 currentBoxOnline.DropRandomObject();
             else if (fakeBox != null)
                 fakeBox.DropRandomObject();
@@ -117,7 +117,7 @@ public class GameplayController : MonoBehaviour
     }
     public void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(
         UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }

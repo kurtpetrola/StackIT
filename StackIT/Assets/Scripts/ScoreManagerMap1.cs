@@ -1,8 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreManagerMap1 : MonoBehaviour
 {
+
+    private static ScoreManagerMap1 instance;
     public Text scoreText;
     public Text highestScoreText;
     public Text unlockText;
@@ -27,8 +32,24 @@ public class ScoreManagerMap1 : MonoBehaviour
     private const string UnlockMessageShownKey = "UnlockMessageShown";
     private const string UnlockMessage1ShownKey = "UnlockMessage1Shown";
 
+
     // Custom event to notify score changes
     public event System.Action<int> ScoreChanged;
+
+    private void Awake()
+    {
+        // Make this instance persistent across scene changes
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(instance);
+        }
+    }
+
 
     private void Start()
     {
@@ -46,7 +67,7 @@ public class ScoreManagerMap1 : MonoBehaviour
         // lockedItemImage.SetActive(isLockedImageActive);
         // lockedItemImage2.SetActive(isLockedImage2Active);
         // PlayerPrefs.Save();
-        
+
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
@@ -55,15 +76,15 @@ public class ScoreManagerMap1 : MonoBehaviour
 
     private void LoadAndApplyButtonAndLockedImageStates()
     {
-    isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
-    isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey, 0) == 1;
-    bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-    bool isLockedImage2Active = PlayerPrefs.GetInt(LockedImage2StateKey, 1) == 1;
+        isLockRemoved = PlayerPrefs.GetInt(LockStateKey, 0) == 1;
+        isButtonEnabled = PlayerPrefs.GetInt(ButtonStateKey, 0) == 1;
+        bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
+        bool isLockedImage2Active = PlayerPrefs.GetInt(LockedImage2StateKey, 1) == 1;
 
-    // Set the button and locked images according to the saved states
-    yourButton2.interactable = isButtonEnabled;
-    lockedItemImage.SetActive(isLockedImageActive);
-    lockedItemImage2.SetActive(isLockedImage2Active);
+        // Set the button and locked images according to the saved states
+        yourButton2.interactable = isButtonEnabled;
+        lockedItemImage.SetActive(isLockedImageActive);
+        lockedItemImage2.SetActive(isLockedImage2Active);
     }
 
     public int GetPlayerScore()
@@ -128,7 +149,7 @@ public class ScoreManagerMap1 : MonoBehaviour
             }
 
             // Load and apply the button and locked image states
-        LoadAndApplyButtonAndLockedImageStates();
+            LoadAndApplyButtonAndLockedImageStates();
 
         }
 

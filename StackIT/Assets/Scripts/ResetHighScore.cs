@@ -76,7 +76,7 @@ public class ResetHighScore : MonoBehaviour
         // Set the locked images to active
         PlayerPrefs.SetInt("LockedImage1State", 1);
         PlayerPrefs.SetInt("LockedImage2State", 1);
-        // PlayerPrefs.SetInt("LockedImage3State", 1); 
+        PlayerPrefs.SetInt("LockedImage3State", 1);
         PlayerPrefs.SetInt("LockedImage4State", 1);
         PlayerPrefs.SetInt("LockedImage5State", 1);
         PlayerPrefs.SetInt("LockedImage6State", 1);

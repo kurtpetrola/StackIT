@@ -28,14 +28,14 @@ public class GameOverUIManager : MonoBehaviour
     public void RestartGame()
     {
         // Restart the game by reloading the current scene.
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(
              UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     public void GoToMainMap()
     {
         // Load the main map scene.
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("MainScene");
     }
 
     // This method is called when the player scores points during the game.

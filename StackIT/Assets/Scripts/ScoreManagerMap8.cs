@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class ScoreManagerMap8 : MonoBehaviour
 {
+
+    private static ScoreManagerMap8 instance;
     public FourXButtonMap8 fourXButtonScriptMap8;
     public Text scoreText;
     public Text highestScoreText;
@@ -31,12 +33,44 @@ public class ScoreManagerMap8 : MonoBehaviour
     // Custom event to notify score changes
     public event System.Action<int> ScoreChanged;
 
+    private void Awake()
+    {
+        // Make this instance persistent across scene changes
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(instance);
+        }
+    }
+
     private void Start()
     {
         LoadHighestScore();
         UpdateHighestScoreUI();
 
         // Load the saved states
+        // isLockRemoved8 = PlayerPrefs.GetInt(LockStateKey8, 0) == 1;
+        // isButtonEnabled8 = PlayerPrefs.GetInt(ButtonStateKey8, 0) == 1;
+        // bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
+        // bool isLockedImage9Active = PlayerPrefs.GetInt(LockedImage9StateKey, 1) == 1;
+
+        // // Set the button and locked images according to the saved states
+        // yourButton9.interactable = isButtonEnabled8;
+        // lockedItemImage.SetActive(isLockedImageActive);
+        // lockedItemImage9.SetActive(isLockedImage9Active);
+        // PlayerPrefs.Save();
+
+        // Check if unlock messages have been shown before
+        isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
+        isUnlockMessageShowing8 = PlayerPrefs.GetInt(UnlockMessage8ShownKey, 0) == 1;
+    }
+
+    private void LoadAndApplyButtonAndLockedImageStates()
+    {
         isLockRemoved8 = PlayerPrefs.GetInt(LockStateKey8, 0) == 1;
         isButtonEnabled8 = PlayerPrefs.GetInt(ButtonStateKey8, 0) == 1;
         bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
@@ -46,11 +80,6 @@ public class ScoreManagerMap8 : MonoBehaviour
         yourButton9.interactable = isButtonEnabled8;
         lockedItemImage.SetActive(isLockedImageActive);
         lockedItemImage9.SetActive(isLockedImage9Active);
-        PlayerPrefs.Save();
-
-        // Check if unlock messages have been shown before
-        isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
-        isUnlockMessageShowing8 = PlayerPrefs.GetInt(UnlockMessage8ShownKey, 0) == 1;
     }
 
     public int GetPlayerScore()
@@ -81,22 +110,19 @@ public class ScoreManagerMap8 : MonoBehaviour
             StartCoroutine(ShowUnlockMessage());
             unlockText.text = "";
 
-
-
             // Mark the unlock message as shown
             PlayerPrefs.SetInt(UnlockMessageShownKey, 1);
             PlayerPrefs.Save();
-
         }
-        else if
-                  (playerScore == 3)
+        else if (playerScore == 3)
         {
             StartCoroutine(ShowUnlockMessage());
             unlockText.text = "";
         }
+
         if (playerScore == 40)
         {
-            // Remove lockedItemImage1 when the player score reaches 4
+            // Remove lockedItemImage9 when the player score reaches 40
             lockedItemImage9.SetActive(false);
             PlayerPrefs.SetInt(LockedImage9StateKey, 0);
             PlayerPrefs.Save();
@@ -112,19 +138,22 @@ public class ScoreManagerMap8 : MonoBehaviour
                 PlayerPrefs.SetInt(UnlockMessage8ShownKey, 1);
                 PlayerPrefs.Save();
             }
+
+            // Load and apply the button and locked image states
+            LoadAndApplyButtonAndLockedImageStates();
+
+            // Enable the button when the player score reaches 40 and the highest score is 40
+            if (playerScore == 40 && highScoreManager.GetHighestScore() == 40)
+            {
+                isButtonEnabled8 = true;
+                PlayerPrefs.SetInt(ButtonStateKey8, 1); // Save the button state
+                LoadAndApplyButtonAndLockedImageStates(); // Load and apply the button and locked image states
+            }
         }
 
-        if (playerScore == 4 && highScoreManager.GetHighestScore() == 4)
-        {
-            isButtonEnabled8 = true;
-            PlayerPrefs.SetInt(ButtonStateKey8, 1); // Save the button state
-        }
-
-        if (isButtonEnabled8)
-        {
-            yourButton9.interactable = true;
-        }
-
+        // Remove the if condition
+        yourButton9.interactable = isButtonEnabled8;
+        PlayerPrefs.Save();
 
         if (fourXButtonScriptMap8.IsButtonActive())
         {

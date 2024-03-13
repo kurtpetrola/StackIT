@@ -3086,7 +3086,7 @@ MonoBehaviour:
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 6922854080870658176, guid: f461a0cca3a9dc447b0c416c787fb0b0, type: 3}
   lockedItemImage3: {fileID: 6188953676039484304, guid: cc02594cf4645754687d4effe9fb843f, type: 3}
-  yourButton3: {fileID: 2919539469074089819, guid: 2e5b82bea48af5846b436c976e0784ed, type: 3}
+  yourButton3: {fileID: 6120693659097501444, guid: 2e5b82bea48af5846b436c976e0784ed, type: 3}
 --- !u!114 &1447382797
 MonoBehaviour:
   m_ObjectHideFlags: 0
