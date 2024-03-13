@@ -2930,7 +2930,7 @@ GameObject:
   - component: {fileID: 1319763354}
   - component: {fileID: 1319763357}
   - component: {fileID: 1319763356}
-  - component: {fileID: 1319763355}
+  - component: {fileID: 1319763358}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -2957,27 +2957,6 @@ RectTransform:
   m_AnchoredPosition: {x: 32.999954, y: -0.000061035156}
   m_SizeDelta: {x: 220, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1319763355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319763353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e531d8386e8d174fbfdcd32959eaaea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  twoXButtonScriptMap4: {fileID: 552255340}
-  scoreText: {fileID: 1319763356}
-  highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  unlockText: {fileID: 1449956599}
-  unlockText4: {fileID: 269118973}
-  highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
-  lockedItemImage: {fileID: 6922854080870658176, guid: f461a0cca3a9dc447b0c416c787fb0b0, type: 3}
-  lockedItemImage5: {fileID: 8325251616522190560, guid: ff0808a3b79216e48b541c767f775b34, type: 3}
-  yourButton5: {fileID: 4588650546926849842, guid: a18bf31a2047fb748be4242e8ef36086, type: 3}
 --- !u!114 &1319763356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3020,6 +2999,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319763353}
   m_CullTransparentMesh: 1
+--- !u!114 &1319763358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319763353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e531d8386e8d174fbfdcd32959eaaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  twoXButtonScriptMap4: {fileID: 552255340}
+  scoreText: {fileID: 1319763356}
+  highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
+  unlockText: {fileID: 1449956599}
+  unlockText4: {fileID: 269118973}
+  highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
+  lockedItemImage: {fileID: 6922854080870658176, guid: f461a0cca3a9dc447b0c416c787fb0b0, type: 3}
+  lockedItemImage5: {fileID: 8325251616522190560, guid: ff0808a3b79216e48b541c767f775b34, type: 3}
+  yourButton5: {fileID: 4588650546926849842, guid: a18bf31a2047fb748be4242e8ef36086, type: 3}
 --- !u!1 &1331675093
 GameObject:
   m_ObjectHideFlags: 0

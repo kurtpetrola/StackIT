@@ -128,40 +128,36 @@ public class ScoreManagerMap4 : MonoBehaviour
         }
 
         if (playerScore == 20)
-        {
-            // Remove lockedItemImage6 when the player score reaches 25
-            lockedItemImage5.SetActive(false);
-            PlayerPrefs.SetInt(LockedImage5StateKey, 0);
-            PlayerPrefs.Save();
+{
+    // Remove lockedItemImage5 when the player score reaches 20
+    lockedItemImage5.SetActive(false);
+    isLockRemoved4 = true;
 
-            RemoveLockImages(); // Remove any remaining lock images if needed
+    RemoveLockImages(); // Remove any remaining lock images if needed
 
-            if (!isUnlockMessageShowing4)
-            {
-                StartCoroutine(ShowUnlockMessage1());
-                unlockText4.text = "5th Map Is Unlocked";
+    if (!isUnlockMessageShowing4)
+    {
+        StartCoroutine(ShowUnlockMessage1());
+        unlockText4.text = "5th Map Is Unlocked";
 
-                // Mark the second unlock message as shown
-                PlayerPrefs.SetInt(UnlockMessage4ShownKey, 1);
-                PlayerPrefs.Save();
-            }
-
-
-            // Enable the button when the player score reaches 25 and the highest score is 25
-            if (playerScore == 20 && highScoreManager.GetHighestScore() == 20)
-            {
-                isButtonEnabled4 = true;
-                // PlayerPrefs.SetInt(ButtonStateKey4, 1); // Save the button state
-                // LoadAndApplyButtonAndLockedImageStates(); // Load and apply the button and locked image states
-            }
-
-            // Load and apply the button and locked image states
-    LoadAndApplyButtonAndLockedImageStates();
-        }
-
-        // Remove the if condition
-        yourButton5.interactable = isButtonEnabled4;
+        // Mark the second unlock message as shown
+        PlayerPrefs.SetInt(UnlockMessage4ShownKey, 1);
         PlayerPrefs.Save();
+    }
+
+    // Enable the button when the player score reaches 20 and the highest score is 20
+    if (playerScore == 20 && highScoreManager.GetHighestScore() == 20)
+    {
+        isButtonEnabled4 = true;
+    }
+
+    // Load and apply the button and locked image states
+    LoadAndApplyButtonAndLockedImageStates();
+}
+
+// Remove the if condition
+yourButton5.interactable = isButtonEnabled4;
+PlayerPrefs.Save();
 
         if (twoXButtonScriptMap4.IsButtonActive())
         {
