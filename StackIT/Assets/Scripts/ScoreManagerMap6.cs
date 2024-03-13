@@ -1,9 +1,13 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class ScoreManagerMap6 : MonoBehaviour
 {
+
     private static ScoreManagerMap6 instance;
     public ThreeXButtonMap6 threeXButtonScriptMap6;
     public Text scoreText;
@@ -53,15 +57,15 @@ public class ScoreManagerMap6 : MonoBehaviour
         UpdateHighestScoreUI();
 
         // Load the saved states
-        // isLockRemoved6 = PlayerPrefs.GetInt(LockStateKey6, 0) == 1;
-        // isButtonEnabled6 = PlayerPrefs.GetInt(ButtonStateKey6, 0) == 1;
+        // isLockRemoved5 = PlayerPrefs.GetInt(LockStateKey5, 0) == 1;
+        // isButtonEnabled5 = PlayerPrefs.GetInt(ButtonStateKey5, 0) == 1;
         // bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-        // bool isLockedImage7Active = PlayerPrefs.GetInt(LockedImage7StateKey, 1) == 1;
+        // bool isLockedImage6Active = PlayerPrefs.GetInt(LockedImage6StateKey, 1) == 1;
 
         // // Set the button and locked images according to the saved states
-        // yourButton7.interactable = isButtonEnabled6;
+        // yourButton6.interactable = isButtonEnabled5;
         // lockedItemImage.SetActive(isLockedImageActive);
-        // lockedItemImage7.SetActive(isLockedImage7Active);
+        // lockedItemImage6.SetActive(isLockedImage6Active);
         // PlayerPrefs.Save();
 
         // Check if unlock messages have been shown before
@@ -120,9 +124,9 @@ public class ScoreManagerMap6 : MonoBehaviour
             unlockText.text = "";
         }
 
-        if (playerScore == 30)
+        if (playerScore == 25)
         {
-            // Remove lockedItemImage7 when the player score reaches 30
+            // Remove lockedItemImage6 when the player score reaches 25
             lockedItemImage7.SetActive(false);
             PlayerPrefs.SetInt(LockedImage7StateKey, 0);
             PlayerPrefs.Save();
@@ -142,8 +146,8 @@ public class ScoreManagerMap6 : MonoBehaviour
             // Load and apply the button and locked image states
             LoadAndApplyButtonAndLockedImageStates();
 
-            // Enable the button when the player score reaches 30 and the highest score is 30
-            if (playerScore == 30 && highScoreManager.GetHighestScore() == 30)
+            // Enable the button when the player score reaches 25 and the highest score is 25
+            if (playerScore == 25 && highScoreManager.GetHighestScore() == 25)
             {
                 isButtonEnabled6 = true;
                 PlayerPrefs.SetInt(ButtonStateKey6, 1); // Save the button state
@@ -190,7 +194,7 @@ public class ScoreManagerMap6 : MonoBehaviour
 
     private System.Collections.IEnumerator ShowUnlockMessage1()
     {
-        isUnlockMessageShowing6 = true;
+        isUnlockMessageShowing = true;
         unlockText6.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(1f);

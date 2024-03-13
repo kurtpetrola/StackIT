@@ -4,14 +4,14 @@ using UnityEngine.UI;
 public class ThreeXButtonMap5 : MonoBehaviour
 {
     public Text scoreText;
-    public Button threeXButton1;
+    public Button threeXButton;
     public Text countdownText; // Text element to show the countdown
     private bool buttonActive = false;
     private float countdown = 30f;
 
     void Start()
     {
-        threeXButton1.onClick.AddListener(ActivateThreeX);
+        threeXButton.onClick.AddListener(ActivateThreeX);
         countdownText.gameObject.SetActive(false); // Initially hide the countdown text
     }
 
@@ -27,7 +27,7 @@ public class ThreeXButtonMap5 : MonoBehaviour
             else
             {
                 buttonActive = false;
-                threeXButton1.interactable = true; // Make the button interactable again
+                threeXButton.interactable = true; // Make the button interactable again
                 countdownText.gameObject.SetActive(false); // Hide the countdown text
                 Destroy(gameObject);
             }
@@ -38,7 +38,7 @@ public class ThreeXButtonMap5 : MonoBehaviour
     {
         buttonActive = true;
         countdown = 30f; // Reset the countdown to 30 seconds
-        threeXButton1.interactable = false; // Disable the button as it's been activated
+        threeXButton.interactable = false; // Disable the button as it's been activated
         countdownText.gameObject.SetActive(true); // Show the countdown text
     }
 

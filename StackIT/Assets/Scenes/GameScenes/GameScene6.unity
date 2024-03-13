@@ -461,8 +461,8 @@ MonoBehaviour:
   unlockText6: {fileID: 1384548048}
   highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 2936310368605813076, guid: 29ca1b39111153b42a13d2c9856a3e1a, type: 3}
-  lockedItemImage7: {fileID: 5586056488436831877, guid: c8cbf1d257792e24d933e0f32739a401, type: 3}
-  yourButton7: {fileID: 2377603090503361574, guid: 377ba760f73dd534aa04e9e88278d1c3, type: 3}
+  lockedItemImage7: {fileID: 6948636927080013728, guid: c8cbf1d257792e24d933e0f32739a401, type: 3}
+  yourButton7: {fileID: 5649678707793906215, guid: 377ba760f73dd534aa04e9e88278d1c3, type: 3}
 --- !u!114 &287205300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4352,7 +4352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: -5
   maxX: 5
-  moveSpeed: 3
+  moveSpeed: 2.5
   moveUpSpeed: 1
   moveUpDistance: 2.5
 --- !u!212 &1893834980
@@ -4417,7 +4417,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.6601491, y: 0.561348, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

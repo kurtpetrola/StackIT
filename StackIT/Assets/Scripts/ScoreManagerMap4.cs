@@ -56,17 +56,20 @@ public class ScoreManagerMap4 : MonoBehaviour
         LoadHighestScore();
         UpdateHighestScoreUI();
 
-        // // Load the saved states
-        // isLockRemoved4 = PlayerPrefs.GetInt(LockStateKey4, 0) == 1;
-        // isButtonEnabled4 = PlayerPrefs.GetInt(ButtonStateKey4, 0) == 1;
+        // Load the saved states
+        // isLockRemoved5 = PlayerPrefs.GetInt(LockStateKey5, 0) == 1;
+        // isButtonEnabled5 = PlayerPrefs.GetInt(ButtonStateKey5, 0) == 1;
         // bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-        // bool isLockedImage5Active = PlayerPrefs.GetInt(LockedImage5StateKey, 1) == 1;
+        // bool isLockedImage6Active = PlayerPrefs.GetInt(LockedImage6StateKey, 1) == 1;
 
         // // Set the button and locked images according to the saved states
-        // yourButton5.interactable = isButtonEnabled4;
+        // yourButton6.interactable = isButtonEnabled5;
         // lockedItemImage.SetActive(isLockedImageActive);
-        // lockedItemImage5.SetActive(isLockedImage5Active);
+        // lockedItemImage6.SetActive(isLockedImage6Active);
         // PlayerPrefs.Save();
+
+        // // Load and apply the button and locked image states
+        // LoadAndApplyButtonAndLockedImageStates();
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
@@ -75,16 +78,15 @@ public class ScoreManagerMap4 : MonoBehaviour
 
     private void LoadAndApplyButtonAndLockedImageStates()
     {
-        // Load the saved states
         isLockRemoved4 = PlayerPrefs.GetInt(LockStateKey4, 0) == 1;
         isButtonEnabled4 = PlayerPrefs.GetInt(ButtonStateKey4, 0) == 1;
         bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
         bool isLockedImage5Active = PlayerPrefs.GetInt(LockedImage5StateKey, 1) == 1;
 
-        // Set the button and locked images according to the current states
+        // Set the button and locked images according to the saved states
         yourButton5.interactable = isButtonEnabled4;
-        lockedItemImage.SetActive(!isLockRemoved4);
-        lockedItemImage5.SetActive(!isLockRemoved4);
+        lockedItemImage.SetActive(isLockedImageActive);
+        lockedItemImage5.SetActive(isLockedImage5Active);
     }
 
     public int GetPlayerScore()
@@ -108,6 +110,8 @@ public class ScoreManagerMap4 : MonoBehaviour
             RemoveLockImages();
             // Also remove lockedItemImage
             lockedItemImage.SetActive(false);
+            PlayerPrefs.SetInt(LockStateKey4, 1);
+            PlayerPrefs.SetInt(LockedImageStateKey, 0);
             PlayerPrefs.Save();
 
             StartCoroutine(ShowUnlockMessage());
@@ -125,9 +129,10 @@ public class ScoreManagerMap4 : MonoBehaviour
 
         if (playerScore == 20)
         {
-            // Remove lockedItemImage5 when the player score reaches 20
+            // Remove lockedItemImage6 when the player score reaches 25
             lockedItemImage5.SetActive(false);
-            isLockRemoved4 = true;
+            PlayerPrefs.SetInt(LockedImage5StateKey, 0);
+            PlayerPrefs.Save();
 
             RemoveLockImages(); // Remove any remaining lock images if needed
 
@@ -141,14 +146,17 @@ public class ScoreManagerMap4 : MonoBehaviour
                 PlayerPrefs.Save();
             }
 
-            // Enable the button when the player score reaches 20 and the highest score is 20
+
+            // Enable the button when the player score reaches 25 and the highest score is 25
             if (playerScore == 20 && highScoreManager.GetHighestScore() == 20)
             {
                 isButtonEnabled4 = true;
+                // PlayerPrefs.SetInt(ButtonStateKey4, 1); // Save the button state
+                // LoadAndApplyButtonAndLockedImageStates(); // Load and apply the button and locked image states
             }
 
             // Load and apply the button and locked image states
-            LoadAndApplyButtonAndLockedImageStates();
+    LoadAndApplyButtonAndLockedImageStates();
         }
 
         // Remove the if condition
@@ -157,7 +165,7 @@ public class ScoreManagerMap4 : MonoBehaviour
 
         if (twoXButtonScriptMap4.IsButtonActive())
         {
-            playerScore += 1;
+            playerScore += 2;
         }
 
         playerScore += stackedItems;

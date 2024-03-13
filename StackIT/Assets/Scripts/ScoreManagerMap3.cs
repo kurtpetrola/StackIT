@@ -120,7 +120,7 @@ public class ScoreManagerMap3 : MonoBehaviour
         else if (playerScore == 3)
         {
             StartCoroutine(ShowUnlockMessage());
-            unlockText.text = "2x Item Is Activated";
+            unlockText.text = "";
         }
 
         if (playerScore == 15)

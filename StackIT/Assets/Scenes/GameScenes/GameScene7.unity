@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 54490454}
-  threeXButton1: {fileID: 1055446318}
+  threeXButton2: {fileID: 1055446318}
   countdownText: {fileID: 1895333622}
 --- !u!114 &1055446318
 MonoBehaviour:
