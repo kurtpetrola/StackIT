@@ -133,7 +133,7 @@ public class ScoreManagerMap4 : MonoBehaviour
             if (!isUnlockMessageShowing4)
             {
                 StartCoroutine(ShowUnlockMessage1());
-                unlockText4.text = "5th Map Is Unlocked";
+                unlockText4.text = "";
 
                 // Mark the second unlock message as shown
                 PlayerPrefs.SetInt(UnlockMessage4ShownKey, 1);

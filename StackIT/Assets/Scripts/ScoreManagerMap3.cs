@@ -55,18 +55,6 @@ public class ScoreManagerMap3 : MonoBehaviour
         LoadHighestScore();
         UpdateHighestScoreUI();
 
-        // // Load the saved states
-        // isLockRemoved3 = PlayerPrefs.GetInt(LockStateKey3, 0) == 1;
-        // isButtonEnabled3 = PlayerPrefs.GetInt(ButtonStateKey3, 0) == 1;
-        // bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-        // bool isLockedImage4Active = PlayerPrefs.GetInt(LockedImage4StateKey, 1) == 1;
-
-        // // Set the button and locked images according to the saved states
-        // yourButton4.interactable = isButtonEnabled3;
-        // lockedItemImage.SetActive(isLockedImageActive);
-        // lockedItemImage4.SetActive(isLockedImage4Active);
-        // PlayerPrefs.Save();
-
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
         isUnlockMessageShowing3 = PlayerPrefs.GetInt(UnlockMessage3ShownKey, 0) == 1;
@@ -111,7 +99,7 @@ public class ScoreManagerMap3 : MonoBehaviour
             PlayerPrefs.Save();
 
             StartCoroutine(ShowUnlockMessage());
-            unlockText.text = "2x Item Is Unlocked";
+            unlockText.text = "";
 
             // Mark the unlock message as shown
             PlayerPrefs.SetInt(UnlockMessageShownKey, 1);
@@ -135,7 +123,7 @@ public class ScoreManagerMap3 : MonoBehaviour
             if (!isUnlockMessageShowing3)
             {
                 StartCoroutine(ShowUnlockMessage1());
-                unlockText3.text = "4th Map Is Unlocked";
+                unlockText3.text = "";
 
                 // Mark the second unlock message as shown
                 PlayerPrefs.SetInt(UnlockMessage3ShownKey, 1);

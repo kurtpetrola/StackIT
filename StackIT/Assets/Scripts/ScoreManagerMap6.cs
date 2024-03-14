@@ -56,18 +56,6 @@ public class ScoreManagerMap6 : MonoBehaviour
         LoadHighestScore();
         UpdateHighestScoreUI();
 
-        // Load the saved states
-        // isLockRemoved5 = PlayerPrefs.GetInt(LockStateKey5, 0) == 1;
-        // isButtonEnabled5 = PlayerPrefs.GetInt(ButtonStateKey5, 0) == 1;
-        // bool isLockedImageActive = PlayerPrefs.GetInt(LockedImageStateKey, 1) == 1;
-        // bool isLockedImage6Active = PlayerPrefs.GetInt(LockedImage6StateKey, 1) == 1;
-
-        // // Set the button and locked images according to the saved states
-        // yourButton6.interactable = isButtonEnabled5;
-        // lockedItemImage.SetActive(isLockedImageActive);
-        // lockedItemImage6.SetActive(isLockedImage6Active);
-        // PlayerPrefs.Save();
-
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
         isUnlockMessageShowing6 = PlayerPrefs.GetInt(UnlockMessage6ShownKey, 0) == 1;
@@ -136,7 +124,7 @@ public class ScoreManagerMap6 : MonoBehaviour
             if (!isUnlockMessageShowing6)
             {
                 StartCoroutine(ShowUnlockMessage1());
-                unlockText6.text = "7th Map Is Unlocked";
+                unlockText6.text = "";
 
                 // Mark the second unlock message as shown
                 PlayerPrefs.SetInt(UnlockMessage6ShownKey, 1);
