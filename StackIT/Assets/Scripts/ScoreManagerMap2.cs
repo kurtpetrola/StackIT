@@ -56,6 +56,7 @@ public class ScoreManagerMap2 : MonoBehaviour
         LoadHighestScore();
         UpdateHighestScoreUI();
 
+        LoadAndApplyButtonAndLockedImageStates();
 
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;

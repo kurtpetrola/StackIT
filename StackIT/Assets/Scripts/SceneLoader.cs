@@ -5,34 +5,35 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    public GameObject loadingScreen;
-    public Slider slider;
+    public GameObject LoaderUI;
+    public Slider progressSlider;
     public Text progressText;
-    public float delayBeforeStart = 1.0f; // Delay before starting the loading
-    public float progressMultiplier = 0.1f; // Adjust this to control the progress speed
+    public float progressMultiplier = 0.1f;
 
-    public void LoadScene(int sceneIndex)
+    public void LoadSceneAsync(int index)
     {
-        StartCoroutine(LoadAsynchronously(sceneIndex));
+        StartCoroutine(LoadScene_Coroutine(index));
     }
 
-    IEnumerator LoadAsynchronously(int sceneIndex)
+    public IEnumerator LoadScene_Coroutine(int index)
     {
-        // Delay for a specified time before showing the loading screen
-        yield return new WaitForSeconds(delayBeforeStart);
+        progressSlider.value = 0;
+        LoaderUI.SetActive(true);
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
+        asyncOperation.allowSceneActivation = false;
+        float progress = 0;
 
-        loadingScreen.SetActive(true);
-
-        while (!operation.isDone)
+        while (!asyncOperation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-
-            // Slow down the progress by multiplying it by a smaller factor
-            slider.value += progress * progressMultiplier;
-            progressText.text = (slider.value * 100f).ToString("F0") + "%";
-
+            progress = Mathf.MoveTowards(progress, asyncOperation.progress, Time.deltaTime);
+            progressSlider.value = progress;
+            progressText.text = "Loading... " + Mathf.Round(progress * 100f) + "%";
+            if (progress >= 0.9f)
+            {
+                progressSlider.value = 1;
+                asyncOperation.allowSceneActivation = true;
+            }
             yield return null;
         }
     }
