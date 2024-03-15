@@ -171,6 +171,39 @@ MonoBehaviour:
   progressSlider: {fileID: 609098293}
   progressText: {fileID: 1965179436}
   progressMultiplier: 0.1
+--- !u!1 &559831286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559831287}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &559831287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559831286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3967204, y: -1.5419115, z: 7979.8237}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 917567623}
+  - {fileID: 1981210311}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609098291
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +381,6 @@ GameObject:
   - component: {fileID: 725147934}
   - component: {fileID: 725147933}
   - component: {fileID: 725147932}
-  - component: {fileID: 725147935}
   m_Layer: 5
   m_Name: TapToStartBtn
   m_TagString: Untagged
@@ -482,27 +514,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725147930}
   m_CullTransparentMesh: 1
---- !u!95 &725147935
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725147930}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &862927541
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,12 +809,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917567620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.024070676, y: -3.4712162, z: 0.08781593}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.4207911, y: -1.9293047, z: -7979.736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 559831287}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116140752
 GameObject:
@@ -817,7 +828,6 @@ GameObject:
   - component: {fileID: 1116140755}
   - component: {fileID: 1116140754}
   - component: {fileID: 1116140753}
-  - component: {fileID: 1116140757}
   m_Layer: 5
   m_Name: StartSceneCanvas
   m_TagString: Untagged
@@ -909,27 +919,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!95 &1116140757
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116140752}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1132846406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,7 +1157,6 @@ GameObject:
   - component: {fileID: 1336369536}
   - component: {fileID: 1336369538}
   - component: {fileID: 1336369537}
-  - component: {fileID: 1336369539}
   m_Layer: 5
   m_Name: StartScenePanel
   m_TagString: Untagged
@@ -1236,27 +1224,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336369535}
   m_CullTransparentMesh: 1
---- !u!95 &1336369539
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336369535}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1395313721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1372,7 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 7143715259730278147, guid: 81cfe102ae13761498952e829d69bc15, type: 2}
-    value: {fileID: 1116140757}
+    value: {fileID: 0}
   - key: {fileID: -8936046906985220143, guid: 81cfe102ae13761498952e829d69bc15, type: 2}
     value: {fileID: 1221930370}
   - key: {fileID: 3990993576949436684, guid: 81cfe102ae13761498952e829d69bc15, type: 2}
@@ -1631,11 +1598,11 @@ Transform:
   m_GameObject: {fileID: 1981210309}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.020000003, y: -0.0070946217, z: 2.0916672}
+  m_LocalPosition: {x: -2.3767204, y: 1.5348169, z: -7977.732}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 559831287}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1981210312
 AudioSource:
@@ -1867,10 +1834,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1920179602239016702}
-  - {fileID: 524871056}
   - {fileID: 887463438}
-  - {fileID: 1981210311}
+  - {fileID: 559831287}
+  - {fileID: 524871056}
   - {fileID: 1116140756}
-  - {fileID: 917567623}
   - {fileID: 1503782394}
   - {fileID: 1132846409}

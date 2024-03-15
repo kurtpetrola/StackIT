@@ -1,81 +1,112 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] Image soundOnicon;
-    [SerializeField] Image soundOfficon;
-    private bool muted = false;
-    private AudioSource soundEffectSource; // Reference to the AudioSource component for sound effects
 
-    public AudioClip yourSoundEffect; // Reference to your sound effect AudioClip
+    public static SoundManager instance;
+
+    public GameObject musicObject;
+    public GameObject soundObject;
+    public Texture soundOn;
+    public Texture soundOff;
+    AudioSource[] sounds;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
-        // Initialize the soundEffectSource reference
-        soundEffectSource = gameObject.AddComponent<AudioSource>();
-
-        if (!PlayerPrefs.HasKey("muted"))
+        sounds = GetComponents<AudioSource>();
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "level_" + (scene.buildIndex).ToString()) // check in menu or game
         {
-            PlayerPrefs.SetInt("muted", 0);
-            Load();
+            MuteMenuMusic();
         }
         else
         {
-            Load();
-        }
-        UpdateButtonIcon();
-        AudioListener.pause = muted;
-    }
-
-    public void OnButtonPress()
-    {
-        if (muted == false)
-        {
-            muted = true;
-            AudioListener.pause = true;
-        }
-        else
-        {
-            muted = false;
-            AudioListener.pause = false;
-        }
-        Save();
-        UpdateButtonIcon();
-    }
-
-    public void PlayYourSoundEffect()
-    {
-        // Check if the sound is not muted
-        if (!muted && yourSoundEffect != null)
-        {
-            soundEffectSource.PlayOneShot(yourSoundEffect);
+            UnMuteMenuMusic();
         }
     }
 
-    private void UpdateButtonIcon()
+    void Update()
     {
-        if (muted == false)
+        AudioController();
+    }
+    public void MusicButton()
+    {
+        if (musicObject.GetComponent<RawImage>().texture == soundOn)
         {
-            soundOnicon.enabled = true;
-            soundOfficon.enabled = false;
+            musicObject.GetComponent<RawImage>().texture = soundOff;
+            PlayerPrefs.SetString("musics", "offmusic");
         }
-        else
+       else if (musicObject.GetComponent<RawImage>().texture == soundOff)
         {
-            soundOnicon.enabled = false;
-            soundOfficon.enabled = true;
+            musicObject.GetComponent<RawImage>().texture = soundOn;
+            PlayerPrefs.SetString("musics", "onmusic");
         }
     }
-
-    private void Load()
+    public void SoundButton()
     {
-        muted = PlayerPrefs.GetInt("muted") == 1;
+        if (soundObject.GetComponent<RawImage>().texture == soundOn)
+        {
+            soundObject.GetComponent<RawImage>().texture = soundOff;
+            PlayerPrefs.SetString("sounds", "offsound");
+        }
+        else if (soundObject.GetComponent<RawImage>().texture == soundOff)
+        {
+            soundObject.GetComponent<RawImage>().texture = soundOn;
+            PlayerPrefs.SetString("sounds", "onsound");
+        }
     }
-
-    private void Save()
+    public void AudioController()
     {
-        PlayerPrefs.SetInt("muted", muted ? 1 : 0);
+        if (PlayerPrefs.GetString("musics") == "onmusic")
+        {
+            sounds[0].mute = false;
+            musicObject.GetComponent<RawImage>().texture = soundOn;
+        }
+        if (PlayerPrefs.GetString("musics") == "offmusic")
+        {
+            sounds[0].mute = true;
+            musicObject.GetComponent<RawImage>().texture = soundOff;
+        }
+        if (PlayerPrefs.GetString("sounds") == "onsound")
+        {
+            sounds[1].mute = false;
+            soundObject.GetComponent<RawImage>().texture = soundOn;
+        }
+        if (PlayerPrefs.GetString("sounds") == "offsound")
+        {
+            sounds[1].mute = true;
+            soundObject.GetComponent<RawImage>().texture = soundOff;
+        }
+
+
+    }
+    public void AudioButton()
+    {
+        sounds[1].Play();
+    }
+    public void MuteMenuMusic()
+    {
+        sounds[0].mute = true;
+    }
+    public void UnMuteMenuMusic()
+    {
+        sounds[0].mute = false;
     }
 }
