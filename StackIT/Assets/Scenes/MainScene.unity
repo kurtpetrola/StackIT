@@ -1785,6 +1785,8 @@ MonoBehaviour:
   soundObject: {fileID: 1759601251}
   soundOn: {fileID: 2800000, guid: 577411d08af1e5143a5444024560b355, type: 3}
   soundOff: {fileID: 2800000, guid: 7849f4377355c1e45acb24e6ba5c1a7d, type: 3}
+  musicOn: {fileID: 2800000, guid: f5b0cb8a6b1510a4cbe5bd0d430623fa, type: 3}
+  musicOff: {fileID: 2800000, guid: 28ceda254246eaf4d9d78fbf099797e0, type: 3}
 --- !u!82 &190927328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2419,7 +2421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 577411d08af1e5143a5444024560b355, type: 3}
+  m_Texture: {fileID: 2800000, guid: f5b0cb8a6b1510a4cbe5bd0d430623fa, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

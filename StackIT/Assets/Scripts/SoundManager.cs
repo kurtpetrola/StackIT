@@ -13,6 +13,8 @@ public class SoundManager : MonoBehaviour
     public GameObject soundObject;
     public Texture soundOn;
     public Texture soundOff;
+    public Texture musicOn;
+    public Texture musicOff;
     AudioSource[] sounds;
 
     private void Awake()
@@ -48,14 +50,14 @@ public class SoundManager : MonoBehaviour
     }
     public void MusicButton()
     {
-        if (musicObject.GetComponent<RawImage>().texture == soundOn)
+        if (musicObject.GetComponent<RawImage>().texture == musicOn)
         {
-            musicObject.GetComponent<RawImage>().texture = soundOff;
+            musicObject.GetComponent<RawImage>().texture = musicOff;
             PlayerPrefs.SetString("musics", "offmusic");
         }
-       else if (musicObject.GetComponent<RawImage>().texture == soundOff)
+       else if (musicObject.GetComponent<RawImage>().texture == musicOff)
         {
-            musicObject.GetComponent<RawImage>().texture = soundOn;
+            musicObject.GetComponent<RawImage>().texture = musicOn;
             PlayerPrefs.SetString("musics", "onmusic");
         }
     }
@@ -77,12 +79,12 @@ public class SoundManager : MonoBehaviour
         if (PlayerPrefs.GetString("musics") == "onmusic")
         {
             sounds[0].mute = false;
-            musicObject.GetComponent<RawImage>().texture = soundOn;
+            musicObject.GetComponent<RawImage>().texture = musicOn;
         }
         if (PlayerPrefs.GetString("musics") == "offmusic")
         {
             sounds[0].mute = true;
-            musicObject.GetComponent<RawImage>().texture = soundOff;
+            musicObject.GetComponent<RawImage>().texture = musicOff;
         }
         if (PlayerPrefs.GetString("sounds") == "onsound")
         {
