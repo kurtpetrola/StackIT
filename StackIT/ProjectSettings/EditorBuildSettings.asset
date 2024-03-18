@@ -44,6 +44,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: 6e08a89fe77773446ab441007f4ed083
+  - enabled: 1
+    path: Assets/Scenes/OnlineMode.unity
+    guid: 43d1fa2b9cb13534a90e5b36a9553211
+  - enabled: 1
+    path: Assets/LootLockerLoginTemplate/Scenes/WhiteLabelAndGuestLogin.unity
+    guid: ec2ff2f2a3fb9b04aae2ea8d852eeda1
+  - enabled: 1
+    path: Assets/LootLockerLoginTemplate/Scenes/LeaderboardScreen.unity
+    guid: 87c2ddd8e4dd04112ba3624d1939e834
+  - enabled: 1
+    path: Assets/LootLockerLoginTemplate/Scenes/ExampleMainMenu.unity
+    guid: e6d175a7a933d4d85a7c90c5adda5083
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: fc9b6e78fd928a7468386b853e73e766, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a4deb4b6f6b010746bc16445427e98c3, type: 2}

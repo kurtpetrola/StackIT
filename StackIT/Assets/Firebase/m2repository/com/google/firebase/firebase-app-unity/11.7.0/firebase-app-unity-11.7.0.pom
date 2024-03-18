@@ -4,6 +4,6 @@
   <groupId>com.google.firebase</groupId>
   <artifactId>firebase-app-unity</artifactId>
   <version>11.7.0</version>
-  <packaging>srcaar</packaging>
+  <packaging>aar</packaging>
   <dependencies></dependencies>
 </project>

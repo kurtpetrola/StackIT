@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7467632270054776270}
   - component: {fileID: -2299230471655764653}
   - component: {fileID: -2131556555338417481}
-  - component: {fileID: 1516416603825076701}
+  - component: {fileID: 1706580933995352661}
   m_Layer: 0
   m_Name: WoodBox 1
   m_TagString: Box
@@ -269,7 +269,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1516416603825076701
+--- !u!114 &1706580933995352661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8516474104200412569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a4b3ae89bd9d249a21712f4e91813c, type: 3}
+  m_Script: {fileID: 11500000, guid: cdc1b63516c5517438b914fca543b5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToDrop: []
