@@ -11,5 +11,7 @@ public class SceneChange : MonoBehaviour
     public void changeScene()
     {
         SceneManager.LoadSceneAsync(sceneName);
+        // UnloadRecentGameScene();
+        // SceneManager.LoadScene("MainScene");
     }
 }

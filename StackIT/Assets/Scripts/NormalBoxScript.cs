@@ -75,6 +75,10 @@ public class NormalBoxScript : MonoBehaviour
 
     public void DropRandomObject()
     {
+        if (Time.timeScale == 0)
+    {
+        return; // Do not drop objects when the game is paused
+    }
         canMove = false;
         myBody.gravityScale = Random.Range(2, 4);
 

@@ -9,6 +9,7 @@ public class GameplayController : MonoBehaviour
     public BoxSpawner box_Spawner;
     public StartPanel startPanel;
     [HideInInspector]
+    public Collider touchCollider;
     public BoxScript currentBox;
     public BoxScript2 currentBox2;
     public BoxScript3 currentBox3;
@@ -51,33 +52,37 @@ public class GameplayController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            int randomIndex = UnityEngine.Random.Range(0, objectsToDrop.Length);
-            GameObject objectToDrop = objectsToDrop[randomIndex];
+            // Check if touch position is inside the touch collider
+            if (touchCollider == Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)))
+            {
+                int randomIndex = UnityEngine.Random.Range(0, objectsToDrop.Length);
+                GameObject objectToDrop = objectsToDrop[randomIndex];
 
-            if (currentBox != null)
-                currentBox.DropRandomObject();
-            else if (currentBox2 != null)
-                currentBox2.DropRandomObject();
-            else if (currentBox3 != null)
-                currentBox3.DropRandomObject();
-            else if (currentBox4 != null)
-                currentBox4.DropRandomObject();
-            else if (currentBox5 != null)
-                currentBox5.DropRandomObject();
-            else if (currentBox6 != null)
-                currentBox6.DropRandomObject();
-            else if (currentBox7 != null)
-                currentBox7.DropRandomObject();
-            else if (currentBox8 != null)
-                currentBox8.DropRandomObject();
-            else if (currentBox9 != null)
-                currentBox9.DropRandomObject();
-            else if (currentBoxNormal != null)
-                currentBoxNormal.DropRandomObject();
+                if (currentBox != null)
+                    currentBox.DropRandomObject();
+                else if (currentBox2 != null)
+                    currentBox2.DropRandomObject();
+                else if (currentBox3 != null)
+                    currentBox3.DropRandomObject();
+                else if (currentBox4 != null)
+                    currentBox4.DropRandomObject();
+                else if (currentBox5 != null)
+                    currentBox5.DropRandomObject();
+                else if (currentBox6 != null)
+                    currentBox6.DropRandomObject();
+                else if (currentBox7 != null)
+                    currentBox7.DropRandomObject();
+                else if (currentBox8 != null)
+                    currentBox8.DropRandomObject();
+                else if (currentBox9 != null)
+                    currentBox9.DropRandomObject();
+                else if (currentBoxNormal != null)
+                    currentBoxNormal.DropRandomObject();
                 else if (currentBoxOnline != null)
-                currentBoxOnline.DropRandomObject();
-            else if (fakeBox != null)
-                fakeBox.DropRandomObject();
+                    currentBoxOnline.DropRandomObject();
+                else if (fakeBox != null)
+                    fakeBox.DropRandomObject();
+            }
         }
     }
 

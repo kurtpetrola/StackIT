@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-    
+    private Scene recentGameScene;
+
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -15,6 +16,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Home()
     {
+        UnloadRecentGameScene();
         SceneManager.LoadScene("MainScene");
         Time.timeScale = 1;
     }
@@ -31,5 +33,16 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    private void UnloadRecentGameScene()
+    {
+        if (recentGameScene.IsValid())
+        {
+            SceneManager.UnloadSceneAsync(recentGameScene);
+        }
+    }
 
+    private void Awake()
+    {
+        recentGameScene = SceneManager.GetActiveScene();
+    }
 }

@@ -10,6 +10,7 @@ TagManager:
   - GameOverBox
   - TNT
   - NormalBox
+  - Touch
   layers:
   - Default
   - TransparentFX
