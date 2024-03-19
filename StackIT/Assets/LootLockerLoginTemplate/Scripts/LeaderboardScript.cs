@@ -6,7 +6,7 @@ using TMPro;
 
 public class LeaderboardScript : MonoBehaviour
 {
-  private string leaderboardKey = "stackIT";
+  private string leaderboardKey = "stackITLead";
   private string mainMenuSceneName = "ExampleMainMenu";
 
   [Header("Animators")]

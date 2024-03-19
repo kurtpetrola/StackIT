@@ -3,7 +3,7 @@ using LootLocker.Requests;
 
 public class SubmitLeaderboardScore : MonoBehaviour
 {
-  public static string leaderboardKey = "stackIT";
+  public static string leaderboardKey = "stackITLead";
 
   public static void Submit(int scoreToSubmit)
   {
