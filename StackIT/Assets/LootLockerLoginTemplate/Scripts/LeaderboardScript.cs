@@ -46,7 +46,7 @@ public class LeaderboardScript : MonoBehaviour
         //show the leaderboard screen and populate it with the data
         leaderboardCanvasAnimator.CallAppearOnAllAnimators();
 
-        leaderboardGamerText.text = "GAMER";
+        leaderboardGamerText.text = "PLAYER";
         leaderboardScoreText.text = "SCORE";
 
         //for each item 
