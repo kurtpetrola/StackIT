@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: LootLockerConfig
   m_EditorClassIdentifier: 
   apiKey: dev_976d1b9072d14e3dbe01bd442d6b0eb1
-  token: d6bb65575f2f78ee50929bcf2bdcd1099c24bcd7
+  token: b26c22988f70112121ee0df34b93d7ce3ee72929
   adminToken: 
   refreshToken: 
   domainKey: jo1w9k7n
   gameID: 0
   game_version: 1.0.0.0
   sdk_version: 2.1.2
-  deviceID: 94cf6c2b-d24e-4feb-a42f-b642bd5dbcd1
+  deviceID: afeeaaae-6a23-4c4d-aa06-fcc501228c0c
   url: https://api.lootlocker.io/v1
   adminUrl: https://jo1w9k7n.api.lootlocker.io/admin
   playerUrl: https://jo1w9k7n.api.lootlocker.io/player

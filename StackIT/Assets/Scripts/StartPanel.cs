@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class StartPanel : MonoBehaviour
 {
@@ -11,30 +9,68 @@ public class StartPanel : MonoBehaviour
     public bool panelClosed = false;
 
     private GameplayController gameplayController;
+    private bool countdownPaused = false;
+    private bool isNetworkDisconnected = false; // To track network status
 
     void Start()
     {
-        panel.SetActive(true); // Ensure the panel is visible when the game starts
-        gameplayController = GameplayController.instance; // Get reference to the GameplayController
-        InvokeRepeating("UpdateCountdown", 0f, 1f); // Call the UpdateCountdown function every second
+        panel.SetActive(true);
+        gameplayController = GameplayController.instance;
+        InvokeRepeating("UpdateCountdown", 0f, 1f);
     }
 
-    // Function to update the countdown display
     void UpdateCountdown()
     {
-        countdown -= 1f;
-        countdownText.text = Mathf.Ceil(countdown).ToString(); // Update the countdown text
-        if (countdown <= 0 && !panelClosed)
+        if (!countdownPaused && !panelClosed)
         {
-            panel.SetActive(false); // Hide the panel after the countdown finishes
-            countdownText.gameObject.SetActive(false); // Hide the countdown text
-            panelClosed = true;
-            gameplayController.SpawnNewBox(); // Call the function in GameplayController to spawn the box
-            CancelInvoke("UpdateCountdown"); // Stop the countdown
+            countdown -= 1f;
+            countdownText.text = Mathf.Ceil(countdown).ToString();
+            if (countdown < 1)
+            {
+                panel.SetActive(false);
+                countdownText.gameObject.SetActive(false);
+                panelClosed = true;
+                gameplayController.SpawnNewBox();
+                CancelInvoke("UpdateCountdown");
+            }
         }
     }
 
-    // Function to call when the panel is closed manually (if needed)
+    public void PauseCountdown(bool paused)
+    {
+        countdownPaused = paused;
+    }
+
+    public void ResumeCountdown()
+    {
+        countdownPaused = false;
+    }
+
+    public void ContinueCountdown()
+    {
+        if (!panelClosed && isNetworkDisconnected)
+        {
+            countdownPaused = false;
+            countdown = 11f;
+            countdownText.text = Mathf.Ceil(countdown).ToString();
+            panel.SetActive(true);
+            countdownText.gameObject.SetActive(true);
+            // InvokeRepeating("UpdateCountdown", 0f, 1f);
+            isNetworkDisconnected = false;
+        }
+    }
+
+    public void OnNetworkDisconnected()
+    {
+        PauseCountdown(true);
+        isNetworkDisconnected = true;
+    }
+
+    public void OnNetworkReconnected()
+    {
+        ContinueCountdown();
+    }
+
     public void ClosePanelManually()
     {
         if (!panelClosed)

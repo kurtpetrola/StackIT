@@ -83,7 +83,7 @@ public class BoxScript7 : MonoBehaviour
         return; // Do not drop objects when the game is paused
     }
         canMove = false;
-        myBody.gravityScale = Random.Range(2, 4);
+        myBody.gravityScale = Random.Range(4, 4);
 
         if (objectsToDrop.Length > 0)
         {

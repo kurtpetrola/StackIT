@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class ScoreManagerOnline : MonoBehaviour
 {
     public Text scoreText;
+    public Text scoreText1;
     public Text highestScoreTextOnline;
     public HighScoreManagerOnline highScoreManagerOnline;
 
@@ -32,6 +33,7 @@ public class ScoreManagerOnline : MonoBehaviour
         }
 
         scoreText.text = "Score: " + playerScore.ToString();
+        scoreText1.text = "Score: " + playerScore.ToString();
         ScoreChanged?.Invoke(playerScore);
     }
 

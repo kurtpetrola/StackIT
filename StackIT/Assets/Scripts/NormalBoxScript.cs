@@ -9,7 +9,7 @@ public class NormalBoxScript : MonoBehaviour
     private int landedBoxCount = 0;
     private int consecutiveSuccessCount = 0; // Track consecutive successful landings
     private bool canMove;
-    private float move_Speed = 2.5f;
+    private float move_Speed = 3f;
     public GameObject[] objectsToDrop;
     private Rigidbody2D myBody;
     private bool gameOver;
@@ -80,7 +80,7 @@ public class NormalBoxScript : MonoBehaviour
         return; // Do not drop objects when the game is paused
     }
         canMove = false;
-        myBody.gravityScale = Random.Range(2, 4);
+        myBody.gravityScale = Random.Range(4, 4);
 
         if (objectsToDrop.Length > 0)
         {

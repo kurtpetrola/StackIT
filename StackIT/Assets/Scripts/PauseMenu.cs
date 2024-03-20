@@ -21,6 +21,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void HomeOnline()
+    {
+        UnloadRecentGameScene();
+        SceneManager.LoadScene("WhiteLabelAndGuestLogin");
+        Time.timeScale = 1;
+    }
+
     public void Resume()
     {
         pauseMenu.SetActive(false);
