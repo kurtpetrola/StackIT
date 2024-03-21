@@ -17,7 +17,7 @@ public class HighScoreManager : MonoBehaviour
         int highestScore = PlayerPrefs.GetInt("HighestScore", 0);
 
 
-        highestScoreText.text = "Highest Score: " + highestScore;
+        highestScoreText.text = "High Score: " + highestScore;
 
         // Use currentScore for your game logic.
         // When the game is over and you want to reset the high score to 1, call SetHighestScore(1).
@@ -27,7 +27,7 @@ public class HighScoreManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("HighestScore", score);
         PlayerPrefs.Save();
-        highestScoreText.text = "Highest Score: " + score;
+        highestScoreText.text = "High Score: " + score;
     }
 
 
