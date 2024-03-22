@@ -46,7 +46,7 @@ public class ResetHighScore : MonoBehaviour
     PlayerPrefs.DeleteAll();
 
     // Reset the high score to 0
-    PlayerPrefs.SetInt("HighestScore", 0);
+    PlayerPrefs.SetInt("High Score", 0);
 
     // Set the items locked images to active
     PlayerPrefs.SetInt("LockedItem1State", 1);
@@ -102,7 +102,7 @@ public class ResetHighScore : MonoBehaviour
     PlayerPrefs.SetInt("UnlockMessage9Shown", 0);
 
     // Update the UI text to reflect the reset
-    highestScoreText.text = "Highest Score: 0";
+    highestScoreText.text = "High Score: 0";
 
     // Show the locked item images after resetting
     lockedItem1.SetActive(true);
