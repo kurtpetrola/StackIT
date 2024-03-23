@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TutorialScene.unity
     guid: 6e08a89fe77773446ab441007f4ed083
   - enabled: 1
-    path: Assets/Scenes/OnlineMode.unity
+    path: Assets/Scenes/GameScenes/OnlineMode.unity
     guid: 43d1fa2b9cb13534a90e5b36a9553211
   - enabled: 1
     path: Assets/LootLockerLoginTemplate/Scenes/WhiteLabelAndGuestLogin.unity
