@@ -11,10 +11,8 @@ public class ScoreManagerMap5 : MonoBehaviour
     private static ScoreManagerMap5 instance;
     public ThreeXButtonMap5 threeXButtonScriptMap5;
     public Text scoreText;
-    public Text highestScoreText;
     public Text unlockText;
     public Text unlockText5; // Reference to the second unlock text
-    public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage6; // Reference to the second locked image
     public Button yourButton6; // Reference to your button
@@ -53,9 +51,6 @@ public class ScoreManagerMap5 : MonoBehaviour
 
     private void Start()
     {
-        LoadHighestScore();
-        UpdateHighestScoreUI();
-
         // Check if unlock messages have been shown before
         isUnlockMessageShowing = PlayerPrefs.GetInt(UnlockMessageShownKey, 0) == 1;
         isUnlockMessageShowing5 = PlayerPrefs.GetInt(UnlockMessage5ShownKey, 0) == 1;
@@ -83,11 +78,6 @@ public class ScoreManagerMap5 : MonoBehaviour
     {
         playerScore++;
 
-        if (playerScore > highScoreManager.GetHighestScore())
-        {
-            highScoreManager.SetHighestScore(playerScore);
-            UpdateHighestScoreUI();
-        }
 
         if (playerScore == 3 && !isUnlockMessageShowing)
         {
@@ -135,7 +125,7 @@ public class ScoreManagerMap5 : MonoBehaviour
             LoadAndApplyButtonAndLockedImageStates();
 
             // Enable the button when the player score reaches 25 and the highest score is 25
-            if (playerScore == 25 && highScoreManager.GetHighestScore() == 25)
+            if (playerScore == 25)
             {
                 isButtonEnabled5 = true;
                 PlayerPrefs.SetInt(ButtonStateKey5, 1); // Save the button state
@@ -158,16 +148,6 @@ public class ScoreManagerMap5 : MonoBehaviour
 
         // Notify subscribers of the score change
         ScoreChanged?.Invoke(playerScore);
-    }
-
-    private void LoadHighestScore()
-    {
-        highScoreManager.LoadHighestScore();
-    }
-
-    private void UpdateHighestScoreUI()
-    {
-        highestScoreText.text = "Highest Score: " + highScoreManager.GetHighestScore().ToString();
     }
 
     private System.Collections.IEnumerator ShowUnlockMessage()

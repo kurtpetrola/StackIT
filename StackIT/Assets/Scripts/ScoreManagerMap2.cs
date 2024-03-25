@@ -10,10 +10,8 @@ public class ScoreManagerMap2 : MonoBehaviour
     private static ScoreManagerMap2 instance;
 
     public Text scoreText;
-    public Text highestScoreText;
     public Text unlockText;
     public Text unlockText2; // Reference to the second unlock text
-    public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage3; // Reference to the second locked image
     public Button yourButton3; // Reference to your button
@@ -53,8 +51,6 @@ public class ScoreManagerMap2 : MonoBehaviour
 
     private void Start()
     {
-        LoadHighestScore();
-        UpdateHighestScoreUI();
 
         LoadAndApplyButtonAndLockedImageStates();
 
@@ -84,12 +80,6 @@ public class ScoreManagerMap2 : MonoBehaviour
     public void IncreaseScore()
     {
         playerScore++;
-
-        if (playerScore > highScoreManager.GetHighestScore())
-        {
-            highScoreManager.SetHighestScore(playerScore);
-            UpdateHighestScoreUI();
-        }
 
         if (playerScore == 10 && !isUnlockMessageShowing)
         {
@@ -138,7 +128,7 @@ public class ScoreManagerMap2 : MonoBehaviour
             LoadAndApplyButtonAndLockedImageStates();
 
             // Enable the button when the player score reaches 10 and the highest score is 10
-            if (playerScore == 10 && highScoreManager.GetHighestScore() == 10)
+            if (playerScore == 10)
             {
                 isButtonEnabled2 = true;
                 PlayerPrefs.SetInt(ButtonStateKey2, 1); // Save the button state
@@ -158,15 +148,6 @@ public class ScoreManagerMap2 : MonoBehaviour
         ScoreChanged?.Invoke(playerScore);
     }
 
-    private void LoadHighestScore()
-    {
-        highScoreManager.LoadHighestScore();
-    }
-
-    private void UpdateHighestScoreUI()
-    {
-        highestScoreText.text = "Highest Score: " + highScoreManager.GetHighestScore().ToString();
-    }
 
     private System.Collections.IEnumerator ShowUnlockMessage()
     {

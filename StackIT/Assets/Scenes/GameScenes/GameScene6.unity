@@ -530,7 +530,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pause
+  m_Text: Paused
 --- !u!222 &102050175
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -999,10 +999,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   threeXButtonScriptMap6: {fileID: 1880617691}
   scoreText: {fileID: 287205300}
-  highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
   unlockText6: {fileID: 1384548048}
-  highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 2936310368605813076, guid: 29ca1b39111153b42a13d2c9856a3e1a, type: 3}
   lockedItemImage7: {fileID: 6948636927080013728, guid: c8cbf1d257792e24d933e0f32739a401, type: 3}
   yourButton7: {fileID: 5649678707793906215, guid: 377ba760f73dd534aa04e9e88278d1c3, type: 3}
@@ -1921,7 +1919,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: OBJECTIVES
+  m_Text: OBJECTIVE
 --- !u!222 &494307204
 CanvasRenderer:
   m_ObjectHideFlags: 0

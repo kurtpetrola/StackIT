@@ -2005,7 +2005,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pause
+  m_Text: Paused
 --- !u!222 &639469289
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2691,10 +2691,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   twoXButtonScript: {fileID: 1198373580}
   scoreText: {fileID: 754053107}
-  highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
   unlockText3: {fileID: 2113046854}
-  highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 6922854080870658176, guid: f461a0cca3a9dc447b0c416c787fb0b0, type: 3}
   lockedItemImage4: {fileID: 3290519518155625003, guid: 730fc85ed78919042b939e2b0882c203, type: 3}
   yourButton4: {fileID: 107257649074106336, guid: 3b78b4e6c60dfa749bcbc4b271a8c003, type: 3}
@@ -3583,7 +3581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Challenge
+  m_Text: Challenges
 --- !u!222 &1036097264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5246,7 +5244,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: OBJECTIVES
+  m_Text: OBJECTIVE
 --- !u!222 &1478508953
 CanvasRenderer:
   m_ObjectHideFlags: 0

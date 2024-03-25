@@ -41,13 +41,13 @@ public class PauseMenu : MonoBehaviour
     }
 
     private void UnloadRecentGameScene()
+{
+    Scene currentScene = SceneManager.GetActiveScene();
+    if (recentGameScene != currentScene && recentGameScene.IsValid())
     {
-        if (recentGameScene.IsValid())
-        {
-            SceneManager.UnloadSceneAsync(recentGameScene);
-        }
+        SceneManager.UnloadSceneAsync(recentGameScene);
     }
-
+}
     private void Awake()
     {
         recentGameScene = SceneManager.GetActiveScene();

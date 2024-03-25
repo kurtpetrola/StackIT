@@ -32,8 +32,8 @@ public class ScoreManagerOnline : MonoBehaviour
             UpdateHighestScoreUIOnline(); // Update the UI for online mode
         }
 
-        scoreText.text = "Score: 0" + playerScore.ToString();
-        scoreText1.text = "Score: 0" + playerScore.ToString();
+        scoreText.text = "Score: " + playerScore.ToString();
+        scoreText1.text = "Score: " + playerScore.ToString();
         ScoreChanged?.Invoke(playerScore);
     }
 

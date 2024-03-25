@@ -9,10 +9,8 @@ public class ScoreManagerMap1 : MonoBehaviour
 
     private static ScoreManagerMap1 instance;
     public Text scoreText;
-    public Text highestScoreText;
     public Text unlockText;
     public Text unlockText1; // Reference to the second unlock text
-    public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage2; // Reference to the second locked image
     public Button yourButton2; // Reference to your button
@@ -53,9 +51,7 @@ public class ScoreManagerMap1 : MonoBehaviour
 
     private void Start()
     {
-        LoadHighestScore();
-        UpdateHighestScoreUI();
-
+    
         LoadAndApplyButtonAndLockedImageStates();
 
         // Check if unlock messages have been shown before
@@ -84,12 +80,6 @@ public class ScoreManagerMap1 : MonoBehaviour
     public void IncreaseScore()
     {
         playerScore++;
-
-        if (playerScore > highScoreManager.GetHighestScore())
-        {
-            highScoreManager.SetHighestScore(playerScore);
-            UpdateHighestScoreUI();
-        }
 
         if (playerScore == 5 && !isUnlockMessageShowing)
         {
@@ -142,7 +132,7 @@ public class ScoreManagerMap1 : MonoBehaviour
 
         }
 
-        if (playerScore == 4 && highScoreManager.GetHighestScore() == 4)
+        if (playerScore == 4)
         {
             isButtonEnabled = true;
             PlayerPrefs.SetInt(ButtonStateKey, 1); // Save the button state
@@ -163,15 +153,6 @@ public class ScoreManagerMap1 : MonoBehaviour
         ScoreChanged?.Invoke(playerScore);
     }
 
-    private void LoadHighestScore()
-    {
-        highScoreManager.LoadHighestScore();
-    }
-
-    private void UpdateHighestScoreUI()
-    {
-        highestScoreText.text = "Highest Score: " + highScoreManager.GetHighestScore().ToString();
-    }
 
     private System.Collections.IEnumerator ShowUnlockMessage()
     {

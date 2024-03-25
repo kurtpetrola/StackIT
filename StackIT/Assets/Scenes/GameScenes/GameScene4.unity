@@ -347,7 +347,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: OBJECTIVES
+  m_Text: OBJECTIVE
 --- !u!222 &76183655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3682,7 +3682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pause
+  m_Text: Paused
 --- !u!222 &1150048569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3910,10 +3910,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   twoXButtonScriptMap4: {fileID: 552255340}
   scoreText: {fileID: 1319763356}
-  highestScoreText: {fileID: 8650409385326012242, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   unlockText: {fileID: 1449956599}
   unlockText4: {fileID: 269118973}
-  highScoreManager: {fileID: 5048821520987013987, guid: 0c949d7eb34bf8a4783ae3b42641ae35, type: 3}
   lockedItemImage: {fileID: 6922854080870658176, guid: f461a0cca3a9dc447b0c416c787fb0b0, type: 3}
   lockedItemImage5: {fileID: 8325251616522190560, guid: ff0808a3b79216e48b541c767f775b34, type: 3}
   yourButton5: {fileID: 4588650546926849842, guid: a18bf31a2047fb748be4242e8ef36086, type: 3}

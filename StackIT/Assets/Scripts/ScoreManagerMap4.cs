@@ -9,10 +9,8 @@ public class ScoreManagerMap4 : MonoBehaviour
     private static ScoreManagerMap4 instance;
     public TwoXButtonMap4 twoXButtonScriptMap4;
     public Text scoreText;
-    public Text highestScoreText;
     public Text unlockText;
     public Text unlockText4; // Reference to the second unlock text
-    public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage5; // Reference to the second locked image
     public Button yourButton5; // Reference to your button
@@ -51,9 +49,6 @@ public class ScoreManagerMap4 : MonoBehaviour
 
     private void Start()
     {
-        LoadHighestScore();
-        UpdateHighestScoreUI();
-
         // Load and apply the button and locked image states
         LoadAndApplyButtonAndLockedImageStates();
 
@@ -89,11 +84,6 @@ public class ScoreManagerMap4 : MonoBehaviour
     {
         playerScore++;
 
-        if (playerScore > highScoreManager.GetHighestScore())
-        {
-            highScoreManager.SetHighestScore(playerScore);
-            UpdateHighestScoreUI();
-        }
 
         if (playerScore == 3 && !isUnlockMessageShowing)
         {
@@ -119,7 +109,7 @@ public class ScoreManagerMap4 : MonoBehaviour
             unlockText.text = "";
         }
 
-        if (playerScore >= 20 && highScoreManager.GetHighestScore() >= 20)
+        if (playerScore == 20)
         {
             // Remove lockedItemImage5 when the player score and highest score reach 20
             lockedItemImage5.SetActive(false);
@@ -163,15 +153,6 @@ public class ScoreManagerMap4 : MonoBehaviour
         ScoreChanged?.Invoke(playerScore);
     }
 
-    private void LoadHighestScore()
-    {
-        highScoreManager.LoadHighestScore();
-    }
-
-    private void UpdateHighestScoreUI()
-    {
-        highestScoreText.text = "Highest Score: " + highScoreManager.GetHighestScore().ToString();
-    }
 
     private System.Collections.IEnumerator ShowUnlockMessage()
     {
@@ -202,7 +183,7 @@ public class ScoreManagerMap4 : MonoBehaviour
 
     private void UpdateButtonInteractableState()
     {
-        isButtonEnabled4 = playerScore >= 20 && highScoreManager.GetHighestScore() >= 20;
+        isButtonEnabled4 = playerScore == 20;
         yourButton5.interactable = isButtonEnabled4;
     }
 }

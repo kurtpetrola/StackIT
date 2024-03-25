@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class SoundManager : MonoBehaviour
 {
 
-    public static SoundManager instance;
+    //public static SoundManager instance;
 
     public GameObject musicObject;
     public GameObject soundObject;
@@ -17,18 +17,18 @@ public class SoundManager : MonoBehaviour
     public Texture musicOff;
     AudioSource[] sounds;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    // private void Awake()
+    // {
+    //     if (instance == null)
+    //     {
+    //         instance = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     else
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     void Start()
     {

@@ -3364,7 +3364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pause
+  m_Text: Paused
 --- !u!222 &1291552845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3383,7 +3383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1338623453}
   - component: {fileID: 1338623452}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: NetworkPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,12 +8,9 @@ public class ScoreManagerMap9 : MonoBehaviour
 {
     public FourXButtonMap9 fourXButtonScriptMap9;
     public Text scoreText;
-    public Text highestScoreText;
     public Text unlockText9; // Reference to the second unlock text
-    public HighScoreManager highScoreManager; // Reference to the HighScoreManager
     public GameObject lockedItemImage; // Reference to the first locked image
     public GameObject lockedItemImage10; // Reference to the second locked image
-
     private int playerScore = 0;
     private int stackedItems = 0;
     private bool isUnlockMessageShowing9 = false; // Track the second unlock message
@@ -28,9 +25,6 @@ public class ScoreManagerMap9 : MonoBehaviour
 
     private void Start()
     {
-        LoadHighestScore();
-        UpdateHighestScoreUI();
-
         // Check if unlock message has been shown before
         isUnlockMessageShowing9 = PlayerPrefs.GetInt(UnlockMessage9ShownKey, 0) == 1;
     }
@@ -44,11 +38,6 @@ public class ScoreManagerMap9 : MonoBehaviour
     {
         playerScore++;
 
-        if (playerScore > highScoreManager.GetHighestScore())
-        {
-            highScoreManager.SetHighestScore(playerScore);
-            UpdateHighestScoreUI();
-        }
 
         if (playerScore == 3)
         {
@@ -100,15 +89,7 @@ public class ScoreManagerMap9 : MonoBehaviour
         ScoreChanged?.Invoke(playerScore);
     }
 
-    private void LoadHighestScore()
-    {
-        highScoreManager.LoadHighestScore();
-    }
 
-    private void UpdateHighestScoreUI()
-    {
-        highestScoreText.text = "Highest Score: " + highScoreManager.GetHighestScore().ToString();
-    }
 
     private System.Collections.IEnumerator ShowUnlockMessage9()
     {
