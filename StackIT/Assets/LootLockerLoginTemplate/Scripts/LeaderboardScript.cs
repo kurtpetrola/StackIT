@@ -35,7 +35,7 @@ public class LeaderboardScript : MonoBehaviour
   public void GetLeaderboardData()
   {
     //how many scores to retrieve
-    int count = 10;
+    int count = 15;
 
     LootLockerSDKManager.GetScoreList(leaderboardKey, count, 0, (response) =>
     {
@@ -46,8 +46,8 @@ public class LeaderboardScript : MonoBehaviour
         //show the leaderboard screen and populate it with the data
         leaderboardCanvasAnimator.CallAppearOnAllAnimators();
 
-        leaderboardGamerText.text = "PLAYER";
-        leaderboardScoreText.text = "SCORE";
+        leaderboardGamerText.text = "";
+        leaderboardScoreText.text = "";
 
         //for each item 
         foreach (LootLockerLeaderboardMember score in response.items)

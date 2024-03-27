@@ -24,7 +24,7 @@ public class BoxScript4 : MonoBehaviour
     private int itemsDropped = 0;
 
     void Awake()
-    {   
+    {
         myBody = GetComponent<Rigidbody2D>();
         myBody.gravityScale = 0f;
 
@@ -79,9 +79,9 @@ public class BoxScript4 : MonoBehaviour
     public void DropRandomObject()
     {
         if (Time.timeScale == 0)
-    {
-        return; // Do not drop objects when the game is paused
-    }
+        {
+            return; // Do not drop objects when the game is paused
+        }
         canMove = false;
         myBody.gravityScale = Random.Range(4, 4);
 

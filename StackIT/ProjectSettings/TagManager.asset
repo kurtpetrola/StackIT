@@ -11,6 +11,7 @@ TagManager:
   - TNT
   - NormalBox
   - Touch
+  - BoxDetector
   layers:
   - Default
   - TransparentFX

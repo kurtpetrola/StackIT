@@ -13,7 +13,7 @@ public class LifeUIManager : MonoBehaviour
     public void UpdateHeartIcons()
     {
         int currentLives = LifeManager.Instance.lives;
- 
+
         // You may want to validate that the heartIcons array has the correct length
         for (int i = 0; i < heartIcons.Length; i++)
         {

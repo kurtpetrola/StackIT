@@ -19,6 +19,8 @@ public class GameOverUIManager : MonoBehaviour
     {
         // Display the game over screen elements.
         gameOverPanel.SetActive(true);
+        LifeManager1.Instance.lives = 0;
+        LifeManager1.Instance.DecreaseLife();
 
         // Set the points text to display the player's score.
         //scoreText.text = "Score: " + score.ToString();

@@ -19071,6 +19071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lock2
       objectReference: {fileID: 0}
+    - target: {fileID: 1470243054832628094, guid: 2db619edde9762244bd8498dbe35b3f3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

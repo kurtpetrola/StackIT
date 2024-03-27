@@ -55,7 +55,7 @@ public class SoundManager : MonoBehaviour
             musicObject.GetComponent<RawImage>().texture = musicOff;
             PlayerPrefs.SetString("musics", "offmusic");
         }
-       else if (musicObject.GetComponent<RawImage>().texture == musicOff)
+        else if (musicObject.GetComponent<RawImage>().texture == musicOff)
         {
             musicObject.GetComponent<RawImage>().texture = musicOn;
             PlayerPrefs.SetString("musics", "onmusic");

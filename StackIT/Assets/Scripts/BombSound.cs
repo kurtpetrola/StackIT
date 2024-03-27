@@ -24,17 +24,4 @@ public class BombSound : MonoBehaviour
             droppingSound.Play();
         }
     }
-
-    // This function is called when the Rigidbody collides with another Rigidbody
-    private void OnCollisionEnter2d(Collision2D collision)
-    {
-        // Check if the GameObject has collided with the platform
-        if (isFalling && collision.gameObject.CompareTag("Platform"))
-        {
-            // Stop the dropping sound and play the impact sound
-            droppingSound.Stop();
-            impactSound.Play();
-            isFalling = false;
-        }
-    }
 }

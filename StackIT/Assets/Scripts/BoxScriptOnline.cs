@@ -77,9 +77,9 @@ public class BoxScriptOnline : MonoBehaviour
     public void DropRandomObject()
     {
         if (Time.timeScale == 0)
-    {
-        return; // Do not drop objects when the game is paused
-    }
+        {
+            return; // Do not drop objects when the game is paused
+        }
         canMove = false;
         myBody.gravityScale = Random.Range(4, 4);
 
@@ -191,9 +191,9 @@ public class BoxScriptOnline : MonoBehaviour
                 }
                 else
                 {
-                     GameOverUIManager.Instance.ShowGameOverUI(playerScore);
-                // Add the following line to submit the high score
-                FindObjectOfType<HighScoreManagerOnline>().SetHighestScore(playerScore);
+                    GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+                    // Add the following line to submit the high score
+                    FindObjectOfType<HighScoreManagerOnline>().SetHighestScore(playerScore);
                 }
             }
             else

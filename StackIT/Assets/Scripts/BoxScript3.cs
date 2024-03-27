@@ -79,11 +79,11 @@ public class BoxScript3 : MonoBehaviour
     public void DropRandomObject()
     {
         if (Time.timeScale == 0)
-    {
-        return; // Do not drop objects when the game is paused
-    }
+        {
+            return; // Do not drop objects when the game is paused
+        }
         canMove = false;
-        myBody.gravityScale = Random.Range(4, 4);
+        myBody.gravityScale = Random.Range(3, 3);
 
         if (objectsToDrop.Length > 0)
         {
@@ -195,6 +195,7 @@ public class BoxScript3 : MonoBehaviour
                 {
                     // If lives are zero, handle game over logic
                     GameOverUIManager.Instance.ShowGameOverUI(playerScore);
+
                 }
             }
             else

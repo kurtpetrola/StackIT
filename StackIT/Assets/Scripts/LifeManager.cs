@@ -20,7 +20,7 @@ public class LifeManager : MonoBehaviour
     {
         if (lifeUIManager != null)
         {
-            lifeUIManager.UpdateHeartIcons(); 
+            lifeUIManager.UpdateHeartIcons();
         }
     }
 
@@ -30,7 +30,7 @@ public class LifeManager : MonoBehaviour
 
         if (lifeUIManager != null)
         {
-            lifeUIManager.UpdateHeartIcons(); 
+            lifeUIManager.UpdateHeartIcons();
         }
 
         if (lives <= 0)
@@ -41,6 +41,6 @@ public class LifeManager : MonoBehaviour
 
     public void GameOver()
     {
-       
+
     }
 }

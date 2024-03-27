@@ -22,6 +22,7 @@ public class NetworkCheck : MonoBehaviour
             
             if (isNotReachable && !previouslyNotReachable)
             {
+                Time.timeScale = 0;
                 Debug.Log("No Internet Connection! Showing Panel.");
                 noConnectionPanel.SetActive(true);
                 startPanelScript.OnNetworkDisconnected();

@@ -51,7 +51,7 @@ public class ScoreManagerMap1 : MonoBehaviour
 
     private void Start()
     {
-    
+
         LoadAndApplyButtonAndLockedImageStates();
 
         // Check if unlock messages have been shown before

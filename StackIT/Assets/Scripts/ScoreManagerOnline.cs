@@ -18,12 +18,12 @@ public class ScoreManagerOnline : MonoBehaviour
         LoadHighestScoreOnline();
         UpdateHighestScoreUIOnline();
     }
-    
+
     public void IncreaseScoreOnline()
     {
         playerScore++;
 
-       
+
         playerScore += stackedItems;
 
         if (playerScore > highScoreManagerOnline.GetHighestScore())
