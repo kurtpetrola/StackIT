@@ -4,39 +4,69 @@ using UnityEngine;
 public class NetworkCheck : MonoBehaviour
 {
     public GameObject noConnectionPanel;
-    public StartPanel startPanelScript;
+    private bool isGamePaused = false;
+    private bool previouslyNotReachable = false;
+    public GameObject loadingIndicator;
 
-    private bool previouslyNotReachable = false; // To track previous connection status
+    private WaitForSeconds waitDelay = new WaitForSeconds(3f);
 
     private void Start()
     {
-        startPanelScript = FindObjectOfType<StartPanel>(); // Find the StartPanel script in the scene
         StartCoroutine(CheckInternetConnection());
+        StartCoroutine(RunYieldContinuously());
     }
 
     IEnumerator CheckInternetConnection()
     {
+        bool isConnected = true;
+        yield return null;
+
         while (true)
         {
             bool isNotReachable = Application.internetReachability == NetworkReachability.NotReachable;
-            
-            if (isNotReachable && !previouslyNotReachable)
+
+            if (isNotReachable && isConnected)
             {
-                Time.timeScale = 0;
-                Debug.Log("No Internet Connection! Showing Panel.");
                 noConnectionPanel.SetActive(true);
-                startPanelScript.OnNetworkDisconnected();
-                previouslyNotReachable = true;
+                loadingIndicator.SetActive(true);
+                PauseGame();
+                isConnected = false;
             }
-            else if (!isNotReachable && previouslyNotReachable)
+            else if (!isNotReachable && !isConnected)
             {
-                Debug.Log("Internet Connection Detected. Hiding Panel.");
                 noConnectionPanel.SetActive(false);
-                startPanelScript.OnNetworkReconnected();
-                previouslyNotReachable = false;
+                loadingIndicator.SetActive(false);
+                ResumeGame();
+                isConnected = true;
+                StartCoroutine(RunYieldContinuously());
             }
 
-            yield return new WaitForSeconds(3f); // Check every 3 seconds
+
+            yield return null;
         }
+    }
+
+    IEnumerator RunYieldContinuously()
+    {
+        while (true)
+        {
+            yield return null;
+        }
+    }
+
+    void PauseGame()
+    {
+        isGamePaused = true;
+        Time.timeScale = 0f;
+
+        // Implement additional logic to freeze game elements if needed
+    }
+
+    void ResumeGame()
+    {
+        isGamePaused = false;
+        Time.timeScale = 1f;
+
+        // Implement additional logic to resume game elements if needed
     }
 }

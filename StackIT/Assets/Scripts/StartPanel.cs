@@ -10,7 +10,7 @@ public class StartPanel : MonoBehaviour
 
     private GameplayController gameplayController;
     private bool countdownPaused = false;
-    private bool isNetworkDisconnected = false; // To track network status
+    // private bool isNetworkDisconnected = false; // To track network status
 
     void Start()
     {
@@ -48,7 +48,7 @@ public class StartPanel : MonoBehaviour
 
     public void ContinueCountdown()
     {
-        if (!panelClosed && isNetworkDisconnected)
+        if (!panelClosed) //&& isNetworkDisconnected
         {
             countdownPaused = false;
             countdown = 11f;
@@ -56,20 +56,20 @@ public class StartPanel : MonoBehaviour
             panel.SetActive(true);
             countdownText.gameObject.SetActive(true);
             // InvokeRepeating("UpdateCountdown", 0f, 1f);
-            isNetworkDisconnected = false;
+            // isNetworkDisconnected = false;
         }
     }
 
-    public void OnNetworkDisconnected()
-    {
-        PauseCountdown(true);
-        isNetworkDisconnected = true;
-    }
+    // public void OnNetworkDisconnected()
+    // {
+    //     PauseCountdown(true);
+    //     isNetworkDisconnected = true;
+    // }
 
-    public void OnNetworkReconnected()
-    {
-        ContinueCountdown();
-    }
+    // public void OnNetworkReconnected()
+    // {
+    //     ContinueCountdown();
+    // }
 
     public void ClosePanelManually()
     {
