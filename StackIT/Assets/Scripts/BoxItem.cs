@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class BoxItem : MonoBehaviour
 {
@@ -23,9 +24,10 @@ public class BoxItem : MonoBehaviour
     {
         if (gameObject.CompareTag("Box"))
         {
-            ShowToastAndHideAfterDelay("You clicked the Box!", 1f);
+            ShowToastAndHideAfterDelay("You clicked the Box!", 0.5f);
         }
-        else if (gameObject.CompareTag("Platform"))
+
+        if (gameObject.CompareTag("Platform"))
         {
             ShowToastAndHideAfterDelay("You clicked the Platform!", 0.5f);
         }
