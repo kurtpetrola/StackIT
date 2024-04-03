@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6520764360476565745}
   - component: {fileID: -8539784009100386412}
   - component: {fileID: -3449529401840840176}
+  - component: {fileID: 6556207800006012238}
   m_Layer: 0
   m_Name: TV
   m_TagString: Box
@@ -158,7 +159,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &-6520764360476565745
@@ -282,3 +283,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6556207800006012238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8516474104200412569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a99648e6118b34ea340de66a772483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toastText: {fileID: 6646445351824790053, guid: 2eb64d7157d1a474a91ec2fcb3f42140, type: 3}

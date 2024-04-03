@@ -7,7 +7,6 @@ public class LifeManager1 : MonoBehaviour
     public static LifeManager1 Instance;
     public int lives = 2;
     public LifeUIManager1 lifeUIManager1; // Reference to the LifeUIManager script
-
     private int boxesDetected = 0;
 
     private void Awake()

@@ -235,11 +235,11 @@ public class BoxScript8 : MonoBehaviour
                 canMove = false;
                 ignoreTrigger = true;
 
-                if (LifeManager2.Instance != null)
+                if (LifeManager1.Instance != null)
                 {
-                    LifeManager2.Instance.DecreaseLife(); // Decrease life
+                    LifeManager1.Instance.DecreaseLife(); // Decrease life
 
-                    if (LifeManager2.Instance.lives > 0)
+                    if (LifeManager1.Instance.lives > 0)
                     {
                         GameplayController.instance.SpawnNewBox();
                     }

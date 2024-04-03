@@ -1095,15 +1095,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: SCORE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d29224c394dad540a7d1a8d38ef51e6, type: 2}
-  m_sharedMaterial: {fileID: -5665454007858045441, guid: 8d29224c394dad540a7d1a8d38ef51e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b2743a14aea0ac447868ac5901e5ad1d, type: 2}
+  m_sharedMaterial: {fileID: -4970337859511575241, guid: b2743a14aea0ac447868ac5901e5ad1d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281641681
-  m_fontColor: {r: 0.8207547, g: 0.66557, b: 0.20518868, a: 1}
+    rgba: 4283453520
+  m_fontColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1126,7 +1126,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1935,15 +1935,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAYER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d29224c394dad540a7d1a8d38ef51e6, type: 2}
-  m_sharedMaterial: {fileID: -5665454007858045441, guid: 8d29224c394dad540a7d1a8d38ef51e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b2743a14aea0ac447868ac5901e5ad1d, type: 2}
+  m_sharedMaterial: {fileID: -4970337859511575241, guid: b2743a14aea0ac447868ac5901e5ad1d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281641681
-  m_fontColor: {r: 0.8207547, g: 0.66557, b: 0.20518868, a: 1}
+    rgba: 4283453520
+  m_fontColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1966,7 +1966,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535

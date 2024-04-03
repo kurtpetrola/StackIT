@@ -1261,7 +1261,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 465}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90053366
 MonoBehaviour:
@@ -2691,7 +2691,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255948917
 MonoBehaviour:
@@ -3599,7 +3599,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364631906
 MonoBehaviour:
@@ -4274,7 +4274,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 465}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423162125
 MonoBehaviour:
@@ -6162,7 +6162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: 30}
+  m_AnchoredPosition: {x: -186.99995, y: 30}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589486837
@@ -6576,7 +6576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245, y: -137}
+  m_AnchoredPosition: {x: -250, y: -137}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &718326626
@@ -8933,7 +8933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: -290}
+  m_AnchoredPosition: {x: 84, y: -290}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &956428010
@@ -10123,7 +10123,7 @@ GameObject:
   - component: {fileID: 1120483163}
   - component: {fileID: 1120483162}
   m_Layer: 5
-  m_Name: Chal1
+  m_Name: Challenge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11452,7 +11452,7 @@ GameObject:
   - component: {fileID: 1235929937}
   - component: {fileID: 1235929936}
   m_Layer: 5
-  m_Name: Line (3)
+  m_Name: Line5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11936,7 +11936,7 @@ GameObject:
   - component: {fileID: 1302034698}
   - component: {fileID: 1302034697}
   m_Layer: 5
-  m_Name: Chal1 (2)
+  m_Name: Challenge4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12037,7 +12037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235, y: 332}
+  m_AnchoredPosition: {x: 152, y: 332}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308769420
@@ -12996,7 +12996,7 @@ GameObject:
   - component: {fileID: 1449829284}
   - component: {fileID: 1449829283}
   m_Layer: 5
-  m_Name: Line (2)
+  m_Name: Line4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13697,7 +13697,7 @@ GameObject:
   - component: {fileID: 1529384695}
   - component: {fileID: 1529384694}
   m_Layer: 5
-  m_Name: Chal1 (1)
+  m_Name: Challenge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13777,7 +13777,7 @@ GameObject:
   - component: {fileID: 1533559318}
   - component: {fileID: 1533559317}
   m_Layer: 5
-  m_Name: Chal1 (4)
+  m_Name: Challenge1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13856,7 +13856,7 @@ GameObject:
   - component: {fileID: 1561472454}
   - component: {fileID: 1561472453}
   m_Layer: 5
-  m_Name: Line (1)
+  m_Name: Line3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14306,7 +14306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -231.00003, y: 30}
+  m_AnchoredPosition: {x: -235, y: 30}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580794781
@@ -14627,7 +14627,7 @@ GameObject:
   - component: {fileID: 1601164008}
   - component: {fileID: 1601164007}
   m_Layer: 5
-  m_Name: Line (4)
+  m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15768,7 +15768,7 @@ GameObject:
   - component: {fileID: 1804519093}
   - component: {fileID: 1804519092}
   m_Layer: 5
-  m_Name: Chal1 (3)
+  m_Name: Challenge5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17679,21 +17679,21 @@ RectTransform:
   - {fileID: 853382178}
   - {fileID: 1657940686}
   - {fileID: 1403706035}
+  - {fileID: 1601164006}
   - {fileID: 1561472452}
   - {fileID: 1449829282}
   - {fileID: 1235929935}
-  - {fileID: 1601164006}
   - {fileID: 2071028951}
   - {fileID: 1308769419}
+  - {fileID: 1533559316}
   - {fileID: 1120483161}
   - {fileID: 1529384693}
   - {fileID: 1302034696}
   - {fileID: 1804519091}
-  - {fileID: 1533559316}
-  - {fileID: 1580794780}
   - {fileID: 1803135302}
   - {fileID: 1197400326}
   - {fileID: 358749906}
+  - {fileID: 1580794780}
   - {fileID: 589486836}
   - {fileID: 718326625}
   - {fileID: 2121634676}
@@ -18208,7 +18208,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -198.90005, y: -133}
+  m_AnchoredPosition: {x: -203.90004, y: -133}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121634677

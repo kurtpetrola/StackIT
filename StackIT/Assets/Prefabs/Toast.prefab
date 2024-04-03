@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You clicked the Box!
+  m_Text: You tapped the Box!
 --- !u!114 &6423526243659019652
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GamePauseManager1 : MonoBehaviour
 {
     public GameObject pausePanel; // Reference to the UI panel that should be displayed
     public ScoreManagerMap1 scoreManager; // Reference to the ScoreManagerMap1 script
     public int scoreToPauseAt = 5; // The score at which the game should pause and show the panel
+
 
     private void OnEnable()
     {

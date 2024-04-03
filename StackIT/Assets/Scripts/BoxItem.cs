@@ -24,12 +24,12 @@ public class BoxItem : MonoBehaviour
     {
         if (gameObject.CompareTag("Box"))
         {
-            ShowToastAndHideAfterDelay("You clicked the Box!", 0.5f);
+            ShowToastAndHideAfterDelay("You tapped the Box!", 0.5f);
         }
 
-        if (gameObject.CompareTag("Platform"))
+        else if (gameObject.CompareTag("Platform"))
         {
-            ShowToastAndHideAfterDelay("You clicked the Platform!", 0.5f);
+            ShowToastAndHideAfterDelay("You tapped the Platform!", 0.5f);
         }
     }
 

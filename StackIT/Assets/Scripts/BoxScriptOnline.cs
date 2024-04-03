@@ -180,11 +180,11 @@ public class BoxScriptOnline : MonoBehaviour
             canMove = false;
             ignoreTrigger = true;
 
-            if (LifeManager.Instance != null)
+            if (LifeManager1.Instance != null)
             {
-                LifeManager.Instance.DecreaseLife(); // Decrease life when the box hits the game over trigger
+                LifeManager1.Instance.DecreaseLife(); // Decrease life when the box hits the game over trigger
 
-                if (LifeManager.Instance.lives > 0)
+                if (LifeManager1.Instance.lives > 0)
                 {
                     // If lives are remaining, continue spawning new boxes
                     GameplayController.instance.SpawnNewBox();
