@@ -9,10 +9,17 @@ public class SoundManager : MonoBehaviour
 
     //public static SoundManager instance;
 
+    [Header("Music")]
     public GameObject musicObject;
+
+    [Header("Sound")]
     public GameObject soundObject;
+
+    [Header("Sound State")]
     public Texture soundOn;
     public Texture soundOff;
+
+    [Header("Music State")]
     public Texture musicOn;
     public Texture musicOff;
     AudioSource[] sounds;
