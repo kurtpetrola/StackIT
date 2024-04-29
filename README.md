@@ -27,6 +27,13 @@ Contributions to this project are welcome. To contribute:
 4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a pull request.
 
+## Credits
+✨ [ElevenLabs](https://elevenlabs.io/) for TTS
+
+✨ [LootLocker](https://docs.lootlocker.com/) for Backend
+
+✨ [Flaticon](https://www.flaticon.com/) for UI Icons
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/kurtpetrola/StackIT/blob/main/LICENSE) file for details.
