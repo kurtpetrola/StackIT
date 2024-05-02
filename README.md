@@ -27,7 +27,7 @@ Contributions to this project are welcome. To contribute:
 4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a pull request.
 
-## Credits
+## Acknowledgement
 ✨ [ElevenLabs](https://elevenlabs.io/) for TTS
 
 ✨ [LootLocker](https://docs.lootlocker.com/) for Backend
