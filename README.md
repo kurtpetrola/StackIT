@@ -28,11 +28,13 @@ Contributions to this project are welcome. To contribute:
 5. Open a pull request.
 
 ## Acknowledgement
-✨ [ElevenLabs](https://elevenlabs.io/) for TTS
+✨ [ElevenLabs](https://elevenlabs.io/) for the TTS
 
-✨ [LootLocker](https://docs.lootlocker.com/) for Backend
+✨ [LootLocker](https://docs.lootlocker.com/) for the Backend
 
-✨ [Flaticon](https://www.flaticon.com/) for UI Icons
+✨ [Flaticon](https://www.flaticon.com/) for the UI Icons
+
+✨ [Iconian](https://iconian.com/) for the Fonts
 
 ## License
 
