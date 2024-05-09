@@ -36,6 +36,8 @@ Contributions to this project are welcome. To contribute:
 
 ✨ [Iconian](https://iconian.com/) for the Fonts
 
+✨ [Jean Moreno](https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-remaster-free-109565) for the Assets
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/kurtpetrola/StackIT/blob/main/LICENSE) file for details.
