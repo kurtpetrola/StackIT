@@ -3,14 +3,21 @@
 Stack IT! is a casual mobile game in which players must stack blocks as high as possible.
 
 ## Features
-- [x] **Arcade Mode**: Classic endless mode.
-- [x] **Online Mode**: A mode where players can save their highest score.
-- [x] **Leaderboards**: Showing of competitive players that scores highest points.
-- [x] **Objectives/Challenges**: Showing of in game objectives and challenges.
+
+- Offline Mode: Classic endless mode.
+- Online Mode: A mode where players can save their highest score.
+- Leaderboards: Showing of competitive players that score the highest points.
+- Objectives/Challenges: Showing of in-game objectives and challenges.
+- It utilizes TTS for better understanding of objectives and challenges.
+- It also includes a tutorial for better understanding of the game.
 
 ## Development
 - This game uses [**Unity Engine**](https://unity.com/) with **C#**.
 - The unity version is `2022.3.8f1 LTS`.
+
+## Installation
+
+You can go to [releases page](https://github.com/kurtpetrola/CapstoneProject/releases) to download the latest version of the game.
 
 ## Contributing
 
