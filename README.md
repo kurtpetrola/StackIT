@@ -46,4 +46,4 @@ We welcome pull requests, bug reports, and feature suggestions! Your contributio
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/kurtpetrola/StackIT/blob/main/LICENSE) file for details.
+**StackIT** is licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html) - see the [LICENSE](https://github.com/kurtpetrola/StackIT/blob/main/LICENSE) file for details.
