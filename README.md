@@ -15,7 +15,7 @@ A casual mobile game where players must stack blocks as high as possible. This g
 
   - **Game Engine**: [Unity Engine](https://unity.com/)
   - **Programming Language**: [C#](https://learn.microsoft.com/en-us/dotnet/csharp/)
-  - **Unity Version**: [`6000.3.5f2 LTS`](https://unity.com/releases/editor/whats-new/6000.3.5f2)
+  - **Unity Version**: [`6000.4.2f1`](https://unity.com/releases/editor/whats-new/6000.4.2f1)
   - **Backend Services**: [LootLocker](https://docs.lootlocker.com/)
   - **TTS Integration**: [ElevenLabs](https://elevenlabs.io/)
 
